@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://bafesg0112kju"]
+
+[ext_resource type="Script" path="res://throttle control/player_manager.gd" id="2_344h7"]
+[ext_resource type="Script" path="res://throttle control/buttonMan.gd" id="4_6bvhk"]
+[ext_resource type="Script" path="res://map/mapItem.gd" id="5_caikj"]
+
+[node name="main" type="Node2D"]
+
+[node name="PlayerManager" type="Node2D" parent="."]
+script = ExtResource("2_344h7")
+playerName = "Sloomy"
+
+[node name="throt-" type="Button" parent="."]
+offset_left = 728.0
+offset_top = 533.0
+offset_right = 863.0
+offset_bottom = 564.0
+text = "throttle-
+"
+script = ExtResource("4_6bvhk")
+type = 2
+
+[node name="throt+" type="Button" parent="."]
+offset_left = 730.0
+offset_top = 571.0
+offset_right = 865.0
+offset_bottom = 602.0
+text = "throttle+
+"
+script = ExtResource("4_6bvhk")
+
+[node name="EngStats" type="RichTextLabel" parent="."]
+offset_left = 870.0
+offset_top = 484.0
+offset_right = 1138.0
+offset_bottom = 630.0
+
+[node name="1" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 60.0
+offset_right = 991.0
+offset_bottom = 102.0
+text = "1"
+script = ExtResource("5_caikj")
+mapID = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Button" parent="."]
+offset_left = 720.0
+offset_top = 186.0
+offset_right = 769.0
+offset_bottom = 231.0
+text = "2"
+script = ExtResource("5_caikj")
+mapID = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Button" parent="."]
+offset_left = 782.0
+offset_top = 88.0
+offset_right = 831.0
+offset_bottom = 133.0
+text = "3"
+script = ExtResource("5_caikj")
+mapID = 3
+metadata/_edit_use_anchors_ = true

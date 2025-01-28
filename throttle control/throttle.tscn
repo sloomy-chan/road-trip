@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciy1xcdky83gd"]
+
+[ext_resource type="Script" path="res://throttle control/player_manager.gd" id="1_nw11d"]
+[ext_resource type="Script" path="res://throttle control/buttonMan.gd" id="2_yrthk"]
+
+[node name="throttle" type="Node2D"]
+metadata/_edit_vertical_guides_ = [635.0]
+
+[node name="PlayerManager" type="Node2D" parent="."]
+script = ExtResource("1_nw11d")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 728.0
+offset_top = 533.0
+offset_right = 863.0
+offset_bottom = 564.0
+text = "throttle-
+"
+script = ExtResource("2_yrthk")
+type = 2
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 730.0
+offset_top = 571.0
+offset_right = 865.0
+offset_bottom = 602.0
+text = "throttle+
+"
+script = ExtResource("2_yrthk")
+
+[node name="EngStats" type="RichTextLabel" parent="."]
+offset_left = 877.0
+offset_top = 536.0
+offset_right = 1138.0
+offset_bottom = 630.0
