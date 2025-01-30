@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=6 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="Script" path="res://throttle control/player_manager.gd" id="2_344h7"]
+[ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://inv.tscn" id="2_v0nlm"]
 [ext_resource type="Script" path="res://throttle control/buttonMan.gd" id="4_6bvhk"]
 [ext_resource type="Script" path="res://map/mapItem.gd" id="5_caikj"]
+[ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 
 [node name="main" type="Node2D"]
 
 [node name="PlayerManager" type="Node2D" parent="."]
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
+bikeGas = 100
+
+[node name="inv" parent="." instance=ExtResource("2_v0nlm")]
+position = Vector2(-187, 96)
 
 [node name="throt-" type="Button" parent="."]
 offset_left = 728.0
@@ -28,6 +34,12 @@ offset_bottom = 602.0
 text = "throttle+
 "
 script = ExtResource("4_6bvhk")
+
+[node name="Messages" type="RichTextLabel" parent="."]
+offset_left = 29.0
+offset_top = 471.0
+offset_right = 497.0
+offset_bottom = 617.0
 
 [node name="EngStats" type="RichTextLabel" parent="."]
 offset_left = 870.0
@@ -64,3 +76,8 @@ text = "3"
 script = ExtResource("5_caikj")
 mapID = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="Olavo" type="Sprite2D" parent="."]
+position = Vector2(337, 188)
+scale = Vector2(0.5565, 0.5525)
+texture = ExtResource("5_pyrfo")

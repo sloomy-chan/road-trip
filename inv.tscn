@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfcbwvdcyy3ko"]
+
+[ext_resource type="Script" path="res://inv.gd" id="1_0st73"]
+[ext_resource type="Script" path="res://invBlock.gd" id="2_uqry6"]
+
+[node name="inv" type="Node2D"]
+script = ExtResource("1_0st73")
+
+[node name="1" type="Button" parent="."]
+offset_left = 231.0
+offset_top = 282.0
+offset_right = 276.0
+offset_bottom = 323.0
+script = ExtResource("2_uqry6")
+itemID = 1
+
+[node name="2" type="Button" parent="."]
+offset_left = 314.0
+offset_top = 280.0
+offset_right = 359.0
+offset_bottom = 324.0
+script = ExtResource("2_uqry6")
