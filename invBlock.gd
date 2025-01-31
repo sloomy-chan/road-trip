@@ -15,8 +15,7 @@ func _use():
 		0: 
 			player.mess.add_text("\nNothing to use here.")
 		1: 
-
-			if player.bikeGas != 100:
+			if player.bikeGas < 100:
 				player.mess.add_text("\nYou refueled your tank.")
 				if player.bikeGas > 90:
 					player.bikeGas += (100-player.bikeGas)

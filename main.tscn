@@ -43,7 +43,7 @@ offset_bottom = 617.0
 
 [node name="EngStats" type="RichTextLabel" parent="."]
 offset_left = 870.0
-offset_top = 484.0
+offset_top = 446.0
 offset_right = 1138.0
 offset_bottom = 630.0
 

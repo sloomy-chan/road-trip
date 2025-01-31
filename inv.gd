@@ -1,9 +1,12 @@
 extends Node2D
 
 @onready var inv = [$"1",$"2"]
-
-func _ready():
-	_add_item()
+@export var itemNmbr = 1
 
 func _add_item():
-	inv.insert(0, 1)
+	for slot in inv:
+		if slot.itemID == 0:
+			slot.itemID = itemNmbr
+			return
+		else:
+			pass
