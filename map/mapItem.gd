@@ -16,11 +16,11 @@ func _map_selected():
 		player.nextPos = mapID
 		match mapID:
 			1:
-				player.timer += 100
+				player.timer += 670
 			2: 
-				player.timer += 100
+				player.timer += 450
 			3:
-				player.timer += 300
+				player.timer += 690
 	if player.isTravel == false:
 		player.mess.add_text(str("\n You are currently headed to ", player.nextPos))
 	else:

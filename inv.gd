@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var inv = [$"1",$"2"]
+@onready var inv = [$"1",$"2",$"3",$"4"]
 @export var itemNmbr = 1
 
 func _add_item():

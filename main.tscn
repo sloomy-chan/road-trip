@@ -11,7 +11,7 @@
 [node name="PlayerManager" type="Node2D" parent="."]
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
-bikeGas = 100
+bikeGas = 5
 
 [node name="inv" parent="." instance=ExtResource("2_v0nlm")]
 position = Vector2(-187, 96)
