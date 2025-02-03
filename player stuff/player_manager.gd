@@ -1,10 +1,15 @@
 extends Node2D
+#pega os nodes necessários
 @onready var stats = get_node("/root/main/EngStats")
 @onready var mess = get_node("/root/main/Messages")
+@onready var ctyName = get_node("/root/main/CityName")
+@onready var city = get_node("/root/main/city")
+
+#variáveis básicas
 @export var playerName = ""
 var speed = 0
 @export var bikeGas = 2
-@export var engRpm = 0
+var engRpm = 0
 var isTravel = false
 var currPos = 0
 var mod: float #É o modificador de consumo de combustível
@@ -16,13 +21,17 @@ var temp = 0
 var event_timer = 10
 var eventNmbr = 10
 var speed_limit: float
+#variáveis da durabilidade do motor
+var eng_state = 0
+var temp_mod = 0
 
 func _process(delta: float) -> void:
 	#Configura o texto das caixas de texto.
-	mess.set_text(str("\nYou are currently at ", currPos))
-	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName, "\n Time left to destination is: ", snappedf(timer, 0.1),"\n istravel?: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1)))
+	ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
+	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName, "\n Time left to destination is: ", snappedf(timer, 0.1),"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1)))
 	
 	#Funções que rodam em todo frame
+	_eng_durability(delta)
 	_rpm_multi(delta)
 	_gas(delta)
 	_speed_calc(delta)
@@ -66,67 +75,50 @@ func _speed_calc(delta):
 	match engRpm:
 		0:
 			if speed > 0:
-				speed -= 30 * delta
-		10:
-			speed_limit = 10
-		20:
-			speed_limit = 17
-		30:
-			speed_limit = 24
-		40:
-			speed_limit = 36
-		50: 
-			speed_limit = 48
-		60:
-			speed_limit = 58
-		70:
-			speed_limit = 70
-		80:
-			speed_limit = 85
-		90:
-			speed_limit = 98
-		100:
-			speed_limit = 130
-	if speed < speed_limit:
+				speed -= (20-(engRpm * 0.1)) * delta
+			else:
+				pass
+				
+	speed_limit = engRpm + ((engRpm * 0.30) + smod) - temp_mod
+
+	if speed < speed_limit && engRpm > 0:
 		speed += (2 * (engRpm * 0.07) + smod) * delta
-	else:
+	else: if speed > 0:
 		speed -= (3 + (engRpm *.03)) * delta
 
 func _eng_temp(delta):
-	if engRpm > 0 && temp < 15:
-		temp += (0.5 * (engRpm * 0.01)) * delta
-	if engRpm == 0 && temp > 0:
-		temp -= 0.05 * delta
-	
-	match temp:
-		7:
-			mess.add_text(str("\nYour engine is in its ideal temperature."))
-			print("temp good")
-		11:
-			mess.add_text(str("\nYour engine is slightly hot"))
-			print("temp hot")
-		15.0:
-			mess.add_text(str("\nYour engine is overheating! Careful with the throttle!"))
-			print("OH SHITTT")
+		if engRpm > 0 && temp < 15:
+			temp += (0.87 * (engRpm * 0.013) - speed * 0.007) * delta
+		if engRpm == 0 && temp > 0:
+			temp -= 0.1 * delta
+
+
+func _eng_durability(delta):
+	if engRpm > 0 && temp >6 && eng_state < 100:
+		eng_state += (temp * 0.1) * delta
+	if eng_state > 60 && speed > 0:
+		temp_mod = (eng_state * 0.35)
+	else:
+		temp_mod = 0
 
 func _event_generator():
 	match eventNmbr:	
 		0:
 			mess.add_text(str("\nThe view is beautiful."))
+			smod = 0
 		1:
 			mess.add_text(str("\nYou can feel the wind in your clothes"))
+			smod = 0
 		2:
 			mess.add_text(str("\nHey :)"))
+			smod = 0
 		3:
 			mess.add_text(str("\nYou're currently going up a hill."))
-			mod = 0.3
-			engRpm -= 10
+			if engRpm > 0 && speed_limit > 5:
+				temp_mod += 8
 		4:
 			mess.add_text(str("\nYour bike seems happy."))
+			smod = 0
 		5:
 			mess.add_text(str("\nYou're currently downhill."))
-			speed_limit += 30
-			smod = 1
-			engRpm += 10
-	
-	
+			smod = 10

@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://csyo6ego73ddr"]
+
+[ext_resource type="Script" path="res://map/mapItem.gd" id="1_ftjsj"]
+
+[node name="map" type="Node2D"]
+
+[node name="1" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 60.0
+offset_right = 991.0
+offset_bottom = 102.0
+text = "1"
+script = ExtResource("1_ftjsj")
+mapID = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Button" parent="."]
+offset_left = 720.0
+offset_top = 186.0
+offset_right = 769.0
+offset_bottom = 231.0
+text = "2"
+script = ExtResource("1_ftjsj")
+mapID = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Button" parent="."]
+offset_left = 782.0
+offset_top = 88.0
+offset_right = 831.0
+offset_bottom = 133.0
+text = "3"
+script = ExtResource("1_ftjsj")
+mapID = 3
+metadata/_edit_use_anchors_ = true

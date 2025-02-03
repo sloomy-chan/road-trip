@@ -17,5 +17,4 @@ config/icon="res://sprites/icon.svg"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"

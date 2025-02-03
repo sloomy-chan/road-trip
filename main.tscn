@@ -1,17 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=7 format=3 uid="uid://bafesg0112kju"]
 
-[ext_resource type="Script" path="res://throttle control/player_manager.gd" id="2_344h7"]
-[ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://inv.tscn" id="2_v0nlm"]
-[ext_resource type="Script" path="res://throttle control/buttonMan.gd" id="4_6bvhk"]
-[ext_resource type="Script" path="res://map/mapItem.gd" id="5_caikj"]
+[ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://map.tscn" id="1_mqp60"]
+[ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://map/city.tscn" id="2_52mnt"]
+[ext_resource type="Script" path="res://player stuff/player_manager.gd" id="2_344h7"]
+[ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://player stuff/inv.tscn" id="2_v0nlm"]
+[ext_resource type="Script" path="res://player stuff/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 
 [node name="main" type="Node2D"]
 
+[node name="map" parent="." instance=ExtResource("1_mqp60")]
+
 [node name="PlayerManager" type="Node2D" parent="."]
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
-bikeGas = 5
+bikeGas = 100
+
+[node name="city" parent="." instance=ExtResource("2_52mnt")]
+position = Vector2(203, -33)
 
 [node name="inv" parent="." instance=ExtResource("2_v0nlm")]
 position = Vector2(-187, 96)
@@ -35,49 +41,30 @@ text = "throttle+
 "
 script = ExtResource("4_6bvhk")
 
+[node name="CityName" type="RichTextLabel" parent="."]
+offset_left = 711.0
+offset_top = 326.0
+offset_right = 1118.0
+offset_bottom = 381.0
+fit_content = true
+scroll_active = false
+
 [node name="Messages" type="RichTextLabel" parent="."]
 offset_left = 29.0
 offset_top = 471.0
-offset_right = 497.0
+offset_right = 622.0
 offset_bottom = 617.0
+scroll_following = true
 
 [node name="EngStats" type="RichTextLabel" parent="."]
 offset_left = 870.0
 offset_top = 446.0
 offset_right = 1138.0
 offset_bottom = 630.0
-
-[node name="1" type="Button" parent="."]
-offset_left = 939.0
-offset_top = 60.0
-offset_right = 991.0
-offset_bottom = 102.0
-text = "1"
-script = ExtResource("5_caikj")
-mapID = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="2" type="Button" parent="."]
-offset_left = 720.0
-offset_top = 186.0
-offset_right = 769.0
-offset_bottom = 231.0
-text = "2"
-script = ExtResource("5_caikj")
-mapID = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="3" type="Button" parent="."]
-offset_left = 782.0
-offset_top = 88.0
-offset_right = 831.0
-offset_bottom = 133.0
-text = "3"
-script = ExtResource("5_caikj")
-mapID = 3
-metadata/_edit_use_anchors_ = true
+fit_content = true
 
 [node name="Olavo" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(337, 188)
 scale = Vector2(0.5565, 0.5525)
 texture = ExtResource("5_pyrfo")
