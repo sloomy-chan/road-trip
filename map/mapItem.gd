@@ -1,5 +1,7 @@
 extends Button
 
+@onready var loc1 = self
+@export var loc2: Node
 @onready var player = get_node("/root/main/PlayerManager")
 var mapButton = self
 @export var mapID = 0
@@ -10,6 +12,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player.timer <= 0.0 && player.isTravel == false:
 		player.currPos = player.nextPos
+	
+	
 
 func _map_selected():
 	if player.isTravel == false && player.currPos != mapID:
@@ -43,3 +47,7 @@ func _map_selected():
 		player.mess.add_text(str("\nYou are currently headed to ", player.city.nextCity_name))
 	else:
 		player.mess.add_text(str("\nYou already have a destination."))
+	
+func _draw():
+	draw_line(loc1.global_position, loc2.global_position, Color.GREEN, 2.0)
+	

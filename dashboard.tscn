@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1sjkjwxumcj"]
+
+[ext_resource type="Script" path="res://dashboard.gd" id="1_2xue6"]
+[ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="2_ke650"]
+
+[node name="dashboard" type="Node2D"]
+script = ExtResource("1_2xue6")
+
+[node name="rpm" type="Sprite2D" parent="."]
+position = Vector2(377, 126)
+rotation = 1.44862
+scale = Vector2(-0.065, 1.163)
+texture = ExtResource("2_ke650")
+
+[node name="veloc" type="Sprite2D" parent="."]
+position = Vector2(137, 135)
+rotation = 1.44862
+scale = Vector2(-0.065, 1.163)
+texture = ExtResource("2_ke650")
+
+[node name="gas" type="Sprite2D" parent="."]
+position = Vector2(80, 65.5)
+rotation = -0.840202
+scale = Vector2(0.328125, 0.0234375)
+texture = ExtResource("2_ke650")
+
+[node name="temp" type="Sprite2D" parent="."]
+position = Vector2(391, 65.5)
+rotation = 0.839503
+scale = Vector2(0.328, 0.023)
+texture = ExtResource("2_ke650")

@@ -4,32 +4,35 @@
 
 [node name="map" type="Node2D"]
 
-[node name="1" type="Button" parent="."]
+[node name="1" type="Button" parent="." node_paths=PackedStringArray("loc2")]
 offset_left = 939.0
 offset_top = 60.0
 offset_right = 991.0
 offset_bottom = 102.0
 text = "1"
 script = ExtResource("1_ftjsj")
+loc2 = NodePath("../3")
 mapID = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="Button" parent="."]
+[node name="2" type="Button" parent="." node_paths=PackedStringArray("loc2")]
 offset_left = 720.0
 offset_top = 186.0
 offset_right = 769.0
 offset_bottom = 231.0
 text = "2"
 script = ExtResource("1_ftjsj")
+loc2 = NodePath("../1")
 mapID = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="3" type="Button" parent="."]
+[node name="3" type="Button" parent="." node_paths=PackedStringArray("loc2")]
 offset_left = 782.0
 offset_top = 88.0
 offset_right = 831.0
 offset_bottom = 133.0
 text = "3"
 script = ExtResource("1_ftjsj")
+loc2 = NodePath("../2")
 mapID = 3
 metadata/_edit_use_anchors_ = true

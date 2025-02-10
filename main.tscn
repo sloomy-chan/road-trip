@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=8 format=3 uid="uid://bafesg0112kju"]
 
+[ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://map.tscn" id="1_mqp60"]
 [ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://map/city.tscn" id="2_52mnt"]
 [ext_resource type="Script" path="res://player stuff/player_manager.gd" id="2_344h7"]
@@ -8,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 
 [node name="main" type="Node2D"]
+
+[node name="dashboard" parent="." instance=ExtResource("1_apyga")]
+position = Vector2(664, 318)
 
 [node name="map" parent="." instance=ExtResource("1_mqp60")]
 
