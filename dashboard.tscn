@@ -1,22 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://f1sjkjwxumcj"]
+[gd_scene load_steps=6 format=3 uid="uid://f1sjkjwxumcj"]
 
 [ext_resource type="Script" path="res://dashboard.gd" id="1_2xue6"]
 [ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="2_ke650"]
+[ext_resource type="Texture2D" uid="uid://lh7udokkf122" path="res://sprites/pointerB.png" id="2_xt3o2"]
+[ext_resource type="Texture2D" uid="uid://b474fs23ypi8" path="res://sprites/painel.png" id="4_v130e"]
+[ext_resource type="Texture2D" uid="uid://btwi2vhw5mk4u" path="res://sprites/pointerA.png" id="5_yxog5"]
 
 [node name="dashboard" type="Node2D"]
 script = ExtResource("1_2xue6")
 
 [node name="rpm" type="Sprite2D" parent="."]
-position = Vector2(377, 126)
+position = Vector2(372, 158)
 rotation = 1.44862
-scale = Vector2(-0.065, 1.163)
-texture = ExtResource("2_ke650")
+scale = Vector2(0.2, 0.130986)
+texture = ExtResource("2_xt3o2")
+offset = Vector2(0, 212.95)
+flip_v = true
 
 [node name="veloc" type="Sprite2D" parent="."]
-position = Vector2(137, 135)
+position = Vector2(165, 154)
 rotation = 1.44862
-scale = Vector2(-0.065, 1.163)
-texture = ExtResource("2_ke650")
+scale = Vector2(0.2, 0.131)
+texture = ExtResource("2_xt3o2")
+offset = Vector2(0, 212.95)
+flip_v = true
 
 [node name="gas" type="Sprite2D" parent="."]
 position = Vector2(80, 65.5)
@@ -29,3 +36,19 @@ position = Vector2(391, 65.5)
 rotation = 0.839503
 scale = Vector2(0.328, 0.023)
 texture = ExtResource("2_ke650")
+
+[node name="Painel" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(279, 144)
+scale = Vector2(0.413333, 0.413333)
+texture = ExtResource("4_v130e")
+
+[node name="PointerA" type="Sprite2D" parent="."]
+position = Vector2(173, 99)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_yxog5")
+
+[node name="PointerA2" type="Sprite2D" parent="."]
+position = Vector2(378, 101)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_yxog5")

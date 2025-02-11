@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=9 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://map.tscn" id="1_mqp60"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://player stuff/inv.tscn" id="2_v0nlm"]
 [ext_resource type="Script" path="res://player stuff/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
+[ext_resource type="Texture2D" uid="uid://ccicvpw0s4spm" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
 
 [node name="main" type="Node2D"]
 
 [node name="dashboard" parent="." instance=ExtResource("1_apyga")]
-position = Vector2(664, 318)
+position = Vector2(657, 367)
 
 [node name="map" parent="." instance=ExtResource("1_mqp60")]
 
@@ -54,17 +55,17 @@ fit_content = true
 scroll_active = false
 
 [node name="Messages" type="RichTextLabel" parent="."]
-offset_left = 29.0
-offset_top = 471.0
-offset_right = 622.0
-offset_bottom = 617.0
+offset_left = 83.0
+offset_top = 418.0
+offset_right = 630.0
+offset_bottom = 604.0
 scroll_following = true
 
 [node name="EngStats" type="RichTextLabel" parent="."]
-offset_left = 870.0
-offset_top = 446.0
-offset_right = 1138.0
-offset_bottom = 630.0
+offset_left = 887.0
+offset_top = 207.0
+offset_right = 1155.0
+offset_bottom = 391.0
 fit_content = true
 
 [node name="Olavo" type="Sprite2D" parent="."]
@@ -72,3 +73,9 @@ z_index = -1
 position = Vector2(337, 188)
 scale = Vector2(0.5565, 0.5525)
 texture = ExtResource("5_pyrfo")
+
+[node name="UiRoadtrip" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(603, 323)
+scale = Vector2(0.581771, 0.591667)
+texture = ExtResource("8_0fdb8")

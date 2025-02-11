@@ -17,12 +17,14 @@ func _dashMove(delta):
 	var Btemp = player.temp
 	gas.rotation = lerp_angle(gas.rotation, Bgas* -0.07, delta * 7)
 	temp.rotation = lerp_angle(temp.rotation, -48.1+Btemp*0.1, delta * 2)
-	rpm.rotation = lerp_angle(rpm.rotation, rpmN * 0.1, delta * 5)
+	rpm.rotation = lerp_angle(rpm.rotation, rpmN * 0.09, delta * 5)
 	var speed = player.speed
 	if player.engRpm > 0:
 		if veloc.rotation < speed:
-			veloc.rotation = lerp_angle(veloc.rotation, 83+(speed * 0.02), delta * 7)
+			veloc.rotation = lerp_angle(veloc.rotation, 83+(speed * 0.024), delta * 7)
 		match player.engRpm:
+			0:
+				rpmN = 0
 			10:
 				rpmN = 14
 			20:
