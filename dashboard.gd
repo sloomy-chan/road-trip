@@ -15,16 +15,15 @@ func _process(delta: float) -> void:
 func _dashMove(delta):
 	var Bgas = player.bikeGas
 	var Btemp = player.temp
-	gas.rotation = lerp_angle(gas.rotation, Bgas* -0.07, delta * 7)
-	temp.rotation = lerp_angle(temp.rotation, -48.1+Btemp*0.1, delta * 2)
-	rpm.rotation = lerp_angle(rpm.rotation, rpmN * 0.09, delta * 5)
+	gas.rotation = lerp_angle(gas.rotation,9.1+Bgas*-0.02, delta * 7)
+	temp.rotation = lerp_angle(temp.rotation, 32.2+Btemp*0.09, delta * 3)
+	
 	var speed = player.speed
 	if player.engRpm > 0:
+		rpm.rotation = lerp_angle(rpm.rotation, rpmN * 0.1, delta * 5)
 		if veloc.rotation < speed:
 			veloc.rotation = lerp_angle(veloc.rotation, 83+(speed * 0.024), delta * 7)
 		match player.engRpm:
-			0:
-				rpmN = 0
 			10:
 				rpmN = 14
 			20:
@@ -46,6 +45,6 @@ func _dashMove(delta):
 			100:
 				rpmN = 52
 	else:
-		rpmN = 830
-		veloc.rotation = lerp_angle(veloc.rotation, 83, delta * 1)
+		rpm.rotation = lerp_angle(rpm.rotation, 849.3, delta * 5)
+		veloc.rotation = lerp_angle(veloc.rotation, 604.3, delta * 1)
 	

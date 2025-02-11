@@ -87,7 +87,7 @@ func _speed_calc(delta):
 		speed -= (3 + (engRpm *.03)) * delta
 
 func _eng_temp(delta):
-		if engRpm > 0 && temp < 15:
+		if engRpm > 0 && temp < 15 && temp > -0.01:
 			temp += (0.87 * (engRpm * 0.013) - speed * 0.007) * delta
 		if engRpm == 0 && temp > 0:
 			temp -= 0.1 * delta
