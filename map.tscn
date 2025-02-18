@@ -4,35 +4,62 @@
 
 [node name="map" type="Node2D"]
 
-[node name="1" type="Button" parent="." node_paths=PackedStringArray("loc2")]
-offset_left = 939.0
-offset_top = 60.0
-offset_right = 991.0
-offset_bottom = 102.0
-text = "1"
+[node name="1" type="Button" parent="."]
+offset_left = 1033.0
+offset_top = 25.0
+offset_right = 1135.0
+offset_bottom = 67.0
+text = "Milho Verde"
 script = ExtResource("1_ftjsj")
-loc2 = NodePath("../3")
-mapID = 1
+cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="Button" parent="." node_paths=PackedStringArray("loc2")]
-offset_left = 720.0
-offset_top = 186.0
-offset_right = 769.0
-offset_bottom = 231.0
-text = "2"
+[node name="2" type="Button" parent="."]
+offset_left = 410.0
+offset_top = 128.0
+offset_right = 507.0
+offset_bottom = 173.0
+text = "Caralheiros"
 script = ExtResource("1_ftjsj")
-loc2 = NodePath("../1")
-mapID = 2
+cityName = "Caralheiros"
 metadata/_edit_use_anchors_ = true
 
-[node name="3" type="Button" parent="." node_paths=PackedStringArray("loc2")]
-offset_left = 782.0
-offset_top = 88.0
-offset_right = 831.0
-offset_bottom = 133.0
-text = "3"
+[node name="3" type="Button" parent="."]
+offset_left = 587.0
+offset_top = 29.0
+offset_right = 684.0
+offset_bottom = 74.0
+text = "Nova Olavo"
 script = ExtResource("1_ftjsj")
-loc2 = NodePath("../2")
-mapID = 3
+cityName = "Nova Olavo"
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Button" parent="."]
+offset_left = 898.0
+offset_top = 478.0
+offset_right = 1000.0
+offset_bottom = 520.0
+text = "Aleardo"
+script = ExtResource("1_ftjsj")
+cityName = "Milho verde"
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Button" parent="."]
+offset_left = 420.0
+offset_top = 358.0
+offset_right = 522.0
+offset_bottom = 400.0
+text = "Furryland"
+script = ExtResource("1_ftjsj")
+cityName = "Milho verde"
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Button" parent="."]
+offset_left = 756.0
+offset_top = 219.0
+offset_right = 858.0
+offset_bottom = 261.0
+text = "Planalto"
+script = ExtResource("1_ftjsj")
+cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true

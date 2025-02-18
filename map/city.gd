@@ -8,19 +8,5 @@ func _process(_delta: float) -> void:
 	_name_picker()
 
 func _name_picker():
-	match player.currPos:
-		0:
-			currCity_name = "Home."
-		1:
-			currCity_name = "Milho Verde"
-		2:
-			currCity_name = "Caralheiros"
-		3:
-			currCity_name = "Nova Jordan"
-	match player.nextPos:
-		1:
-			nextCity_name = "Milho verde"
-		2:
-			nextCity_name = "Caralheiros"
-		3:
-			nextCity_name = "Nova Jordan"
+	if player.A1 == player.B1:
+		currCity_name = nextCity_name

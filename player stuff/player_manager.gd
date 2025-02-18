@@ -5,18 +5,21 @@ extends Node2D
 @onready var ctyName = get_node("/root/main/CityName")
 @onready var city = get_node("/root/main/city")
 
+var A1: float
+var B1: float
+var startPos: Vector2
+
 #variáveis básicas
 @export var playerName = ""
 var speed = 0
 @export var bikeGas = 2
 var engRpm = 0
 var isTravel = false
-var currPos = 0
 var mod: float #É o modificador de consumo de combustível
 var smod: float
+var pl_pos: Vector2
+var nextPos: Vector2
 #timer se refere à distância de um lugar a outro
-var timer = 0
-var nextPos = 0
 var temp = 0
 var event_timer = 10
 var eventNmbr = 10
@@ -25,26 +28,24 @@ var speed_limit: float
 var eng_state = 0
 var temp_mod = 0
 
+func _ready() -> void:
+	pl_pos = self.global_position
+
 func _process(delta: float) -> void:
 	#Configura o texto das caixas de texto.
-	ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
-	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName, "\n Time left to destination is: ", snappedf(timer, 0.1),"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1)))
-	
+	if isTravel == false:
+		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
+	else:
+		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
+	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1)))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
-	_rpm_multi(delta)
+	_dist_change(delta)
 	_gas(delta)
 	_speed_calc(delta)
 	_eng_temp(delta)
 	
 	#Diz se o player tá viajando ou não, e se ele tem gasosa
-	if bikeGas > 0:
-		if timer <= 0.0:
-			isTravel = false
-		else: 
-			isTravel = true
-	else:
-		isTravel = false
 	
 	#Desliga o motor fora de viagem
 	if isTravel == false:
@@ -63,9 +64,33 @@ func _process(delta: float) -> void:
 		_event_generator()	
 
  
-func _rpm_multi(delta):
-	if timer > 0.0 && bikeGas > 0:
-		timer -= (1 * (speed * 0.1)) * delta
+func _dist_change(delta):
+	#(???)
+	#mentira, isso aqui pega as posições e muda a representaçãozinha do player
+	var t = 0
+	if self.global_position != nextPos && bikeGas > 0 && isTravel == true:
+		t = (speed * 0.3) * delta
+		self.global_position += t * (nextPos - self.global_position).normalized()
+	
+	#variáveis que pegam a distância e transformam num número 
+	var A = float(self.global_position.x + self.global_position.y)
+	var B = float(nextPos.x + nextPos.y)
+	
+	#Muda a posição internamente :3
+	if A != B && B < A:
+		A -= (speed * 1) * delta
+	else: if A != B && B > A:
+		A -= (speed * 1) * delta
+	
+	print("A: ", A, "\nB: ", B)
+	
+	#Arredonda as coordenadas pra moto poder de fato parar owo nya
+	A1 = snappedf(A, 1)
+	B1 = snappedf(B, 1)
+	if A1 == B1:
+		isTravel = false
+
+
 
 func _gas(delta):
 	if bikeGas > 0:
@@ -75,7 +100,7 @@ func _speed_calc(delta):
 	match engRpm:
 		0:
 			if speed > 0:
-				speed -= (20-(engRpm * 0.1)) * delta
+				speed -= 70 * delta
 			else:
 				pass
 				

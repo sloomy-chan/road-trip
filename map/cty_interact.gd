@@ -8,7 +8,7 @@ func _ready() -> void:
 	cityButton.pressed.connect(self._city_pressed)
 
 func _process(_delta: float) -> void:
-	if man.player.isTravel == true && man.player.timer > 0:
+	if man.player.isTravel == true:
 		self.visible = false
 	else:
 		self.visible = true
