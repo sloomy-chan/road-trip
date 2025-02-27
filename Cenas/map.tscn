@@ -1,65 +1,71 @@
 [gd_scene load_steps=2 format=3 uid="uid://csyo6ego73ddr"]
 
-[ext_resource type="Script" path="res://map/mapItem.gd" id="1_ftjsj"]
+[ext_resource type="Script" path="res://Scripts/Scripts do mapa/map_item.gd" id="1_xgyyd"]
 
 [node name="map" type="Node2D"]
 
-[node name="1" type="Button" parent="."]
+[node name="1" type="Button" parent="." groups=["place"]]
 offset_left = 1033.0
 offset_top = 25.0
 offset_right = 1135.0
 offset_bottom = 67.0
 text = "Milho Verde"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../3"), NodePath("../6")]
 cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="Button" parent="."]
+[node name="2" type="Button" parent="." groups=["place"]]
 offset_left = 410.0
 offset_top = 128.0
 offset_right = 507.0
 offset_bottom = 173.0
 text = "Caralheiros"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../3"), NodePath("../1")]
 cityName = "Caralheiros"
 metadata/_edit_use_anchors_ = true
 
-[node name="3" type="Button" parent="."]
+[node name="3" type="Button" parent="." groups=["place"]]
 offset_left = 587.0
 offset_top = 29.0
 offset_right = 684.0
 offset_bottom = 74.0
 text = "Nova Olavo"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../2"), NodePath("../1")]
 cityName = "Nova Olavo"
 metadata/_edit_use_anchors_ = true
 
-[node name="4" type="Button" parent="."]
+[node name="4" type="Button" parent="." groups=["place"]]
 offset_left = 898.0
 offset_top = 478.0
 offset_right = 1000.0
 offset_bottom = 520.0
 text = "Aleardo"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../6")]
 cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true
 
-[node name="5" type="Button" parent="."]
+[node name="5" type="Button" parent="." groups=["place"]]
 offset_left = 420.0
 offset_top = 358.0
 offset_right = 522.0
 offset_bottom = 400.0
 text = "Furryland"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../6"), NodePath("../2")]
 cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true
 
-[node name="6" type="Button" parent="."]
+[node name="6" type="Button" parent="." groups=["place"]]
 offset_left = 756.0
 offset_top = 219.0
 offset_right = 858.0
 offset_bottom = 261.0
 text = "Planalto"
-script = ExtResource("1_ftjsj")
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../4"), NodePath("../5")]
 cityName = "Milho verde"
 metadata/_edit_use_anchors_ = true

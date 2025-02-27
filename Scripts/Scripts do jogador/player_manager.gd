@@ -1,4 +1,5 @@
 extends Node2D
+
 #pega os nodes necessários
 @onready var stats = get_node("/root/main/EngStats")
 @onready var mess = get_node("/root/main/Messages")
@@ -10,9 +11,11 @@ var B1: float
 var startPos: Vector2
 
 #variáveis básicas
+var money: int
 @export var playerName = ""
 var speed = 0
 @export var bikeGas = 2
+var place
 var engRpm = 0
 var isTravel = false
 var mod: float #É o modificador de consumo de combustível
@@ -30,6 +33,7 @@ var temp_mod = 0
 
 func _ready() -> void:
 	pl_pos = self.global_position
+	money += 50
 
 func _process(delta: float) -> void:
 	#Configura o texto das caixas de texto.
@@ -37,7 +41,7 @@ func _process(delta: float) -> void:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
 		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
-	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1)))
+	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1), money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
 	_dist_change(delta)
@@ -82,13 +86,14 @@ func _dist_change(delta):
 	else: if A != B && B > A:
 		A -= (speed * 1) * delta
 	
-	print("A: ", A, "\nB: ", B)
 	
 	#Arredonda as coordenadas pra moto poder de fato parar owo nya
 	A1 = snappedf(A, 1)
 	B1 = snappedf(B, 1)
 	if A1 == B1:
 		isTravel = false
+		place._get_places()
+
 
 
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bafesg0112kju"]
 
-[ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://dashboard.tscn" id="1_apyga"]
-[ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://map.tscn" id="1_mqp60"]
-[ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://map/city.tscn" id="2_52mnt"]
-[ext_resource type="Script" path="res://player stuff/player_manager.gd" id="2_344h7"]
-[ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://player stuff/inv.tscn" id="2_v0nlm"]
-[ext_resource type="Script" path="res://player stuff/engineMan.gd" id="4_6bvhk"]
+[ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
+[ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
+[ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://Cenas/city.tscn" id="2_52mnt"]
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/player_manager.gd" id="2_344h7"]
+[ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://Cenas/inv.tscn" id="2_v0nlm"]
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="4_tss1a"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 [ext_resource type="Texture2D" uid="uid://ccicvpw0s4spm" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
@@ -21,7 +21,7 @@ position = Vector2(473, 13)
 scale = Vector2(0.599999, 0.599999)
 
 [node name="PlayerManager" type="Node2D" parent="."]
-position = Vector2(1064, 182)
+position = Vector2(924, 147)
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
 bikeGas = 100

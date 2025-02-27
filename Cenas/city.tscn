@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuwogci2gi0mo"]
+
+[ext_resource type="Script" path="res://Scripts/Scripts do mapa/city.gd" id="1_m48dq"]
+[ext_resource type="Script" path="res://Scripts/Scripts do mapa/city_interact.gd" id="2_kmlhq"]
+[ext_resource type="Script" path="res://Scripts/Scripts do mapa/shop_item.gd" id="3_c4yj0"]
+
+[node name="city" type="Node2D"]
+script = ExtResource("1_m48dq")
+
+[node name="shop" type="Button" parent="."]
+offset_left = 327.0
+offset_top = 71.0
+offset_right = 405.0
+offset_bottom = 131.0
+text = "shop"
+script = ExtResource("2_kmlhq")
+buttonType = 1
+
+[node name="1" type="Button" parent="shop" groups=["shop_item"]]
+layout_mode = 0
+offset_left = -172.0
+offset_top = 37.0
+offset_right = -164.0
+offset_bottom = 45.0
+script = ExtResource("3_c4yj0")
+item_type = 1
+item_price = 25
+
+[node name="2" type="Button" parent="shop" groups=["shop_item"]]
+layout_mode = 0
+offset_left = -131.0
+offset_top = 37.0
+offset_right = -123.0
+offset_bottom = 45.0
+script = ExtResource("3_c4yj0")
+item_type = 2
+item_price = 10
+
+[node name="3" type="Button" parent="shop" groups=["shop_item"]]
+layout_mode = 0
+offset_left = -86.0
+offset_top = 37.0
+offset_right = -78.0
+offset_bottom = 45.0
+script = ExtResource("3_c4yj0")
+item_type = 3
+item_price = 15
+
+[node name="4" type="Button" parent="shop" groups=["shop_item"]]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 36.0
+offset_right = -36.0
+offset_bottom = 44.0
+script = ExtResource("3_c4yj0")
+item_type = 4
+item_price = 20
+
+[node name="mechanic" type="Button" parent="."]
+offset_left = 343.0
+offset_top = 142.0
+offset_right = 396.0
+offset_bottom = 182.0
+text = "mechanic
+"
+script = ExtResource("2_kmlhq")
+buttonType = 3
+
+[node name="interact" type="Button" parent="."]
+offset_left = 338.0
+offset_top = 197.0
+offset_right = 398.0
+offset_bottom = 238.0
+text = "interact"
+script = ExtResource("2_kmlhq")
+buttonType = 2
+
+[node name="gas" type="Button" parent="."]
+offset_left = 343.0
+offset_top = 255.0
+offset_right = 403.0
+offset_bottom = 296.0
+text = "gas"
+script = ExtResource("2_kmlhq")
+buttonType = 4
+
+[connection signal="pressed" from="shop/1" to="shop/1" method="_on_pressed"]
+[connection signal="pressed" from="shop/2" to="shop/2" method="_on_pressed"]
+[connection signal="pressed" from="shop/3" to="shop/3" method="_on_pressed"]
+[connection signal="pressed" from="shop/4" to="shop/4" method="_on_pressed"]

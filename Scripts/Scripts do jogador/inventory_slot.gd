@@ -14,6 +14,7 @@ func _use():
 	match itemID:
 		0: 
 			player.mess.add_text("\nNothing to use here.")
+			return
 		1: 
 			if player.bikeGas < 100:
 				player.mess.add_text("\nYou refueled your tank.")
@@ -24,9 +25,14 @@ func _use():
 			else: 
 				player.mess.add_text("\nYour tank is already full!")
 				return
+		_:
+			player.mess.add_text("\nYou ate something.")
 	self.itemID = 0
 
 func _add_name():
 	match itemID:
 		0:	self.set_text("Nada")
 		1:	self.set_text("Gas")
+		2:	self.set_text("A banana")
+		3:	self.set_text("An apple")
+		4:	self.set_text("A sandwich")

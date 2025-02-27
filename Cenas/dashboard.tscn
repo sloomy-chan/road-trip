@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://f1sjkjwxumcj"]
 
-[ext_resource type="Script" path="res://dashboard.gd" id="1_2xue6"]
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/dashboard.gd" id="1_2xue6"]
 [ext_resource type="Texture2D" uid="uid://lh7udokkf122" path="res://sprites/pointerB.png" id="2_xt3o2"]
 [ext_resource type="Texture2D" uid="uid://b474fs23ypi8" path="res://sprites/painel.png" id="4_v130e"]
 [ext_resource type="Texture2D" uid="uid://btwi2vhw5mk4u" path="res://sprites/pointerA.png" id="5_yxog5"]

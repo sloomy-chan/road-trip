@@ -16,9 +16,7 @@ func _process(_delta: float) -> void:
 func _city_pressed() -> void:
 	match buttonType:
 		1:
-			man.player.mess.add_text(str("\nBought some gas."))
-			man.inv._add_item()
-			print("shop")
+			_open_shop()
 		2:
 			man.player.mess.add_text(str("\nThis is the city of ", man.currCity_name))
 			print("city")
@@ -31,3 +29,12 @@ func _city_pressed() -> void:
 			man.player.mess.add_text(str("\nYou refueled your bike."))
 			print("gas")
 			man.player.bikeGas += 100-man.player.bikeGas
+
+func _open_shop():
+	var items = get_children()
+	for i in items:
+		if i.is_in_group("shop_item"):
+			if i.visible == true:
+				i.visible = false
+			else:
+				i.visible = true

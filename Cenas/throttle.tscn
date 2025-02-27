@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ciy1xcdky83gd"]
 
-[ext_resource type="Script" path="res://player stuff/player_manager.gd" id="1_nw11d"]
-[ext_resource type="Script" path="res://player stuff/engineMan.gd" id="2_yrthk"]
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/player_manager.gd" id="1_nw11d"]
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/engineMan.gd" id="2_yrthk"]
 
 [node name="throttle" type="Node2D"]
 metadata/_edit_vertical_guides_ = [635.0]
