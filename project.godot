@@ -18,3 +18,7 @@ config/icon="res://sprites/icon.svg"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+place=""

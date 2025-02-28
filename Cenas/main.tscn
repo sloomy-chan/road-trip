@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=11 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="4_tss1a"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 [ext_resource type="Texture2D" uid="uid://ccicvpw0s4spm" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
+[ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
 
 [node name="main" type="Node2D"]
 
@@ -91,3 +92,5 @@ z_index = -4
 position = Vector2(603, 323)
 scale = Vector2(0.581771, 0.591667)
 texture = ExtResource("8_0fdb8")
+
+[node name="book" parent="." instance=ExtResource("10_41073")]
