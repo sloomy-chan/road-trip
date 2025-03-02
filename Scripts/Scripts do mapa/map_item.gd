@@ -3,7 +3,7 @@ extends Button
 @export var places_connected: Array
 @export var cityName: String
 
-@onready var map_list = [get_node("/root/main/map/1"),get_node("/root/main/map/2"), get_node("/root/main/map/3"),get_node("/root/main/map/4"),get_node("/root/main/map/5"),get_node("/root/main/map/6")]
+@onready var map_list = []
 @onready var player = get_node("/root/main/PlayerManager")
 
 var mapButton = self
@@ -12,6 +12,8 @@ var cityPath: Node
 
 
 func _ready() -> void:
+	var parent = self.get_parent()
+	map_list = parent.get_children()
 	mapButton.pressed.connect(self._map_selected)
 	cityName = self.text
 	isConnected = true
@@ -30,7 +32,7 @@ func _map_selected():
 		player.city.nextCity_name = cityName
 		player.place = self
 	else:
-		print("YOU FUCKING IDIOT THERE'S NO ROADS!!!!!!!!!!!!!!!")
+		player.mess.add_text("There's no roads connecting this city.")
 	
 func _get_places():
 	for items in places_connected:
@@ -40,3 +42,9 @@ func _get_places():
 				map.isConnected = true
 			else:
 				map.isConnected = false
+
+func _draw() -> void:
+	if isConnected == true:
+		for i in places_connected:
+			var mapNode = get_node(i)
+			draw_line(self.global_position, mapNode.global_position, Color.BLACK, 3)

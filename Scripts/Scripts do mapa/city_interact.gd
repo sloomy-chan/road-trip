@@ -21,10 +21,12 @@ func _city_pressed() -> void:
 			man.player.mess.add_text(str("\nThis is the city of ", man.currCity_name))
 			print("city")
 		3:
-			man.player.mess.add_text(str("\nA mechanic fixed your bike."))
-			man.player.eng_state = 0
-			man.player.temp = 0
-			print("rest")
+			if man.player.money > 40:
+				man.player.mess.add_text(str("\nA mechanic fixed your bike."))
+				man.player.eng_state = 0
+				man.player.temp = 0
+			else:
+				man.player.mess.add_text("\nYou don't have enough money.")
 		4:
 			man.player.mess.add_text(str("\nYou refueled your bike."))
 			print("gas")

@@ -5,6 +5,7 @@ extends Node2D
 @onready var mess = get_node("/root/main/Messages")
 @onready var ctyName = get_node("/root/main/CityName")
 @onready var city = get_node("/root/main/city")
+@onready var book = get_node("/root/main/book")
 
 var A1: float
 var B1: float
@@ -41,7 +42,7 @@ func _process(delta: float) -> void:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
 		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
-	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1), money))
+	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1), "\nMoney", money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
 	_dist_change(delta)
@@ -73,7 +74,7 @@ func _dist_change(delta):
 	#mentira, isso aqui pega as posições e muda a representaçãozinha do player
 	var t = 0
 	if self.global_position != nextPos && bikeGas > 0 && isTravel == true:
-		t = (speed * 0.3) * delta
+		t = (speed * 0.03) * delta
 		self.global_position += t * (nextPos - self.global_position).normalized()
 	
 	#variáveis que pegam a distância e transformam num número 
@@ -92,9 +93,8 @@ func _dist_change(delta):
 	B1 = snappedf(B, 1)
 	if A1 == B1:
 		isTravel = false
+		book._add_card()
 		place._get_places()
-
-
 
 
 func _gas(delta):
@@ -117,7 +117,7 @@ func _speed_calc(delta):
 		speed -= (3 + (engRpm *.03)) * delta
 
 func _eng_temp(delta):
-		if engRpm > 0 && temp < 15 && temp > -0.01:
+		if engRpm > 0 && temp != 15:
 			temp += (0.87 * (engRpm * 0.013) - speed * 0.007) * delta
 		if engRpm == 0 && temp > 0:
 			temp -= 0.1 * delta

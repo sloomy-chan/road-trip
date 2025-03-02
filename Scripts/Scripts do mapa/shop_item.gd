@@ -1,5 +1,6 @@
 extends Button
 
+
 @export var item_type: int
 @export var item_price: int
 @onready var parent = self.get_parent()
@@ -15,7 +16,7 @@ func _on_pressed() -> void:
 		inv.itemNmbr = item_type
 		inv._add_item()
 	else:
-		print("Broke ass idiot")
+		player.mess.add_text("\nYou don't have enough money.")
 
 func _add_name():
 	match item_type:
