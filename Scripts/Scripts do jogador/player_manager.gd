@@ -11,7 +11,10 @@ var A1: float
 var B1: float
 var startPos: Vector2
 
+var speed_limit_modifier = 0
+var heat_mod = 1
 #variáveis básicas
+var day_counter: int
 var money: int
 @export var playerName = ""
 var speed = 0
@@ -20,7 +23,6 @@ var place
 var engRpm = 0
 var isTravel = false
 var mod: float #É o modificador de consumo de combustível
-var smod: float
 var pl_pos: Vector2
 var nextPos: Vector2
 #timer se refere à distância de um lugar a outro
@@ -33,8 +35,9 @@ var eng_state = 0
 var temp_mod = 0
 
 func _ready() -> void:
+	day_counter += 1
 	pl_pos = self.global_position
-	money += 50
+	money += 100
 
 func _process(delta: float) -> void:
 	#Configura o texto das caixas de texto.
@@ -42,7 +45,7 @@ func _process(delta: float) -> void:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
 		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
-	stats.set_text(str(engRpm, "rpm x100", "\nEngine temp: ",snappedf(temp, 0.1), "\n Player:", playerName,"\n Travelling: ", isTravel, "\n Gas: ", snappedf(bikeGas, 0.1), "\nSpeed: ", snappedf(speed, 1), "\nEngine State: ", snappedf(eng_state, 1), "\nMoney", money))
+	stats.set_text(str("Day: ", day_counter, "\nEngine State: ", snappedf(eng_state, 1), "\nMoney", money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
 	_dist_change(delta)
@@ -56,7 +59,6 @@ func _process(delta: float) -> void:
 	if isTravel == false:
 		engRpm = 0
 		mod = 0
-		smod = 0
 		event_timer = 10
 		
 	
@@ -65,7 +67,7 @@ func _process(delta: float) -> void:
 		event_timer -= 1 * delta
 	if isTravel == true && event_timer < 0:
 		event_timer += 10
-		eventNmbr = randi_range(0,5)
+		eventNmbr = randi_range(0,9)
 		_event_generator()	
 
  
@@ -95,6 +97,7 @@ func _dist_change(delta):
 		isTravel = false
 		book._add_card()
 		place._get_places()
+		day_counter += 1
 
 
 func _gas(delta):
@@ -109,17 +112,17 @@ func _speed_calc(delta):
 			else:
 				pass
 				
-	speed_limit = engRpm + ((engRpm * 0.30) + smod) - temp_mod
+	speed_limit = engRpm + ((engRpm * 0.30)) + speed_limit_modifier
 
 	if speed < speed_limit && engRpm > 0:
-		speed += (2 * (engRpm * 0.07) + smod) * delta
+		speed += (2 * (engRpm * 0.07)) * delta
 	else: if speed > 0:
 		speed -= (3 + (engRpm *.03)) * delta
 
 func _eng_temp(delta):
-		if engRpm > 0 && temp != 15:
-			temp += (0.87 * (engRpm * 0.013) - speed * 0.007) * delta
-		if engRpm == 0 && temp > 0:
+		if engRpm > 0 && temp <= 15:
+			temp += (0.87 * (engRpm * 0.013) - speed * 0.007) * heat_mod * delta
+		if engRpm == 0 && temp > 0 :
 			temp -= 0.1 * delta
 
 
@@ -135,20 +138,27 @@ func _event_generator():
 	match eventNmbr:	
 		0:
 			mess.add_text(str("\nThe view is beautiful."))
-			smod = 0
 		1:
 			mess.add_text(str("\nYou can feel the wind in your clothes"))
-			smod = 0
 		2:
-			mess.add_text(str("\nHey :)"))
-			smod = 0
+			mess.add_text(str("\nThe roar of your engine calms your mind. You're excited to arrive at your destination."))
 		3:
-			mess.add_text(str("\nYou're currently going up a hill."))
-			if engRpm > 0 && speed_limit > 5:
-				temp_mod += 8
+			mess.add_text(str("\nYou're currently going up a hill. Your bike might struggle."))
+			speed_limit_modifier -= 15
 		4:
-			mess.add_text(str("\nYour bike seems happy."))
-			smod = 0
+			mess.add_text(str("\nThe road seems to be pretty good."))
 		5:
-			mess.add_text(str("\nYou're currently downhill."))
-			smod = 10
+			mess.add_text(str("\nYou're currently going downhill. You can ease off the throttle."))
+			speed_limit_modifier += 9
+		6:
+			mess.add_text(str("\nThe roads seem pretty bad. You should probably slow down."))
+			speed_limit_modifier -= 10
+		7:
+			mess.add_text(str("\nThe sun seems pretty hot. You engine might overheat faster."))
+			heat_mod = 2
+		8:
+			mess.add_text(str("\nIt's raining. You engine will take longer to overheat."))
+			heat_mod = 0.4
+		9:
+			mess.add_text(str("\nYou think about where you are in your life. You should be proud of yourself, even if you're tired."))
+		

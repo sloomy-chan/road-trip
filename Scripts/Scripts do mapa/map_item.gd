@@ -32,19 +32,14 @@ func _map_selected():
 		player.city.nextCity_name = cityName
 		player.place = self
 	else:
-		player.mess.add_text("There's no roads connecting this city.")
+		player.mess.add_text("\nYou can't go there right now.")
 	
 func _get_places():
 	for items in places_connected:
-		for map in map_list:
+		for maps in map_list:
 			var itemNode = get_node(items)
-			if map == itemNode:
-				map.isConnected = true
+			if maps == itemNode:
+				maps.isConnected = true
 			else:
-				map.isConnected = false
-
-func _draw() -> void:
-	if isConnected == true:
-		for i in places_connected:
-			var mapNode = get_node(i)
-			draw_line(self.global_position, mapNode.global_position, Color.BLACK, 3)
+				maps.isConnected = false
+		print(map_list)

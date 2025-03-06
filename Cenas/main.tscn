@@ -94,4 +94,6 @@ scale = Vector2(0.581771, 0.591667)
 texture = ExtResource("8_0fdb8")
 
 [node name="book" parent="." instance=ExtResource("10_41073")]
-position = Vector2(183, 71)
+z_index = 6
+position = Vector2(206, 68)
+scale = Vector2(0.735, 0.735)

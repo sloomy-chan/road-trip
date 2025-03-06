@@ -1,6 +1,87 @@
-[gd_scene load_steps=2 format=3 uid="uid://cl8ee18xqfatn"]
+[gd_scene load_steps=3 format=3 uid="uid://cl8ee18xqfatn"]
 
 [ext_resource type="Script" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
+[ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="2_isggl"]
 
 [node name="book" type="Node2D"]
 script = ExtResource("1_82vla")
+
+[node name="10" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(598, 263)
+texture = ExtResource("2_isggl")
+
+[node name="9" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(430, 260)
+texture = ExtResource("2_isggl")
+
+[node name="8" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(269, 257)
+texture = ExtResource("2_isggl")
+
+[node name="7" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(112, 264)
+texture = ExtResource("2_isggl")
+
+[node name="6" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(944, 105)
+texture = ExtResource("2_isggl")
+
+[node name="5" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(596, 105)
+texture = ExtResource("2_isggl")
+
+[node name="4" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(770, 104)
+texture = ExtResource("2_isggl")
+
+[node name="3" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(429, 102)
+texture = ExtResource("2_isggl")
+
+[node name="2" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(266, 103)
+texture = ExtResource("2_isggl")
+
+[node name="1" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(110, 100)
+texture = ExtResource("2_isggl")
+
+[node name="11" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(954, 260)
+texture = ExtResource("2_isggl")
+
+[node name="12" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(948, 417)
+texture = ExtResource("2_isggl")
+
+[node name="13" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(269, 570)
+texture = ExtResource("2_isggl")
+
+[node name="14" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(112, 577)
+texture = ExtResource("2_isggl")
+
+[node name="15" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(770, 262)
+texture = ExtResource("2_isggl")
+
+[node name="16" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(596, 418)
+texture = ExtResource("2_isggl")
+
+[node name="17" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(770, 417)
+texture = ExtResource("2_isggl")
+
+[node name="18" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(429, 415)
+texture = ExtResource("2_isggl")
+
+[node name="19" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(266, 416)
+texture = ExtResource("2_isggl")
+
+[node name="20" type="Sprite2D" parent="." groups=["card"]]
+position = Vector2(110, 413)
+texture = ExtResource("2_isggl")

@@ -4,68 +4,229 @@
 
 [node name="map" type="Node2D"]
 
-[node name="1" type="Button" parent="." groups=["place"]]
+[node name="Mason County" type="Button" parent="." groups=["place"]]
 offset_left = 1033.0
 offset_top = 25.0
 offset_right = 1135.0
 offset_bottom = 67.0
-text = "Milho Verde"
+text = "Mason County
+"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../3"), NodePath("../6")]
-cityName = "Milho verde"
+places_connected = [NodePath("../Cunningherd City"), NodePath("../Mint Hills"), NodePath("../Tuxland")]
+cityName = "Mason County"
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="Button" parent="." groups=["place"]]
+[node name="Farnell City" type="Button" parent="." groups=["place"]]
 offset_left = 410.0
 offset_top = 128.0
 offset_right = 507.0
 offset_bottom = 173.0
-text = "Caralheiros"
+text = "Farnell City
+"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../3"), NodePath("../1")]
-cityName = "Caralheiros"
+places_connected = [NodePath("../Old Olives"), NodePath("../Fairhaven"), NodePath("../Coppenberg"), NodePath("../Staywell")]
+cityName = "Farnell City"
 metadata/_edit_use_anchors_ = true
 
-[node name="3" type="Button" parent="." groups=["place"]]
-offset_left = 587.0
-offset_top = 29.0
-offset_right = 684.0
-offset_bottom = 74.0
-text = "Nova Olavo"
+[node name="Plum Plain" type="Button" parent="." groups=["place"]]
+offset_left = 683.0
+offset_top = 21.0
+offset_right = 780.0
+offset_bottom = 66.0
+text = "Plum Plain
+"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../2"), NodePath("../1")]
-cityName = "Nova Olavo"
+places_connected = [NodePath("../Tuxland"), NodePath("../Fairhaven")]
+cityName = "Plum Plain"
 metadata/_edit_use_anchors_ = true
 
-[node name="4" type="Button" parent="." groups=["place"]]
-offset_left = 898.0
-offset_top = 478.0
-offset_right = 1000.0
-offset_bottom = 520.0
-text = "Aleardo"
+[node name="Beach Knot" type="Button" parent="." groups=["place"]]
+offset_left = 873.0
+offset_top = 523.0
+offset_right = 975.0
+offset_bottom = 565.0
+text = "Beach Knot"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../6")]
-cityName = "Milho verde"
+places_connected = [NodePath("../Chestead"), NodePath("../Ardmond"), NodePath("../Illemore")]
+cityName = "Beach Knot"
 metadata/_edit_use_anchors_ = true
 
-[node name="5" type="Button" parent="." groups=["place"]]
+[node name="Green Corn" type="Button" parent="." groups=["place"]]
 offset_left = 420.0
 offset_top = 358.0
 offset_right = 522.0
 offset_bottom = 400.0
-text = "Furryland"
+text = "Green Corn"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../6"), NodePath("../2")]
-cityName = "Milho verde"
+places_connected = [NodePath("../Verdivale"), NodePath("../Staywell")]
+cityName = "Green Corn"
 metadata/_edit_use_anchors_ = true
 
-[node name="6" type="Button" parent="." groups=["place"]]
-offset_left = 756.0
-offset_top = 219.0
-offset_right = 858.0
-offset_bottom = 261.0
-text = "Planalto"
+[node name="Mint Hills" type="Button" parent="." groups=["place"]]
+offset_left = 864.0
+offset_top = 158.0
+offset_right = 966.0
+offset_bottom = 200.0
+text = "Mint Hills"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../4"), NodePath("../5")]
-cityName = "Milho verde"
+places_connected = [NodePath("../New Olavo"), NodePath("../Tuxland"), NodePath("../Cunningherd City")]
+cityName = "Mint Hills"
+metadata/_edit_use_anchors_ = true
+
+[node name="Solitude" type="Button" parent="." groups=["place"]]
+offset_left = 650.0
+offset_top = 308.0
+offset_right = 752.0
+offset_bottom = 350.0
+text = "Solitude"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Staywell"), NodePath("../Green Corn"), NodePath("../New Olavo"), NodePath("../Embercrest")]
+cityName = "Solitude"
+metadata/_edit_use_anchors_ = true
+
+[node name="Tuxland" type="Button" parent="." groups=["place"]]
+offset_left = 793.0
+offset_top = 74.0
+offset_right = 895.0
+offset_bottom = 116.0
+text = "Tuxland
+"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Plum Plain"), NodePath("../Mint Hills"), NodePath(".")]
+cityName = "Tuxland"
+metadata/_edit_use_anchors_ = true
+
+[node name="Staywell" type="Button" parent="." groups=["place"]]
+offset_left = 472.0
+offset_top = 259.0
+offset_right = 569.0
+offset_bottom = 304.0
+text = "Staywell"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Solitude"), NodePath("../Green Corn"), NodePath("../Coppenberg"), NodePath("../Farnell City")]
+cityName = "Staywell"
+metadata/_edit_use_anchors_ = true
+
+[node name="Old Olives" type="Button" parent="." groups=["place"]]
+offset_left = 406.0
+offset_top = 18.0
+offset_right = 503.0
+offset_bottom = 63.0
+text = "Old Olives"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Farnell City"), NodePath("../Fairhaven")]
+cityName = "Old Olives"
+metadata/_edit_use_anchors_ = true
+
+[node name="Illemore" type="Button" parent="." groups=["place"]]
+offset_left = 545.0
+offset_top = 530.0
+offset_right = 647.0
+offset_bottom = 572.0
+text = "Illemore"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Ardmond"), NodePath("../Verdivale")]
+cityName = "Illemore"
+metadata/_edit_use_anchors_ = true
+
+[node name="Verdivale" type="Button" parent="." groups=["place"]]
+offset_left = 402.0
+offset_top = 493.0
+offset_right = 504.0
+offset_bottom = 535.0
+text = "Verdvale"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Illemore"), NodePath("../Green Corn")]
+cityName = "Verdivale"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ardmond" type="Button" parent="." groups=["place"]]
+offset_left = 714.0
+offset_top = 439.0
+offset_right = 816.0
+offset_bottom = 481.0
+text = "Ardmond"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Beach Knot"), NodePath("../Illemore")]
+cityName = "Ardmond"
+metadata/_edit_use_anchors_ = true
+
+[node name="Cunningherd City" type="Button" parent="." groups=["place"]]
+offset_left = 1001.0
+offset_top = 156.0
+offset_right = 1103.0
+offset_bottom = 198.0
+text = "Cunningherd City"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Willowbrook"), NodePath("../Mint Hills"), NodePath("../Mason County")]
+cityName = "Cunningherd City"
+metadata/_edit_use_anchors_ = true
+
+[node name="Willowbrook" type="Button" parent="." groups=["place"]]
+offset_left = 982.0
+offset_top = 264.0
+offset_right = 1084.0
+offset_bottom = 306.0
+text = "Willowbrook"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Embercrest"), NodePath("../Chestead"), NodePath("../Cunningherd City")]
+cityName = "Willowbrook"
+metadata/_edit_use_anchors_ = true
+
+[node name="Fairhaven" type="Button" parent="." groups=["place"]]
+offset_left = 568.0
+offset_top = 89.0
+offset_right = 665.0
+offset_bottom = 134.0
+text = "Fairhaven
+"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Farnell City"), NodePath("../Old Olives"), NodePath("../Plum Plain"), NodePath("../Coppenberg"), NodePath("../New Olavo")]
+cityName = "Fairhaven"
+metadata/_edit_use_anchors_ = true
+
+[node name="New Olavo" type="Button" parent="." groups=["place"]]
+offset_left = 742.0
+offset_top = 200.0
+offset_right = 839.0
+offset_bottom = 245.0
+text = "New Olavo
+"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Embercrest"), NodePath("../Solitude"), NodePath("../Coppenberg"), NodePath("../Mint Hills"), NodePath("../Tuxland"), NodePath("../Fairhaven")]
+cityName = "New Olavo"
+metadata/_edit_use_anchors_ = true
+
+[node name="Chestead" type="Button" parent="." groups=["place"]]
+offset_left = 976.0
+offset_top = 391.0
+offset_right = 1078.0
+offset_bottom = 433.0
+text = "Chestead"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Beach Knot"), NodePath("../Embercrest"), NodePath("../Willowbrook")]
+cityName = "Chestead"
+metadata/_edit_use_anchors_ = true
+
+[node name="Embercrest" type="Button" parent="." groups=["place"]]
+offset_left = 803.0
+offset_top = 281.0
+offset_right = 905.0
+offset_bottom = 323.0
+text = "Embercrest
+"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Solitude"), NodePath("../Chestead"), NodePath("../New Olavo"), NodePath("../Mint Hills")]
+cityName = "Embercrest"
+metadata/_edit_use_anchors_ = true
+
+[node name="Coppenberg" type="Button" parent="." groups=["place"]]
+offset_left = 571.0
+offset_top = 172.0
+offset_right = 673.0
+offset_bottom = 214.0
+text = "Coppenberg"
+script = ExtResource("1_xgyyd")
+places_connected = [NodePath("../Farnell City"), NodePath("../Fairhaven"), NodePath("../Solitude"), NodePath("../Staywell"), NodePath("../New Olavo")]
+cityName = "Coppenberg"
 metadata/_edit_use_anchors_ = true

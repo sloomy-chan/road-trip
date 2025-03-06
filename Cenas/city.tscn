@@ -88,6 +88,24 @@ text = "gas"
 script = ExtResource("2_kmlhq")
 buttonType = 4
 
+[node name="book" type="Button" parent="."]
+offset_left = 335.0
+offset_top = 309.0
+offset_right = 343.0
+offset_bottom = 317.0
+text = "Book"
+script = ExtResource("2_kmlhq")
+buttonType = 5
+
+[node name="work" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 349.0
+offset_right = 380.0
+offset_bottom = 380.0
+text = "work"
+script = ExtResource("2_kmlhq")
+buttonType = 6
+
 [connection signal="pressed" from="shop/1" to="shop/1" method="_on_pressed"]
 [connection signal="pressed" from="shop/2" to="shop/2" method="_on_pressed"]
 [connection signal="pressed" from="shop/3" to="shop/3" method="_on_pressed"]
