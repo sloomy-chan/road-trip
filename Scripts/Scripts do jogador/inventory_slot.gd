@@ -2,12 +2,18 @@ extends Button
 
 @onready var player = get_node("/root/main/PlayerManager")
 @export var itemID = 0
+var itemName: String
+var empty = false
 
 func _ready() -> void:
 	var invButton = self
 	invButton.pressed.connect(self._use)
 
 func _process(_delta: float) -> void:
+	if itemID != 0:
+		empty = false
+	else:
+		empty = true
 	_add_name()
 
 func _use():
@@ -31,8 +37,17 @@ func _use():
 
 func _add_name():
 	match itemID:
-		0:	self.set_text("Nada")
-		1:	self.set_text("Gas")
-		2:	self.set_text("A banana")
-		3:	self.set_text("An apple")
-		4:	self.set_text("A sandwich")
+		0:	itemName = "Nada"
+		1:	itemName = "Gas"
+		2:	itemName = "A banana"
+		3:	itemName = "An apple"
+		4:	itemName = "A sandwich"
+
+@onready var mouse = get_node("/root/main/mouse")
+
+func _on_mouse_entered() -> void:
+	mouse.text.set_text(itemName)
+
+
+func _on_mouse_exited() -> void:
+	mouse.text.set_text("")

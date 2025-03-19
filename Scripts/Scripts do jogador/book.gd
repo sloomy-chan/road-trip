@@ -13,7 +13,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var sprites = self.get_children()
-	#TODO: Isso aqui não funciona no momento- os nodes de sprite do book ainda ficam invisíveis.
 	for a in sprites:
 		for i in postal_cards:
 			if i == null:
@@ -27,7 +26,5 @@ func _add_card():
 			return
 		else:
 			postal_cards.insert(0,str(player.place.cityName))
-			#var card_node: Button
-			#add_child(card_node)
 			print(postal_cards)
 	

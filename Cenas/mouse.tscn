@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://drtxbias3a37h"]
+
+[ext_resource type="Script" path="res://Scripts/Scripts do jogador/mouse.gd" id="1_1b0en"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6vfy"]
+bg_color = Color(0.208084, 0.218828, 0.216219, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45emw"]
+content_margin_left = 209.0
+content_margin_top = 259.0
+content_margin_right = 294.0
+content_margin_bottom = 284.0
+bg_color = Color(0.192157, 0.192157, 0.192157, 0.737255)
+border_width_left = 465
+border_width_top = 417
+border_width_right = 1024
+border_width_bottom = 525
+
+[node name="mouse" type="Node2D"]
+script = ExtResource("1_1b0en")
+
+[node name="text" type="RichTextLabel" parent="."]
+offset_left = 45.0
+offset_right = 251.0
+offset_bottom = 40.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_c6vfy")
+theme_override_styles/background = SubResource("StyleBoxFlat_45emw")
+text = "SEX!!"

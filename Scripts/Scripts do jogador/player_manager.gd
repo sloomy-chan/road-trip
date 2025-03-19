@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
 		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
-	stats.set_text(str("Day: ", day_counter, "\nEngine State: ", snappedf(eng_state, 1), "\nMoney", money))
+	stats.set_text(str("Day: ", day_counter,"\nMoney: ", money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
 	_dist_change(delta)
@@ -84,9 +84,7 @@ func _dist_change(delta):
 	var B = float(nextPos.x + nextPos.y)
 	
 	#Muda a posição internamente :3
-	if A != B && B < A:
-		A -= (speed * 1) * delta
-	else: if A != B && B > A:
+	if A != B:
 		A -= (speed * 1) * delta
 	
 	
@@ -95,9 +93,8 @@ func _dist_change(delta):
 	B1 = snappedf(B, 1)
 	if A1 == B1:
 		isTravel = false
-		book._add_card()
 		place._get_places()
-		day_counter += 1
+		book._add_card()
 
 
 func _gas(delta):

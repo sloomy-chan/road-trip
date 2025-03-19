@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=12 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
@@ -8,18 +8,20 @@
 [ext_resource type="Script" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="4_tss1a"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
-[ext_resource type="Texture2D" uid="uid://ccicvpw0s4spm" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
+[ext_resource type="Texture2D" uid="uid://2ephta042isi" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
+[ext_resource type="PackedScene" uid="uid://drtxbias3a37h" path="res://Cenas/mouse.tscn" id="8_7cm0s"]
 [ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
 
 [node name="main" type="Node2D"]
 
 [node name="dashboard" parent="." instance=ExtResource("1_apyga")]
-position = Vector2(732, 412)
+z_index = 3
+position = Vector2(732, 441)
 scale = Vector2(0.68, 0.68)
 
 [node name="map" parent="." instance=ExtResource("1_mqp60")]
-position = Vector2(473, 13)
-scale = Vector2(0.599999, 0.599999)
+position = Vector2(607, 63)
+scale = Vector2(0.4, 0.4)
 
 [node name="PlayerManager" type="Node2D" parent="."]
 position = Vector2(924, 147)
@@ -36,7 +38,7 @@ texture = ExtResource("4_tss1a")
 position = Vector2(203, -33)
 
 [node name="inv" parent="." instance=ExtResource("2_v0nlm")]
-position = Vector2(-187, 96)
+position = Vector2(-161, 42)
 
 [node name="throt-" type="Button" parent="."]
 offset_left = 874.0
@@ -60,10 +62,10 @@ text = "throttle+
 script = ExtResource("4_6bvhk")
 
 [node name="CityName" type="RichTextLabel" parent="."]
-offset_left = 711.0
-offset_top = 326.0
-offset_right = 1118.0
-offset_bottom = 381.0
+offset_left = 780.0
+offset_top = 321.0
+offset_right = 1113.0
+offset_bottom = 366.0
 fit_content = true
 scroll_active = false
 
@@ -74,26 +76,35 @@ offset_right = 630.0
 offset_bottom = 604.0
 scroll_following = true
 
+[node name="mouse" parent="." instance=ExtResource("8_7cm0s")]
+position = Vector2(73, 67)
+
 [node name="EngStats" type="RichTextLabel" parent="."]
-offset_left = 62.0
-offset_top = 175.0
-offset_right = 330.0
-offset_bottom = 359.0
+offset_left = 486.0
+offset_top = 319.0
+offset_right = 538.0
+offset_bottom = 365.0
+scale = Vector2(0.725, 0.725)
+theme_override_font_sizes/normal_font_size = 10
+text = "Day: 
+
+Money: 100"
 fit_content = true
 
-[node name="Olavo" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(337, 188)
-scale = Vector2(0.5565, 0.5525)
-texture = ExtResource("5_pyrfo")
-
 [node name="UiRoadtrip" type="Sprite2D" parent="."]
-z_index = -4
+z_index = -1
 position = Vector2(603, 323)
 scale = Vector2(0.581771, 0.591667)
 texture = ExtResource("8_0fdb8")
 
+[node name="Olavo" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(296.067, 180.438)
+scale = Vector2(0.498134, 0.488125)
+texture = ExtResource("5_pyrfo")
+
 [node name="book" parent="." instance=ExtResource("10_41073")]
-z_index = 6
+visible = false
+z_index = 12
 position = Vector2(206, 68)
 scale = Vector2(0.735, 0.735)

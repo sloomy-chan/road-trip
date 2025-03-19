@@ -6,7 +6,7 @@
 [node name="inv" type="Node2D"]
 script = ExtResource("1_0st73")
 
-[node name="1" type="Button" parent="."]
+[node name="1" type="Button" parent="." groups=["inv"]]
 offset_left = 230.0
 offset_top = 284.0
 offset_right = 275.0
@@ -14,26 +14,35 @@ offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
 script = ExtResource("2_uqry6")
 
-[node name="2" type="Button" parent="."]
-offset_left = 285.0
+[node name="2" type="Button" parent="." groups=["inv"]]
+offset_left = 304.0
 offset_top = 284.0
-offset_right = 330.0
+offset_right = 349.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
 script = ExtResource("2_uqry6")
 
-[node name="3" type="Button" parent="."]
-offset_left = 350.0
+[node name="3" type="Button" parent="." groups=["inv"]]
+offset_left = 404.0
 offset_top = 284.0
-offset_right = 395.0
+offset_right = 449.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
 script = ExtResource("2_uqry6")
 
-[node name="4" type="Button" parent="."]
-offset_left = 415.0
+[node name="4" type="Button" parent="." groups=["inv"]]
+offset_left = 503.0
 offset_top = 284.0
-offset_right = 460.0
+offset_right = 548.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
 script = ExtResource("2_uqry6")
+
+[connection signal="mouse_entered" from="1" to="1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="1" to="1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="2" to="2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="2" to="2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="3" to="3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="3" to="3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="4" to="4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="4" to="4" method="_on_mouse_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ephta042isi"
-path="res://.godot/imported/UI roadtrip.png-6cd36014d336302f43ab69f33bb7d87d.ctex"
+uid="uid://d22pjwodtxfj"
+path="res://.godot/imported/mapItem.png-f8f784b4c53e86ce2e64656e5d72b26a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UI roadtrip.png"
-dest_files=["res://.godot/imported/UI roadtrip.png-6cd36014d336302f43ab69f33bb7d87d.ctex"]
+source_file="res://sprites/mapItem.png"
+dest_files=["res://.godot/imported/mapItem.png-f8f784b4c53e86ce2e64656e5d72b26a.ctex"]
 
 [params]
 

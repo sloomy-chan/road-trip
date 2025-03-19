@@ -27,6 +27,7 @@ func _city_pressed() -> void:
 				man.player.eng_state = 0
 				man.player.temp = 0
 				man.player.money -= 40
+				man.player.day_counter += 1
 				
 			if man.player.money >= 40 && man.player.eng_state == 0:
 				man.player.mess.add_text("\nYour bike looks damn fine.")
@@ -65,6 +66,7 @@ func _work():
 		man.player.money += 50 
 		man.player.day_counter += 1
 		man.player.mess.add_text("\nYou worked a part-time job and rested on a nearby inn.")
+		man.player.day_counter += 1
 		has_worked = true
 	else:
 		man.player.mess.add_text("\nYou've already worked here. It's time to move on.")

@@ -7,16 +7,16 @@ extends Button
 @onready var player = get_node("/root/main/PlayerManager")
 
 var mapButton = self
-var isConnected = false
-var cityPath: Node
+@export var isConnected = false
 
 
 func _ready() -> void:
 	var parent = self.get_parent()
 	map_list = parent.get_children()
 	mapButton.pressed.connect(self._map_selected)
-	cityName = self.text
-	isConnected = true
+	for places in places_connected:
+		places = get_node(places)
+	self.text = ""
 	
 func _process(_delta: float) -> void:
 	if isConnected == true:
@@ -25,21 +25,27 @@ func _process(_delta: float) -> void:
 		self.scale = Vector2(1,1)
 		
 func _map_selected():
+	player.place = self
 	if player.speed <= 0 && isConnected == true:
 		player.startPos = player.global_position
 		player.isTravel = true
 		player.nextPos = self.global_position
 		player.city.nextCity_name = cityName
-		player.place = self
 	else:
 		player.mess.add_text("\nYou can't go there right now.")
 	
 func _get_places():
-	for items in places_connected:
-		for maps in map_list:
-			var itemNode = get_node(items)
-			if maps == itemNode:
-				maps.isConnected = true
-			else:
-				maps.isConnected = false
-		print(map_list)
+	for map in map_list:
+		map.isConnected = false
+	for places in places_connected:
+		var placesNode = get_node(places)
+		placesNode.isConnected = true
+
+@onready var mouse = get_node("/root/main/mouse")
+
+func _on_mouse_entered() -> void:
+	mouse.text.set_text(cityName)
+
+
+func _on_mouse_exited() -> void:
+	mouse.text.set_text("")

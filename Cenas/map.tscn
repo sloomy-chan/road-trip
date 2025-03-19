@@ -1,15 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://csyo6ego73ddr"]
+[gd_scene load_steps=7 format=3 uid="uid://csyo6ego73ddr"]
 
+[ext_resource type="Texture2D" uid="uid://d22pjwodtxfj" path="res://sprites/mapItem.png" id="1_6guac"]
 [ext_resource type="Script" path="res://Scripts/Scripts do mapa/map_item.gd" id="1_xgyyd"]
+[ext_resource type="Texture2D" uid="uid://ds2qv3a5k273u" path="res://sprites/mapItemHover.png" id="3_rsu3p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prowx"]
+texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stc6b"]
+texture = ExtResource("3_rsu3p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1evk"]
+texture = ExtResource("1_6guac")
 
 [node name="map" type="Node2D"]
 
 [node name="Mason County" type="Button" parent="." groups=["place"]]
 offset_left = 1033.0
 offset_top = 25.0
-offset_right = 1135.0
-offset_bottom = 67.0
-text = "Mason County
+offset_right = 1078.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_prowx")
+text = "
 "
 script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Cunningherd City"), NodePath("../Mint Hills"), NodePath("../Tuxland")]
@@ -69,7 +81,7 @@ offset_right = 966.0
 offset_bottom = 200.0
 text = "Mint Hills"
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../New Olavo"), NodePath("../Tuxland"), NodePath("../Cunningherd City")]
+places_connected = [NodePath("../New Olavo"), NodePath("../Tuxland"), NodePath("../Cunningherd City"), NodePath("../Mason County")]
 cityName = "Mint Hills"
 metadata/_edit_use_anchors_ = true
 
@@ -92,7 +104,7 @@ offset_bottom = 116.0
 text = "Tuxland
 "
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../Plum Plain"), NodePath("../Mint Hills"), NodePath(".")]
+places_connected = [NodePath("../Plum Plain"), NodePath("../Mint Hills"), NodePath("."), NodePath("../Mason County")]
 cityName = "Tuxland"
 metadata/_edit_use_anchors_ = true
 
@@ -188,13 +200,14 @@ metadata/_edit_use_anchors_ = true
 [node name="New Olavo" type="Button" parent="." groups=["place"]]
 offset_left = 742.0
 offset_top = 200.0
-offset_right = 839.0
+offset_right = 787.0
 offset_bottom = 245.0
-text = "New Olavo
-"
+theme_override_styles/hover = SubResource("StyleBoxTexture_stc6b")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s1evk")
 script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Embercrest"), NodePath("../Solitude"), NodePath("../Coppenberg"), NodePath("../Mint Hills"), NodePath("../Tuxland"), NodePath("../Fairhaven")]
 cityName = "New Olavo"
+isConnected = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Chestead" type="Button" parent="." groups=["place"]]
@@ -230,3 +243,44 @@ script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Farnell City"), NodePath("../Fairhaven"), NodePath("../Solitude"), NodePath("../Staywell"), NodePath("../New Olavo")]
 cityName = "Coppenberg"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="Mason County" to="Mason County" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mason County" to="Mason County" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Farnell City" to="Farnell City" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Farnell City" to="Farnell City" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Plum Plain" to="Plum Plain" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Plum Plain" to="Plum Plain" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Beach Knot" to="Beach Knot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Beach Knot" to="Beach Knot" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Green Corn" to="Green Corn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Green Corn" to="Green Corn" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Mint Hills" to="Mint Hills" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Mint Hills" to="Mint Hills" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Solitude" to="Solitude" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Solitude" to="Solitude" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Tuxland" to="Tuxland" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Tuxland" to="Tuxland" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Staywell" to="Staywell" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Staywell" to="Staywell" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Old Olives" to="Old Olives" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Old Olives" to="Old Olives" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Illemore" to="Illemore" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Illemore" to="Illemore" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Verdivale" to="Verdivale" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Verdivale" to="Verdivale" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Ardmond" to="Ardmond" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Ardmond" to="Ardmond" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Cunningherd City" to="Cunningherd City" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Cunningherd City" to="Cunningherd City" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Willowbrook" to="Willowbrook" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Willowbrook" to="Willowbrook" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Fairhaven" to="Fairhaven" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fairhaven" to="Fairhaven" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="New Olavo" to="New Olavo" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="New Olavo" to="New Olavo" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Chestead" to="Chestead" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Chestead" to="Chestead" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Embercrest" to="Embercrest" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Embercrest" to="Embercrest" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Coppenberg" to="Coppenberg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Coppenberg" to="Coppenberg" method="_on_mouse_exited"]
