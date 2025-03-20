@@ -52,6 +52,7 @@ func _process(delta: float) -> void:
 	_gas(delta)
 	_speed_calc(delta)
 	_eng_temp(delta)
+	_lights()
 	
 	#Diz se o player tá viajando ou não, e se ele tem gasosa
 	
@@ -159,3 +160,22 @@ func _event_generator():
 		9:
 			mess.add_text(str("\nYou think about where you are in your life. You should be proud of yourself, even if you're tired."))
 		
+
+@onready var engLight = get_node("/root/main/EngLight")
+@onready var heatLight = get_node("/root/main/HeatLight")
+@onready var fuelLight = get_node("/root/main/FuelLight")
+func _lights():
+	if temp > 9:
+		heatLight.visible = true
+	else:
+		heatLight.visible = false
+	
+	if eng_state > 60:
+		engLight.visible = true
+	else:
+		engLight.visible = false
+	
+	if bikeGas <= 25:
+		fuelLight.visible = true
+	else:
+		fuelLight.visible = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://drtxbias3a37h"]
 
-[ext_resource type="Script" path="res://Scripts/Scripts do jogador/mouse.gd" id="1_1b0en"]
+[ext_resource type="Script" uid="uid://bwq6vka5gx3mw" path="res://Scripts/Scripts do jogador/mouse.gd" id="1_1b0en"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6vfy"]
 bg_color = Color(0.208084, 0.218828, 0.216219, 1)

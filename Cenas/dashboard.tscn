@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://f1sjkjwxumcj"]
 
-[ext_resource type="Script" path="res://Scripts/Scripts do jogador/dashboard.gd" id="1_2xue6"]
+[ext_resource type="Script" uid="uid://b0xox54n08nss" path="res://Scripts/Scripts do jogador/dashboard.gd" id="1_2xue6"]
 [ext_resource type="Texture2D" uid="uid://lh7udokkf122" path="res://sprites/pointerB.png" id="2_xt3o2"]
 [ext_resource type="Texture2D" uid="uid://b474fs23ypi8" path="res://sprites/painel.png" id="4_v130e"]
 [ext_resource type="Texture2D" uid="uid://btwi2vhw5mk4u" path="res://sprites/pointerA.png" id="5_yxog5"]
@@ -27,7 +27,7 @@ offset = Vector2(0, 212.95)
 flip_v = true
 
 [node name="gas" type="Sprite2D" parent="."]
-position = Vector2(3.7625, -0.695831)
+position = Vector2(-6, 4)
 rotation = 0.922303
 scale = Vector2(0.126, 0.126)
 texture = ExtResource("2_xt3o2")

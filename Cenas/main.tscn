@@ -1,16 +1,37 @@
-[gd_scene load_steps=12 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=23 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
 [ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://Cenas/city.tscn" id="2_52mnt"]
-[ext_resource type="Script" path="res://Scripts/Scripts do jogador/player_manager.gd" id="2_344h7"]
+[ext_resource type="Script" uid="uid://c2kqnl6ucyiyi" path="res://Scripts/Scripts do jogador/player_manager.gd" id="2_344h7"]
 [ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://Cenas/inv.tscn" id="2_v0nlm"]
-[ext_resource type="Script" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
-[ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="4_tss1a"]
+[ext_resource type="Script" uid="uid://cm55irp834gk0" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
+[ext_resource type="Texture2D" uid="uid://cfs66bipryxdh" path="res://sprites/player.png" id="4_7yi6i"]
 [ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
+[ext_resource type="Texture2D" uid="uid://dp4sarmmujgn2" path="res://sprites/throttle.png" id="7_irhh0"]
+[ext_resource type="Texture2D" uid="uid://cbtmd4griwf44" path="res://sprites/throttleHover.png" id="7_me8gh"]
 [ext_resource type="Texture2D" uid="uid://2ephta042isi" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
 [ext_resource type="PackedScene" uid="uid://drtxbias3a37h" path="res://Cenas/mouse.tscn" id="8_7cm0s"]
+[ext_resource type="Texture2D" uid="uid://cr7o6ox28dcwg" path="res://sprites/throttlePress.png" id="8_330ga"]
 [ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
+[ext_resource type="Texture2D" uid="uid://nmingaahe5x5" path="res://sprites/engLight.png" id="15_ir430"]
+[ext_resource type="Texture2D" uid="uid://cue8iyvqa0v4n" path="res://sprites/fuelLight.png" id="16_neu2f"]
+[ext_resource type="Texture2D" uid="uid://d1ajwu8j507bf" path="res://sprites/heatLight.png" id="17_wnyw5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_330ga"]
+texture = ExtResource("7_me8gh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xaxpv"]
+texture = ExtResource("8_330ga")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_me8gh"]
+texture = ExtResource("7_irhh0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ea3k"]
+texture = ExtResource("7_me8gh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ir430"]
+texture = ExtResource("8_330ga")
 
 [node name="main" type="Node2D"]
 
@@ -32,34 +53,36 @@ bikeGas = 100
 [node name="Sprite2D" type="Sprite2D" parent="PlayerManager"]
 position = Vector2(-2, 3.8147e-06)
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("4_tss1a")
+texture = ExtResource("4_7yi6i")
 
 [node name="city" parent="." instance=ExtResource("2_52mnt")]
-position = Vector2(203, -33)
+position = Vector2(213, -32)
 
 [node name="inv" parent="." instance=ExtResource("2_v0nlm")]
 position = Vector2(-161, 42)
 
-[node name="throt-" type="Button" parent="."]
-offset_left = 874.0
-offset_top = 568.0
-offset_right = 1009.0
-offset_bottom = 599.0
+[node name="+" type="Button" parent="."]
+offset_left = 898.0
+offset_top = 559.0
+offset_right = 969.0
+offset_bottom = 606.0
 scale = Vector2(0.674, 0.674)
-text = "throttle-
-"
+theme_override_styles/hover = SubResource("StyleBoxTexture_330ga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xaxpv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_me8gh")
+script = ExtResource("4_6bvhk")
+
+[node name="-" type="Button" parent="."]
+offset_left = 898.0
+offset_top = 617.0
+offset_right = 969.0
+offset_bottom = 664.0
+scale = Vector2(0.674, -0.674)
+theme_override_styles/hover = SubResource("StyleBoxTexture_3ea3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ir430")
+theme_override_styles/normal = SubResource("StyleBoxTexture_me8gh")
 script = ExtResource("4_6bvhk")
 type = 2
-
-[node name="throt+" type="Button" parent="."]
-offset_left = 875.0
-offset_top = 594.0
-offset_right = 1010.0
-offset_bottom = 625.0
-scale = Vector2(0.673581, 0.673581)
-text = "throttle+
-"
-script = ExtResource("4_6bvhk")
 
 [node name="CityName" type="RichTextLabel" parent="."]
 offset_left = 780.0
@@ -81,14 +104,14 @@ position = Vector2(73, 67)
 
 [node name="EngStats" type="RichTextLabel" parent="."]
 offset_left = 486.0
-offset_top = 319.0
-offset_right = 538.0
-offset_bottom = 365.0
+offset_top = 317.0
+offset_right = 554.0
+offset_bottom = 383.0
 scale = Vector2(0.725, 0.725)
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 15
 text = "Day: 
 
-Money: 100"
+$ : 100"
 fit_content = true
 
 [node name="UiRoadtrip" type="Sprite2D" parent="."]
@@ -108,3 +131,18 @@ visible = false
 z_index = 12
 position = Vector2(206, 68)
 scale = Vector2(0.735, 0.735)
+
+[node name="HeatLight" type="Sprite2D" parent="."]
+position = Vector2(917, 627)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_wnyw5")
+
+[node name="FuelLight" type="Sprite2D" parent="."]
+position = Vector2(944, 627)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_neu2f")
+
+[node name="EngLight" type="Sprite2D" parent="."]
+position = Vector2(890, 628)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_ir430")

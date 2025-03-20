@@ -1,18 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuwogci2gi0mo"]
+[gd_scene load_steps=18 format=3 uid="uid://cuwogci2gi0mo"]
 
-[ext_resource type="Script" path="res://Scripts/Scripts do mapa/city.gd" id="1_m48dq"]
-[ext_resource type="Script" path="res://Scripts/Scripts do mapa/city_interact.gd" id="2_kmlhq"]
-[ext_resource type="Script" path="res://Scripts/Scripts do mapa/shop_item.gd" id="3_c4yj0"]
+[ext_resource type="Script" uid="uid://ct7riolm0p82a" path="res://Scripts/Scripts do mapa/city.gd" id="1_m48dq"]
+[ext_resource type="Texture2D" uid="uid://bko34el4va8b5" path="res://sprites/botão.png" id="2_d1uql"]
+[ext_resource type="Script" uid="uid://c5b5853neg4pb" path="res://Scripts/Scripts do mapa/city_interact.gd" id="2_kmlhq"]
+[ext_resource type="Texture2D" uid="uid://chhpeklyvrywl" path="res://sprites/botãoHover.png" id="2_sy8bh"]
+[ext_resource type="Script" uid="uid://bem6sc3kgikjy" path="res://Scripts/Scripts do mapa/shop_item.gd" id="3_c4yj0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs8q5"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sy8bh"]
+texture = ExtResource("2_d1uql")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cimqg"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3y4qy"]
+texture = ExtResource("2_d1uql")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g4t8"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2eyg"]
+texture = ExtResource("2_d1uql")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8jp5u"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dty0"]
+texture = ExtResource("2_d1uql")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q0xgp"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxqds"]
+texture = ExtResource("2_d1uql")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_11trk"]
+texture = ExtResource("2_sy8bh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8rr74"]
+texture = ExtResource("2_d1uql")
 
 [node name="city" type="Node2D"]
 script = ExtResource("1_m48dq")
 
 [node name="shop" type="Button" parent="."]
 offset_left = 327.0
-offset_top = 71.0
-offset_right = 405.0
-offset_bottom = 131.0
-text = "shop"
+offset_top = 70.0
+offset_right = 427.0
+offset_bottom = 170.0
+tooltip_text = "Opens the shop."
+theme_override_styles/hover = SubResource("StyleBoxTexture_rs8q5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sy8bh")
+text = " Shop"
+alignment = 2
+autowrap_mode = 2
+clip_text = true
+text_direction = 1
 script = ExtResource("2_kmlhq")
 buttonType = 1
 
@@ -61,50 +106,73 @@ item_type = 4
 item_price = 20
 
 [node name="mechanic" type="Button" parent="."]
-offset_left = 343.0
-offset_top = 142.0
-offset_right = 396.0
-offset_bottom = 182.0
-text = "mechanic
+offset_left = 327.0
+offset_top = 120.0
+offset_right = 427.0
+offset_bottom = 220.0
+tooltip_text = "Fixes any engine issues your bike might have, while also cooling your engine. Costs 40 bucks."
+theme_override_styles/hover = SubResource("StyleBoxTexture_cimqg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3y4qy")
+text = "Mechanic
 "
+alignment = 2
+autowrap_mode = 1
+clip_text = true
 script = ExtResource("2_kmlhq")
 buttonType = 3
 
 [node name="interact" type="Button" parent="."]
-offset_left = 338.0
-offset_top = 197.0
-offset_right = 398.0
-offset_bottom = 238.0
-text = "interact"
+offset_left = 327.0
+offset_top = 170.0
+offset_right = 427.0
+offset_bottom = 270.0
+tooltip_text = "Have a look around the city. Take the scenery in."
+theme_override_styles/hover = SubResource("StyleBoxTexture_1g4t8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m2eyg")
+text = "Interact"
+alignment = 2
 script = ExtResource("2_kmlhq")
 buttonType = 2
 
 [node name="gas" type="Button" parent="."]
-offset_left = 343.0
-offset_top = 255.0
-offset_right = 403.0
-offset_bottom = 296.0
-text = "gas"
+offset_left = 327.0
+offset_top = 220.0
+offset_right = 427.0
+offset_bottom = 320.0
+tooltip_text = "Fully refuels your tank. Costs 60 bucks."
+theme_override_styles/hover = SubResource("StyleBoxTexture_8jp5u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4dty0")
+text = "Refuel "
+alignment = 2
 script = ExtResource("2_kmlhq")
 buttonType = 4
 
-[node name="book" type="Button" parent="."]
-offset_left = 335.0
-offset_top = 309.0
-offset_right = 343.0
-offset_bottom = 317.0
-text = "Book"
-script = ExtResource("2_kmlhq")
-buttonType = 5
-
 [node name="work" type="Button" parent="."]
-offset_left = 333.0
-offset_top = 349.0
-offset_right = 380.0
-offset_bottom = 380.0
-text = "work"
+offset_left = 327.0
+offset_top = 270.0
+offset_right = 427.0
+offset_bottom = 370.0
+size_flags_horizontal = 3
+tooltip_text = "Work as a waitress at a local restaurant. Earns you 50 bucks."
+theme_override_styles/hover = SubResource("StyleBoxTexture_q0xgp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uxqds")
+text = "Work"
+alignment = 2
 script = ExtResource("2_kmlhq")
 buttonType = 6
+
+[node name="book" type="Button" parent="."]
+offset_left = 327.0
+offset_top = 334.0
+offset_right = 427.0
+offset_bottom = 434.0
+tooltip_text = "Opens your postal card collection."
+theme_override_styles/hover = SubResource("StyleBoxTexture_11trk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8rr74")
+text = "Book"
+alignment = 2
+script = ExtResource("2_kmlhq")
+buttonType = 5
 
 [connection signal="pressed" from="shop/1" to="shop/1" method="_on_pressed"]
 [connection signal="pressed" from="shop/2" to="shop/2" method="_on_pressed"]

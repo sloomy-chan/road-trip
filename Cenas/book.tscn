@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl8ee18xqfatn"]
 
-[ext_resource type="Script" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
+[ext_resource type="Script" uid="uid://b5ygl5ywwnyt7" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
 [ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="2_isggl"]
 
 [node name="book" type="Node2D"]
