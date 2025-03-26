@@ -1,5 +1,6 @@
-[gd_scene load_steps=65 format=3 uid="uid://csyo6ego73ddr"]
+[gd_scene load_steps=66 format=3 uid="uid://csyo6ego73ddr"]
 
+[ext_resource type="Script" uid="uid://b10u7203i8xts" path="res://Cenas/mapSprites.gd" id="1_03xao"]
 [ext_resource type="Texture2D" uid="uid://d22pjwodtxfj" path="res://sprites/mapItem.png" id="1_6guac"]
 [ext_resource type="Script" uid="uid://cs0ojecnlot0s" path="res://Scripts/Scripts do mapa/map_item.gd" id="1_xgyyd"]
 [ext_resource type="Texture2D" uid="uid://ds2qv3a5k273u" path="res://sprites/mapItemHover.png" id="3_rsu3p"]
@@ -186,6 +187,7 @@ texture = ExtResource("4_wwt62")
 texture = ExtResource("1_6guac")
 
 [node name="map" type="Node2D"]
+script = ExtResource("1_03xao")
 
 [node name="Mason County" type="Button" parent="." groups=["place"]]
 offset_left = 1033.0
@@ -278,7 +280,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_paqy8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_23u2x")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pb0w8")
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../Staywell"), NodePath("../Green Corn"), NodePath("../New Olavo"), NodePath("../Embercrest")]
+places_connected = [NodePath("../Staywell"), NodePath("../New Olavo"), NodePath("../Embercrest")]
 cityName = "Solitude"
 metadata/_edit_use_anchors_ = true
 
@@ -291,7 +293,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_vm5k2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ovxet")
 theme_override_styles/normal = SubResource("StyleBoxTexture_77yeh")
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../Plum Plain"), NodePath("../Mint Hills"), NodePath("."), NodePath("../Mason County")]
+places_connected = [NodePath("../Plum Plain"), NodePath("../Mint Hills"), NodePath("../Mason County")]
 cityName = "Tuxland"
 metadata/_edit_use_anchors_ = true
 
@@ -382,7 +384,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_apjem")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6od6s")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jf6ct")
 script = ExtResource("1_xgyyd")
-places_connected = [NodePath("../Embercrest"), NodePath("../Chestead"), NodePath("../Cunningherd City")]
+places_connected = [NodePath("../Chestead"), NodePath("../Cunningherd City")]
 cityName = "Willowbrook"
 metadata/_edit_use_anchors_ = true
 

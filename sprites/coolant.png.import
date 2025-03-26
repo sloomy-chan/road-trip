@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds24ijyxkyss5"
-path="res://.godot/imported/botão.png-4a70d3779290d170b46dd71579878734.ctex"
+uid="uid://63iprs3p6dfi"
+path="res://.godot/imported/coolant.png-6db528a58e71886d34921e343bb64a22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/botão.png"
-dest_files=["res://.godot/imported/botão.png-4a70d3779290d170b46dd71579878734.ctex"]
+source_file="res://sprites/coolant.png"
+dest_files=["res://.godot/imported/coolant.png-6db528a58e71886d34921e343bb64a22.ctex"]
 
 [params]
 

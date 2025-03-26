@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://Cenas/inv.tscn" id="2_v0nlm"]
 [ext_resource type="Script" uid="uid://cm55irp834gk0" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://cfs66bipryxdh" path="res://sprites/player.png" id="4_7yi6i"]
-[ext_resource type="Texture2D" uid="uid://nnfh8i2qponf" path="res://sprites/Olavo.png" id="5_pyrfo"]
 [ext_resource type="Texture2D" uid="uid://dp4sarmmujgn2" path="res://sprites/throttle.png" id="7_irhh0"]
 [ext_resource type="Texture2D" uid="uid://cbtmd4griwf44" path="res://sprites/throttleHover.png" id="7_me8gh"]
 [ext_resource type="Texture2D" uid="uid://2ephta042isi" path="res://sprites/UI roadtrip.png" id="8_0fdb8"]
 [ext_resource type="PackedScene" uid="uid://drtxbias3a37h" path="res://Cenas/mouse.tscn" id="8_7cm0s"]
 [ext_resource type="Texture2D" uid="uid://cr7o6ox28dcwg" path="res://sprites/throttlePress.png" id="8_330ga"]
 [ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
+[ext_resource type="Texture2D" uid="uid://cau0vkfofgs78" path="res://sprites/road image1.png" id="13_ir430"]
 [ext_resource type="Texture2D" uid="uid://nmingaahe5x5" path="res://sprites/engLight.png" id="15_ir430"]
 [ext_resource type="Texture2D" uid="uid://cue8iyvqa0v4n" path="res://sprites/fuelLight.png" id="16_neu2f"]
 [ext_resource type="Texture2D" uid="uid://d1ajwu8j507bf" path="res://sprites/heatLight.png" id="17_wnyw5"]
@@ -41,10 +41,330 @@ position = Vector2(732, 441)
 scale = Vector2(0.68, 0.68)
 
 [node name="map" parent="." instance=ExtResource("1_mqp60")]
-position = Vector2(607, 63)
-scale = Vector2(0.4, 0.4)
+z_index = 1
+position = Vector2(565, 37)
+scale = Vector2(0.49, 0.49)
+
+[node name="Line2D2" type="Line2D" parent="."]
+z_as_relative = false
+position = Vector2(1071.17, 49.25)
+scale = Vector2(0.49, 0.49)
+points = PackedVector2Array(22, 23, -147, 157)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D5" type="Line2D" parent="Line2D2"]
+z_index = -2
+points = PackedVector2Array(23, 25, -219, 71)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="Line2D2"]
+position = Vector2(-350, -4)
+points = PackedVector2Array(21, 22, 134, 75)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D6" type="Line2D" parent="Line2D2"]
+position = Vector2(-160, 498)
+points = PackedVector2Array(21, 22, -140, -63)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D7" type="Line2D" parent="Line2D2"]
+position = Vector2(-160, 498)
+points = PackedVector2Array(19, 25, -306, 31)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D8" type="Line2D" parent="Line2D2"]
+position = Vector2(-613, 333)
+points = PackedVector2Array(21, 24, 4, 160)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D9" type="Line2D" parent="Line2D2"]
+position = Vector2(-613, 333)
+points = PackedVector2Array(20, 24, 74, -76)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D10" type="Line2D" parent="Line2D2"]
+position = Vector2(-149, 151)
+points = PackedVector2Array(2, 6, 139, 4)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D11" type="Line2D" parent="Line2D2"]
+position = Vector2(-383, 283)
+points = PackedVector2Array(18, 24, 112, -82)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D12" type="Line2D" parent="Line2D2"]
+position = Vector2(-383, 283)
+points = PackedVector2Array(23, 24, -157, -28)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D13" type="Line2D" parent="Line2D2"]
+position = Vector2(-240, 49)
+points = PackedVector2Array(22, 23, 94, 109)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D14" type="Line2D" parent="Line2D2"]
+position = Vector2(-561, 234)
+points = PackedVector2Array(20, 23, 120, -62)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D15" type="Line2D" parent="Line2D2"]
+position = Vector2(-627, -7)
+points = PackedVector2Array(20, 23, 184, 94)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D16" type="Line2D" parent="Line2D2"]
+position = Vector2(-488, 505)
+points = PackedVector2Array(22, 23, -124, -14)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D34" type="Line2D" parent="Line2D2"]
+position = Vector2(-319, 414)
+points = PackedVector2Array(-124.87, -328.13, -120.522, -243.348)
+width = 5.35
+default_color = Color(0.352941, 0.215686, 0.235294, 1)
+sharp_limit = 0.265
+antialiased = true
+
+[node name="Line2D17" type="Line2D" parent="Line2D2"]
+position = Vector2(-319, 414)
+points = PackedVector2Array(22, 23, -148, 115)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D18" type="Line2D" parent="Line2D2"]
+position = Vector2(-32, 131)
+points = PackedVector2Array(23, 23, 54, -107)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D19" type="Line2D" parent="Line2D2"]
+position = Vector2(-51, 239)
+points = PackedVector2Array(23, 24, 42, -83)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D20" type="Line2D" parent="Line2D2"]
+position = Vector2(-465, 64)
+points = PackedVector2Array(21, 24, 136, -45)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D21" type="Line2D" parent="Line2D2"]
+z_index = -1
+position = Vector2(-465, 64)
+points = PackedVector2Array(22, 23, 26, 107)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D22" type="Line2D" parent="Line2D2"]
+z_index = -1
+position = Vector2(-465, 64)
+points = PackedVector2Array(18, 23, 198, 134)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D23" type="Line2D" parent="Line2D2"]
+position = Vector2(-291, 175)
+points = PackedVector2Array(22, 24, -150, -4)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D24" type="Line2D" parent="Line2D2"]
+position = Vector2(-291, 175)
+points = PackedVector2Array(19, 24, 72, -103)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D27" type="Line2D" parent="Line2D2"]
+position = Vector2(-57, 366)
+points = PackedVector2Array(22, 23, 28, -104)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D28" type="Line2D" parent="Line2D2"]
+position = Vector2(-57, 366)
+points = PackedVector2Array(22, 22, -81, 157)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D29" type="Line2D" parent="Line2D2"]
+position = Vector2(-57, 366)
+points = PackedVector2Array(24, 22, -152, -88)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D30" type="Line2D" parent="Line2D2"]
+position = Vector2(-230, 256)
+points = PackedVector2Array(22, 28, -38, -57)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D31" type="Line2D" parent="Line2D2"]
+position = Vector2(-230, 256)
+points = PackedVector2Array(23, 25, -131, 51)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D32" type="Line2D" parent="Line2D2"]
+position = Vector2(-230, 256)
+points = PackedVector2Array(25, 24, 82, -99)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D25" type="Line2D" parent="Line2D2"]
+position = Vector2(-291, 175)
+points = PackedVector2Array(23, 22, 143, -20)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D26" type="Line2D" parent="Line2D2"]
+position = Vector2(-462, 147)
+points = PackedVector2Array(23, 23, 102, 162)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D3" type="Line2D" parent="Line2D2"]
+position = Vector2(-623, 103)
+points = PackedVector2Array(21, 26, 83, 156)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D4" type="Line2D" parent="Line2D2"]
+position = Vector2(-623, 103)
+points = PackedVector2Array(21, 24, 18, -88)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D33" type="Line2D" parent="Line2D2"]
+position = Vector2(-623, 103)
+points = PackedVector2Array(19, 23, 183, 67)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
+
+[node name="Line2D" type="Line2D" parent="Line2D2"]
+position = Vector2(-623, 103)
+points = PackedVector2Array(22, 23, 179, -17)
+width = 5.35
+default_color = Color(0.352148, 0.214938, 0.233806, 1)
+joint_mode = 2
+sharp_limit = 0.37
+antialiased = true
 
 [node name="PlayerManager" type="Node2D" parent="."]
+z_index = 2
 position = Vector2(924, 147)
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
@@ -56,10 +376,10 @@ scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("4_7yi6i")
 
 [node name="city" parent="." instance=ExtResource("2_52mnt")]
-position = Vector2(213, -32)
+position = Vector2(233, -4)
 
 [node name="inv" parent="." instance=ExtResource("2_v0nlm")]
-position = Vector2(-161, 42)
+position = Vector2(-142, 43)
 
 [node name="+" type="Button" parent="."]
 offset_left = 898.0
@@ -120,11 +440,11 @@ position = Vector2(603, 323)
 scale = Vector2(0.581771, 0.591667)
 texture = ExtResource("8_0fdb8")
 
-[node name="Olavo" type="Sprite2D" parent="."]
+[node name="PlayerState" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(296.067, 180.438)
-scale = Vector2(0.498134, 0.488125)
-texture = ExtResource("5_pyrfo")
+position = Vector2(309, 180)
+scale = Vector2(0.247579, 0.242604)
+texture = ExtResource("13_ir430")
 
 [node name="book" parent="." instance=ExtResource("10_41073")]
 visible = false

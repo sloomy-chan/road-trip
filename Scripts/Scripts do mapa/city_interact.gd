@@ -62,12 +62,12 @@ func _open_book():
 	print(book.is_visible())
 	
 func _work():
-	if has_worked == false:
+	if man.player.place.has_worked == false:
 		man.player.money += 50 
 		man.player.day_counter += 1
 		man.player.mess.add_text("\nYou worked a part-time job and rested on a nearby inn.")
 		man.player.day_counter += 1
-		has_worked = true
+		man.player.place.has_worked = true
 	else:
 		man.player.mess.add_text("\nYou've already worked here. It's time to move on.")
 	

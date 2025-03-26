@@ -5,13 +5,14 @@ extends Button
 
 @onready var map_list = []
 @onready var player = get_node("/root/main/PlayerManager")
+@onready var parent = self.get_parent()
 
+var has_worked = false
 var mapButton = self
 @export var isConnected = false
 
 
 func _ready() -> void:
-	var parent = self.get_parent()
 	map_list = parent.get_children()
 	mapButton.pressed.connect(self._map_selected)
 	for places in places_connected:
@@ -20,12 +21,13 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	if isConnected == true:
-		self.scale = Vector2(2,2)
+		self.self_modulate = Color(1,1,1,1)
 	else:
-		self.scale = Vector2(1,1)
+		self.self_modulate = Color(1,1,1,0.5)
 		
 func _map_selected():
 	player.place = self
+	player.place.has_worked = false
 	if player.speed <= 0 && isConnected == true:
 		player.startPos = player.global_position
 		player.isTravel = true
