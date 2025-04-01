@@ -243,6 +243,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_i5ix7")
 script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Chestead"), NodePath("../Ardmond"), NodePath("../Illemore")]
 cityName = "Beach Knot"
+city_interact = "A beautiful coastal city, full of cute cafés and seafood restaurants. The sea looks gorgeous."
 metadata/_edit_use_anchors_ = true
 
 [node name="Green Corn" type="Button" parent="." groups=["place"]]
@@ -414,6 +415,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_s1evk")
 script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Embercrest"), NodePath("../Solitude"), NodePath("../Coppenberg"), NodePath("../Mint Hills"), NodePath("../Tuxland"), NodePath("../Fairhaven")]
 cityName = "New Olavo"
+city_interact = "The heart of the entire state. No matter what you want to do or see, New Olavo has you covered."
 isConnected = true
 metadata/_edit_use_anchors_ = true
 

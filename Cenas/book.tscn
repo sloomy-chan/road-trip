@@ -1,87 +1,187 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl8ee18xqfatn"]
+[gd_scene load_steps=22 format=3 uid="uid://cl8ee18xqfatn"]
 
 [ext_resource type="Script" uid="uid://b5ygl5ywwnyt7" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
-[ext_resource type="Texture2D" uid="uid://dkcl1l6p6x7uk" path="res://sprites/icon.svg" id="2_isggl"]
+[ext_resource type="Texture2D" uid="uid://cu7c5l1waj0l3" path="res://sprites/cards/mason county.png" id="2_552vw"]
+[ext_resource type="Texture2D" uid="uid://b7l1arhlu12lc" path="res://sprites/cards/farnell.png" id="3_1vtma"]
+[ext_resource type="Texture2D" uid="uid://c2dvwv6ilu6ak" path="res://sprites/cards/plum.png" id="4_18ix2"]
+[ext_resource type="Texture2D" uid="uid://bqrd5t80if72y" path="res://sprites/cards/verdi.png" id="5_3p8h3"]
+[ext_resource type="Texture2D" uid="uid://cgypbrivldmy2" path="res://sprites/cards/illemore.png" id="6_c04vt"]
+[ext_resource type="Texture2D" uid="uid://du66o2l7837xa" path="res://sprites/cards/olave.png" id="7_8t1rq"]
+[ext_resource type="Texture2D" uid="uid://dutcrlrqbrgbh" path="res://sprites/cards/solitude.png" id="8_gswfd"]
+[ext_resource type="Texture2D" uid="uid://dmpgi2j7use0q" path="res://sprites/cards/mint.png" id="9_ox4d2"]
+[ext_resource type="Texture2D" uid="uid://bk2kwrtmnoeqx" path="res://sprites/cards/corn.png" id="10_b4w5d"]
+[ext_resource type="Texture2D" uid="uid://1sllysun0c6m" path="res://sprites/cards/beach.png" id="11_a5gdx"]
+[ext_resource type="Texture2D" uid="uid://4m1pood26ny1" path="res://sprites/cards/staywell.png" id="12_3r0bo"]
+[ext_resource type="Texture2D" uid="uid://dvabgr08hmx4" path="res://sprites/cards/olives.png" id="13_8qtbf"]
+[ext_resource type="Texture2D" uid="uid://dj1lai6p1vm25" path="res://sprites/cards/ardmond.png" id="14_teeht"]
+[ext_resource type="Texture2D" uid="uid://yoadxdno02ox" path="res://sprites/cards/herd.png" id="15_u512a"]
+[ext_resource type="Texture2D" uid="uid://b2w1714gu2qyu" path="res://sprites/cards/willow.png" id="16_oa6ta"]
+[ext_resource type="Texture2D" uid="uid://c1agi2bfxmslv" path="res://sprites/cards/haven.png" id="17_co3su"]
+[ext_resource type="Texture2D" uid="uid://conxcawghaxvm" path="res://sprites/cards/chestead.png" id="18_0765i"]
+[ext_resource type="Texture2D" uid="uid://d0vw63f304re1" path="res://sprites/cards/crest.png" id="19_gu2i5"]
+[ext_resource type="Texture2D" uid="uid://foucinw3vekj" path="res://sprites/cards/coppen.png" id="20_dfpwe"]
+[ext_resource type="Texture2D" uid="uid://dh2s0dt056pwh" path="res://sprites/cards/tuxland.png" id="21_5stll"]
 
 [node name="book" type="Node2D"]
 script = ExtResource("1_82vla")
 
-[node name="10" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(598, 263)
-texture = ExtResource("2_isggl")
+[node name="page1" type="Node2D" parent="."]
 
-[node name="9" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(430, 260)
-texture = ExtResource("2_isggl")
+[node name="Staywell" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(923, 101)
+rotation = -0.0648829
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_3r0bo")
 
-[node name="8" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(269, 257)
-texture = ExtResource("2_isggl")
+[node name="Old Olives" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(488, 251)
+rotation = 0.0300513
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_8qtbf")
 
-[node name="7" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(112, 264)
-texture = ExtResource("2_isggl")
+[node name="Ardmond" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(394, 96)
+rotation = -0.0939948
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_teeht")
 
-[node name="6" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(944, 105)
-texture = ExtResource("2_isggl")
+[node name="Cunningherd City" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(141, 215)
+rotation = 0.132378
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_u512a")
 
-[node name="5" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(596, 105)
-texture = ExtResource("2_isggl")
-
-[node name="4" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(770, 104)
-texture = ExtResource("2_isggl")
-
-[node name="3" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(429, 102)
-texture = ExtResource("2_isggl")
-
-[node name="2" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(266, 103)
-texture = ExtResource("2_isggl")
-
-[node name="1" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(110, 100)
-texture = ExtResource("2_isggl")
-
-[node name="11" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(954, 260)
-texture = ExtResource("2_isggl")
-
-[node name="12" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(948, 417)
-texture = ExtResource("2_isggl")
-
-[node name="13" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(269, 570)
-texture = ExtResource("2_isggl")
-
-[node name="14" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(112, 577)
-texture = ExtResource("2_isggl")
-
-[node name="15" type="Sprite2D" parent="." groups=["card"]]
+[node name="Willowbrook" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
 position = Vector2(770, 262)
-texture = ExtResource("2_isggl")
+rotation = 0.0985561
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_oa6ta")
 
-[node name="16" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(596, 418)
-texture = ExtResource("2_isggl")
+[node name="Fairhaven" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(778, 562)
+rotation = -0.103516
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("17_co3su")
 
-[node name="17" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(770, 417)
-texture = ExtResource("2_isggl")
+[node name="Chestead" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(957, 404)
+rotation = -0.11114
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_0765i")
 
-[node name="18" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(429, 415)
-texture = ExtResource("2_isggl")
+[node name="Embercrest" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(546, 410)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_gu2i5")
 
-[node name="19" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(266, 416)
-texture = ExtResource("2_isggl")
+[node name="Coppenberg" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(328, 555)
+rotation = 0.221036
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_dfpwe")
 
-[node name="20" type="Sprite2D" parent="." groups=["card"]]
-position = Vector2(110, 413)
-texture = ExtResource("2_isggl")
+[node name="Tuxland" type="Sprite2D" parent="page1" groups=["card"]]
+visible = false
+position = Vector2(181, 403)
+rotation = -0.250267
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_5stll")
+
+[node name="page2" type="Node2D" parent="."]
+visible = false
+
+[node name="Mason County" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(163, 419)
+rotation = -0.155521
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_552vw")
+
+[node name="Farnell City" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(694, 535)
+rotation = -0.204478
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_1vtma")
+
+[node name="Plum plain" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(965, 443)
+rotation = 0.225412
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_18ix2")
+
+[node name="Verdivale" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(975, 262)
+rotation = 0.117985
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_3p8h3")
+
+[node name="Illemore" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(177, 103)
+rotation = -0.346628
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_c04vt")
+
+[node name="New Olavo" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(418, 499)
+rotation = 0.0698393
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_8t1rq")
+
+[node name="Solitutde" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(674, 291)
+rotation = -0.261799
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_gswfd")
+
+[node name="Mint Hills" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(375, 275)
+rotation = 0.106649
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_ox4d2")
+
+[node name="Green Corn" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(946, 93)
+rotation = -0.101372
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_b4w5d")
+
+[node name="Beach Knot" type="Sprite2D" parent="page2" groups=["card"]]
+visible = false
+position = Vector2(536, 93)
+rotation = 0.043683
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_a5gdx")
+
+[node name="change" type="Button" parent="."]
+offset_left = 1018.0
+offset_top = 568.0
+offset_right = 1126.0
+offset_bottom = 599.0
+text = "Change page"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 40.0
+offset_bottom = 32.0
+text = "Close book"
+
+[connection signal="pressed" from="change" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

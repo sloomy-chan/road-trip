@@ -2,6 +2,7 @@ extends Button
 
 @export var places_connected: Array
 @export var cityName: String
+@export var city_interact: String
 
 @onready var map_list = []
 @onready var player = get_node("/root/main/PlayerManager")

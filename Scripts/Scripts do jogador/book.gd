@@ -11,15 +11,6 @@ func _ready() -> void:
 	print(str(postal_cards))
 	print(str(size))
 
-func _process(_delta: float) -> void:
-	var sprites = self.get_children()
-	for a in sprites:
-		for i in postal_cards:
-			if i == null:
-					a.visible = false
-			else:
-					a.visible = true
-
 func _add_card():
 	for cards in postal_cards:
 		if postal_cards.has(player.place.cityName):
@@ -28,3 +19,19 @@ func _add_card():
 			postal_cards.insert(0,str(player.place.cityName))
 			print(postal_cards)
 	
+
+
+func _on_button_pressed() -> void:
+	var page = $"page1"
+	var page2 = $"page2"
+	
+	if page.visible == true:
+		page2.visible = true
+		page.visible = false
+	else: if page2.visible == true:
+		page.visible = true
+		page2.visible = false
+
+
+func _on_quit_pressed() -> void:
+	self.visible = false

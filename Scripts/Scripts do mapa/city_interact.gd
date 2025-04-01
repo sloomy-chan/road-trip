@@ -2,7 +2,11 @@ extends Button
 @onready var cityButton = self
 var man
 @export var buttonType = 0
+@onready var bookpg1 = get_node("/root/main/book/page1")
+@onready var bookpg2 = get_node("/root/main/book/page2")
 var has_worked = false
+
+var shop_on = false
 
 func _ready() -> void:
 	man = self.get_parent()
@@ -19,8 +23,8 @@ func _city_pressed() -> void:
 		1:
 			_open_shop()
 		2:
-			man.player.mess.add_text(str("\nThis is the city of ", man.currCity_name))
-			print("city")
+			man.player.mess.add_text(str("\n",man.player.place.city_interact))
+			_get_card()
 		3:
 			if man.player.money >= 40 && man.player.eng_state > 0:
 				man.player.mess.add_text(str("\nA mechanic fixed your bike."))
@@ -34,7 +38,6 @@ func _city_pressed() -> void:
 		4:
 			if man.player.money >= 60 && man.player.bikeGas < 100:
 				man.player.mess.add_text(str("\nYou refueled your bike."))
-				print("gas")
 				man.player.bikeGas += 100-man.player.bikeGas
 			
 			if man.player.money >= 60 && man.player.bikeGas == 100:
@@ -46,12 +49,15 @@ func _city_pressed() -> void:
 
 func _open_shop():
 	var items = get_children()
-	for i in items:
-		if i.is_in_group("shop_item"):
-			if i.visible == true:
-				i.visible = false
-			else:
-				i.visible = true
+	var shop_anim = get_node("/root/main/city/shop/shop_anim")
+	
+	if shop_on == false:
+		shop_anim.play("on")
+		shop_on = true
+	else: if shop_on == true:
+		shop_anim.play("off")
+		shop_on = false
+	print(shop_on)
 
 func _open_book():
 	var book = get_node("/root/main/book")
@@ -70,4 +76,16 @@ func _work():
 		man.player.place.has_worked = true
 	else:
 		man.player.mess.add_text("\nYou've already worked here. It's time to move on.")
+
+func _get_card():
+	var page1Array = bookpg1.get_children()
+	var page2Array = bookpg2.get_children()
+	
+	for card in page1Array:
+		if card.name == man.player.place.cityName:
+			card.visible = true
+			
+	for card in page2Array:
+		if card.name == man.player.place.cityName:
+			card.visible = true
 	

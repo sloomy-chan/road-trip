@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cuwogci2gi0mo"]
+[gd_scene load_steps=37 format=3 uid="uid://cuwogci2gi0mo"]
 
 [ext_resource type="Script" uid="uid://ct7riolm0p82a" path="res://Scripts/Scripts do mapa/city.gd" id="1_m48dq"]
 [ext_resource type="Texture2D" uid="uid://ds24ijyxkyss5" path="res://sprites/botão.png" id="2_d1uql"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://vk1hw5r1ocr4" path="res://sprites/shopItemHover.png" id="5_4dty0"]
 [ext_resource type="Texture2D" uid="uid://buaia0aa5o8nd" path="res://sprites/shopBack.png" id="6_3y4qy"]
 [ext_resource type="Texture2D" uid="uid://47vomt8bgqew" path="res://sprites/shopItem.png" id="6_8rr74"]
+[ext_resource type="Texture2D" uid="uid://52tkft5j54dw" path="res://sprites/gas.png" id="8_cimqg"]
+[ext_resource type="Texture2D" uid="uid://8pg5ns8eun8d" path="res://sprites/banann.png" id="9_1g4t8"]
+[ext_resource type="Texture2D" uid="uid://63iprs3p6dfi" path="res://sprites/coolant.png" id="10_8jp5u"]
+[ext_resource type="Texture2D" uid="uid://cdht3spd6svk" path="res://sprites/fixer.png" id="12_q0xgp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs8q5"]
 texture = ExtResource("2_sy8bh")
@@ -38,6 +42,168 @@ texture = ExtResource("5_4dty0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iamc7"]
 texture = ExtResource("6_8rr74")
+
+[sub_resource type="Animation" id="Animation_1g4t8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-234, -92)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-182, -92)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-126, -92)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-66, -93)]
+}
+
+[sub_resource type="Animation" id="Animation_8jp5u"]
+resource_name = "off"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-234, 1), Vector2(-234, -102)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-182, 1), Vector2(-182, -102)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-126, 1), Vector2(-126, -102)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-66, 0), Vector2(-66, -103)]
+}
+
+[sub_resource type="Animation" id="Animation_cimqg"]
+resource_name = "on"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-234, -92), Vector2(-234, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-182, -92), Vector2(-182, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-126, -92), Vector2(-126, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-66, -93), Vector2(-66, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8jp5u"]
+_data = {
+&"RESET": SubResource("Animation_1g4t8"),
+&"off": SubResource("Animation_8jp5u"),
+&"on": SubResource("Animation_cimqg")
+}
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cimqg"]
 texture = ExtResource("2_sy8bh")
@@ -88,10 +254,12 @@ script = ExtResource("2_kmlhq")
 buttonType = 1
 
 [node name="1" type="Button" parent="shop" groups=["shop_item"]]
+z_index = -1
 layout_mode = 0
 offset_left = -234.0
+offset_top = -92.0
 offset_right = -226.0
-offset_bottom = 8.0
+offset_bottom = -84.0
 scale = Vector2(3.99, 3.99)
 theme_override_styles/hover = SubResource("StyleBoxTexture_vpyqe")
 theme_override_styles/normal = SubResource("StyleBoxTexture_cp3xk")
@@ -99,11 +267,18 @@ script = ExtResource("3_c4yj0")
 item_type = 1
 item_price = 25
 
+[node name="Sprite2D" type="Sprite2D" parent="shop/1"]
+position = Vector2(4.01002, 3.7594)
+scale = Vector2(0.0613252, 0.0613252)
+texture = ExtResource("8_cimqg")
+
 [node name="2" type="Button" parent="shop" groups=["shop_item"]]
+z_index = -1
 layout_mode = 0
 offset_left = -182.0
+offset_top = -92.0
 offset_right = -174.0
-offset_bottom = 8.0
+offset_bottom = -84.0
 scale = Vector2(3.99, 3.99)
 theme_override_styles/hover = SubResource("StyleBoxTexture_q67qe")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1dt52")
@@ -111,11 +286,18 @@ script = ExtResource("3_c4yj0")
 item_type = 2
 item_price = 1
 
+[node name="Sprite2D" type="Sprite2D" parent="shop/2"]
+position = Vector2(4.26065, 4.01002)
+scale = Vector2(0.0613252, 0.0613252)
+texture = ExtResource("9_1g4t8")
+
 [node name="3" type="Button" parent="shop" groups=["shop_item"]]
+z_index = -1
 layout_mode = 0
 offset_left = -126.0
+offset_top = -92.0
 offset_right = -118.0
-offset_bottom = 8.0
+offset_bottom = -84.0
 scale = Vector2(3.99, 3.99)
 theme_override_styles/hover = SubResource("StyleBoxTexture_wxno1")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mrxqk")
@@ -123,12 +305,18 @@ script = ExtResource("3_c4yj0")
 item_type = 3
 item_price = 40
 
+[node name="Sprite2D" type="Sprite2D" parent="shop/3"]
+position = Vector2(4.01003, 3.759)
+scale = Vector2(0.0613252, 0.0613252)
+texture = ExtResource("10_8jp5u")
+
 [node name="4" type="Button" parent="shop" groups=["shop_item"]]
+z_index = -1
 layout_mode = 0
 offset_left = -66.0
-offset_top = -1.0
+offset_top = -93.0
 offset_right = -58.0
-offset_bottom = 7.0
+offset_bottom = -85.0
 scale = Vector2(3.99, 3.99)
 theme_override_styles/hover = SubResource("StyleBoxTexture_saoq4")
 theme_override_styles/normal = SubResource("StyleBoxTexture_iamc7")
@@ -137,11 +325,16 @@ item_type = 4
 item_price = 60
 
 [node name="ShopBack" type="Sprite2D" parent="shop/4"]
-z_index = -1
+z_index = -2
 z_as_relative = false
 position = Vector2(-17.2932, 5.01253)
 scale = Vector2(0.250627, 0.250627)
 texture = ExtResource("6_3y4qy")
+
+[node name="Sprite2D" type="Sprite2D" parent="shop/4"]
+position = Vector2(4.01003, 3.759)
+scale = Vector2(0.0613252, 0.0613252)
+texture = ExtResource("12_q0xgp")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="shop"]
 layout_mode = 0
@@ -150,6 +343,11 @@ offset_top = 11.0
 offset_right = 142.0
 offset_bottom = 51.0
 text = "Shop"
+
+[node name="shop_anim" type="AnimationPlayer" parent="shop"]
+libraries = {
+&"": SubResource("AnimationLibrary_8jp5u")
+}
 
 [node name="mechanic" type="Button" parent="."]
 offset_left = 327.0

@@ -23,7 +23,6 @@ var place
 var engRpm = 0
 var isTravel = false
 var mod: float #É o modificador de consumo de combustível
-var pl_pos: Vector2
 var nextPos: Vector2
 #timer se refere à distância de um lugar a outro
 var temp = 0
@@ -36,7 +35,6 @@ var temp_mod = 0
 
 func _ready() -> void:
 	day_counter += 1
-	pl_pos = self.global_position
 	money += 100
 
 func _process(delta: float) -> void:
@@ -95,7 +93,7 @@ func _dist_change(delta):
 	if A1 == B1:
 		isTravel = false
 		place._get_places()
-		book._add_card()
+		#book._add_card()
 
 
 func _gas(delta):
