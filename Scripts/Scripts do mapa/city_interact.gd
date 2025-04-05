@@ -14,41 +14,58 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if man.player.isTravel == true:
+		clicked_mechanic = 0
 		self.visible = false
 	else:
 		self.visible = true
 
+var clicked_mechanic = 0
 func _city_pressed() -> void:
 	match buttonType:
 		1:
 			_open_shop()
 		2:
 			man.player.mess.add_text(str("\n",man.player.place.city_interact))
+			man.player.mess.add_text(str("\nA new postal card was added to your book."))
 			_get_card()
 		3:
-			if man.player.money >= 40 && man.player.eng_state > 0:
-				man.player.mess.add_text(str("\nA mechanic fixed your bike."))
-				man.player.eng_state = 0
-				man.player.temp = 0
-				man.player.money -= 40
-				man.player.day_counter += 1
-				
-			if man.player.money >= 40 && man.player.eng_state == 0:
-				man.player.mess.add_text("\nYour bike looks damn fine.")
+			match clicked_mechanic:
+				0:
+					man.player.mess.add_text(str("\nHere's a breakdown of your bike's status. Your engine damage is at ", snappedf(man.player.eng_state, 1),"%, your front tire durability is at ", snappedf(man.player.tire_front_durability,1),"%, and your rear tire is at ", snappedf(man.player.tire_rear_durability,1),"%, Fixing all this will be 60 bucks."))
+					clicked_mechanic += 1
+				1:
+					if man.player.money >= 60 && man.player.eng_state > 0 && man.player.tire_rear_durability != 100 or man.player.tire_front_durability != 100:
+						man.player.mess.add_text(str("\nA mechanic fixed your bike."))
+						man.player.tire_front_durability = 100
+						man.player.tire_rear_durability = 100
+						man.player.eng_state = 0
+						man.player.temp = 0
+						man.player.money -= 40
+						man.player.day_counter += 1
+						clicked_mechanic -= 1
+					else: if man.player.money >= 60 && man.player.eng_state == 0:
+						man.player.mess.add_text("\nYour bike looks fine already.")
+						clicked_mechanic -= 1
 		4:
+			if man.player.money < 60:
+				man.player.mess.add_text(str("\nYou don't have enough money."))
+				return
+				
 			if man.player.money >= 60 && man.player.bikeGas < 100:
 				man.player.mess.add_text(str("\nYou refueled your bike."))
 				man.player.bikeGas += 100-man.player.bikeGas
+				man.player.money -= 60
+				return
 			
 			if man.player.money >= 60 && man.player.bikeGas == 100:
 				man.player.mess.add_text(str("\nYour tank is already full."))
+				return
 		5:
 			_open_book()
 		6:
 			_work()
 
 func _open_shop():
-	var items = get_children()
 	var shop_anim = get_node("/root/main/city/shop/shop_anim")
 	
 	if shop_on == false:

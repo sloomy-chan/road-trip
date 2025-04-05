@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cl8ee18xqfatn"]
+[gd_scene load_steps=23 format=3 uid="uid://cl8ee18xqfatn"]
 
 [ext_resource type="Script" uid="uid://b5ygl5ywwnyt7" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
 [ext_resource type="Texture2D" uid="uid://cu7c5l1waj0l3" path="res://sprites/cards/mason county.png" id="2_552vw"]
@@ -21,11 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://d0vw63f304re1" path="res://sprites/cards/crest.png" id="19_gu2i5"]
 [ext_resource type="Texture2D" uid="uid://foucinw3vekj" path="res://sprites/cards/coppen.png" id="20_dfpwe"]
 [ext_resource type="Texture2D" uid="uid://dh2s0dt056pwh" path="res://sprites/cards/tuxland.png" id="21_5stll"]
+[ext_resource type="Texture2D" uid="uid://dskbcyin3ux1s" path="res://sprites/UI/cardBook.png" id="22_1vtma"]
 
 [node name="book" type="Node2D"]
 script = ExtResource("1_82vla")
 
 [node name="page1" type="Node2D" parent="."]
+position = Vector2(11, -14)
 
 [node name="Staywell" type="Sprite2D" parent="page1" groups=["card"]]
 visible = false
@@ -98,6 +100,7 @@ texture = ExtResource("21_5stll")
 
 [node name="page2" type="Node2D" parent="."]
 visible = false
+position = Vector2(12, 0)
 
 [node name="Mason County" type="Sprite2D" parent="page2" groups=["card"]]
 visible = false
@@ -141,7 +144,7 @@ rotation = 0.0698393
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_8t1rq")
 
-[node name="Solitutde" type="Sprite2D" parent="page2" groups=["card"]]
+[node name="Solitude" type="Sprite2D" parent="page2" groups=["card"]]
 visible = false
 position = Vector2(674, 291)
 rotation = -0.261799
@@ -182,6 +185,12 @@ offset_top = 24.0
 offset_right = 40.0
 offset_bottom = 32.0
 text = "Close book"
+
+[node name="CardBook" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(580, 316)
+scale = Vector2(1.01806, 1.01806)
+texture = ExtResource("22_1vtma")
 
 [connection signal="pressed" from="change" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

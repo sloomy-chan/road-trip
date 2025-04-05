@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://f1sjkjwxumcj"]
 
 [ext_resource type="Script" uid="uid://b0xox54n08nss" path="res://Scripts/Scripts do jogador/dashboard.gd" id="1_2xue6"]
-[ext_resource type="Texture2D" uid="uid://lh7udokkf122" path="res://sprites/pointerB.png" id="2_xt3o2"]
-[ext_resource type="Texture2D" uid="uid://b474fs23ypi8" path="res://sprites/painel.png" id="4_v130e"]
-[ext_resource type="Texture2D" uid="uid://btwi2vhw5mk4u" path="res://sprites/pointerA.png" id="5_yxog5"]
-[ext_resource type="Texture2D" uid="uid://bfyls5g315hi8" path="res://sprites/fuel indic.png" id="6_tjvxf"]
-[ext_resource type="Texture2D" uid="uid://c5hd1ljfux3e3" path="res://sprites/heat indic.png" id="7_fquqi"]
+[ext_resource type="Texture2D" uid="uid://lh7udokkf122" path="res://sprites/UI/pointerB.png" id="2_xt3o2"]
+[ext_resource type="Texture2D" uid="uid://b474fs23ypi8" path="res://sprites/UI/painel.png" id="4_v130e"]
+[ext_resource type="Texture2D" uid="uid://btwi2vhw5mk4u" path="res://sprites/UI/pointerA.png" id="5_yxog5"]
+[ext_resource type="Texture2D" uid="uid://bfyls5g315hi8" path="res://sprites/UI/fuel indic.png" id="6_tjvxf"]
+[ext_resource type="Texture2D" uid="uid://c5hd1ljfux3e3" path="res://sprites/UI/heat indic.png" id="7_fquqi"]
 
 [node name="dashboard" type="Node2D"]
 script = ExtResource("1_2xue6")

@@ -1,17 +1,17 @@
 [gd_scene load_steps=37 format=3 uid="uid://cuwogci2gi0mo"]
 
 [ext_resource type="Script" uid="uid://ct7riolm0p82a" path="res://Scripts/Scripts do mapa/city.gd" id="1_m48dq"]
-[ext_resource type="Texture2D" uid="uid://ds24ijyxkyss5" path="res://sprites/botão.png" id="2_d1uql"]
+[ext_resource type="Texture2D" uid="uid://ds24ijyxkyss5" path="res://sprites/UI/botão.png" id="2_d1uql"]
 [ext_resource type="Script" uid="uid://c5b5853neg4pb" path="res://Scripts/Scripts do mapa/city_interact.gd" id="2_kmlhq"]
-[ext_resource type="Texture2D" uid="uid://bt3ayacrl3sse" path="res://sprites/botãoHover.png" id="2_sy8bh"]
+[ext_resource type="Texture2D" uid="uid://bt3ayacrl3sse" path="res://sprites/UI/botãoHover.png" id="2_sy8bh"]
 [ext_resource type="Script" uid="uid://bem6sc3kgikjy" path="res://Scripts/Scripts do mapa/shop_item.gd" id="3_c4yj0"]
-[ext_resource type="Texture2D" uid="uid://vk1hw5r1ocr4" path="res://sprites/shopItemHover.png" id="5_4dty0"]
-[ext_resource type="Texture2D" uid="uid://buaia0aa5o8nd" path="res://sprites/shopBack.png" id="6_3y4qy"]
-[ext_resource type="Texture2D" uid="uid://47vomt8bgqew" path="res://sprites/shopItem.png" id="6_8rr74"]
-[ext_resource type="Texture2D" uid="uid://52tkft5j54dw" path="res://sprites/gas.png" id="8_cimqg"]
-[ext_resource type="Texture2D" uid="uid://8pg5ns8eun8d" path="res://sprites/banann.png" id="9_1g4t8"]
-[ext_resource type="Texture2D" uid="uid://63iprs3p6dfi" path="res://sprites/coolant.png" id="10_8jp5u"]
-[ext_resource type="Texture2D" uid="uid://cdht3spd6svk" path="res://sprites/fixer.png" id="12_q0xgp"]
+[ext_resource type="Texture2D" uid="uid://vk1hw5r1ocr4" path="res://sprites/UI/shopItemHover.png" id="5_4dty0"]
+[ext_resource type="Texture2D" uid="uid://buaia0aa5o8nd" path="res://sprites/UI/shopBack.png" id="6_3y4qy"]
+[ext_resource type="Texture2D" uid="uid://47vomt8bgqew" path="res://sprites/UI/shopItem.png" id="6_8rr74"]
+[ext_resource type="Texture2D" uid="uid://52tkft5j54dw" path="res://sprites/items/gas.png" id="8_cimqg"]
+[ext_resource type="Texture2D" uid="uid://8pg5ns8eun8d" path="res://sprites/items/banann.png" id="9_1g4t8"]
+[ext_resource type="Texture2D" uid="uid://63iprs3p6dfi" path="res://sprites/items/coolant.png" id="10_8jp5u"]
+[ext_resource type="Texture2D" uid="uid://cdht3spd6svk" path="res://sprites/items/fixer.png" id="12_q0xgp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs8q5"]
 texture = ExtResource("2_sy8bh")
@@ -354,7 +354,7 @@ offset_left = 327.0
 offset_top = 120.0
 offset_right = 373.0
 offset_bottom = 166.0
-tooltip_text = "Fixes any engine issues your bike might have, while also cooling your engine. Costs 40 bucks."
+tooltip_text = "Fixes any engine issues your bike might have, while also cooling your engine. Costs 60 bucks."
 theme_override_styles/hover = SubResource("StyleBoxTexture_cimqg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_3y4qy")
 text = "

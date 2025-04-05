@@ -27,11 +27,20 @@ func _process(_delta: float) -> void:
 		self.self_modulate = Color(1,1,1,0.5)
 		
 func _map_selected():
+	var choose_ride = randi_range(1,3)
 	player.place = self
 	player.place.has_worked = false
-	if player.speed <= 0 && isConnected == true:
+	if player.speed <= 0 && isConnected == true && player.isTravel == false:
 		player.startPos = player.global_position
 		player.isTravel = true
+		match choose_ride:
+			1:
+				player.next_state = player.riding_sunset
+			2:
+				player.next_state = player.riding_noon
+			3:
+				player.next_state = player.riding_night
+		player.transitioner.play("fade_in")
 		player.nextPos = self.global_position
 		player.city.nextCity_name = cityName
 	else:
