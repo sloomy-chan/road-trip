@@ -1,16 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://cl8ee18xqfatn"]
+[gd_scene load_steps=25 format=3 uid="uid://cl8ee18xqfatn"]
 
 [ext_resource type="Script" uid="uid://b5ygl5ywwnyt7" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
 [ext_resource type="Texture2D" uid="uid://cu7c5l1waj0l3" path="res://sprites/cards/mason county.png" id="2_552vw"]
-[ext_resource type="Texture2D" uid="uid://b7l1arhlu12lc" path="res://sprites/cards/farnell.png" id="3_1vtma"]
-[ext_resource type="Texture2D" uid="uid://c2dvwv6ilu6ak" path="res://sprites/cards/plum.png" id="4_18ix2"]
+[ext_resource type="Texture2D" uid="uid://cdahwex8bcsdw" path="res://sprites/cards/farnell.png" id="3_1vtma"]
+[ext_resource type="Texture2D" uid="uid://drsi847s6byjf" path="res://sprites/cards/plum.png" id="4_18ix2"]
 [ext_resource type="Texture2D" uid="uid://bqrd5t80if72y" path="res://sprites/cards/verdi.png" id="5_3p8h3"]
 [ext_resource type="Texture2D" uid="uid://cgypbrivldmy2" path="res://sprites/cards/illemore.png" id="6_c04vt"]
 [ext_resource type="Texture2D" uid="uid://du66o2l7837xa" path="res://sprites/cards/olave.png" id="7_8t1rq"]
 [ext_resource type="Texture2D" uid="uid://dutcrlrqbrgbh" path="res://sprites/cards/solitude.png" id="8_gswfd"]
 [ext_resource type="Texture2D" uid="uid://dmpgi2j7use0q" path="res://sprites/cards/mint.png" id="9_ox4d2"]
 [ext_resource type="Texture2D" uid="uid://bk2kwrtmnoeqx" path="res://sprites/cards/corn.png" id="10_b4w5d"]
-[ext_resource type="Texture2D" uid="uid://1sllysun0c6m" path="res://sprites/cards/beach.png" id="11_a5gdx"]
+[ext_resource type="Texture2D" uid="uid://04kq1govjql8" path="res://sprites/cards/beach.png" id="11_a5gdx"]
 [ext_resource type="Texture2D" uid="uid://4m1pood26ny1" path="res://sprites/cards/staywell.png" id="12_3r0bo"]
 [ext_resource type="Texture2D" uid="uid://dvabgr08hmx4" path="res://sprites/cards/olives.png" id="13_8qtbf"]
 [ext_resource type="Texture2D" uid="uid://dj1lai6p1vm25" path="res://sprites/cards/ardmond.png" id="14_teeht"]
@@ -22,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://foucinw3vekj" path="res://sprites/cards/coppen.png" id="20_dfpwe"]
 [ext_resource type="Texture2D" uid="uid://dh2s0dt056pwh" path="res://sprites/cards/tuxland.png" id="21_5stll"]
 [ext_resource type="Texture2D" uid="uid://dskbcyin3ux1s" path="res://sprites/UI/cardBook.png" id="22_1vtma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vtma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_18ix2"]
 
 [node name="book" type="Node2D"]
 script = ExtResource("1_82vla")
@@ -177,6 +181,7 @@ offset_left = 1018.0
 offset_top = 568.0
 offset_right = 1126.0
 offset_bottom = 599.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1vtma")
 text = "Change page"
 
 [node name="quit" type="Button" parent="."]
@@ -184,6 +189,7 @@ offset_left = 32.0
 offset_top = 24.0
 offset_right = 40.0
 offset_bottom = 32.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_18ix2")
 text = "Close book"
 
 [node name="CardBook" type="Sprite2D" parent="."]

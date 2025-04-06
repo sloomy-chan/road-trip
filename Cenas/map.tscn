@@ -1,10 +1,12 @@
-[gd_scene load_steps=66 format=3 uid="uid://csyo6ego73ddr"]
+[gd_scene load_steps=86 format=3 uid="uid://csyo6ego73ddr"]
 
 [ext_resource type="Script" uid="uid://b10u7203i8xts" path="res://Cenas/mapSprites.gd" id="1_03xao"]
 [ext_resource type="Texture2D" uid="uid://d22pjwodtxfj" path="res://sprites/UI/mapItem.png" id="1_6guac"]
 [ext_resource type="Script" uid="uid://cs0ojecnlot0s" path="res://Scripts/Scripts do mapa/map_item.gd" id="1_xgyyd"]
 [ext_resource type="Texture2D" uid="uid://ds2qv3a5k273u" path="res://sprites/UI/mapItemHover.png" id="3_rsu3p"]
 [ext_resource type="Texture2D" uid="uid://b5exfiy58xr5f" path="res://sprites/UI/mapItemPressr.png" id="4_wwt62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03xao"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwt62"]
 texture = ExtResource("3_rsu3p")
@@ -15,6 +17,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prowx"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x42rn"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snfoo"]
 texture = ExtResource("3_rsu3p")
 
@@ -23,6 +27,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tw6g"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snfoo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2mdi"]
 texture = ExtResource("3_rsu3p")
@@ -33,6 +39,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6upcm"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dl000"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bwol"]
 texture = ExtResource("3_rsu3p")
 
@@ -41,6 +49,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5ix7"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6tw6g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehxlj"]
 texture = ExtResource("3_rsu3p")
@@ -51,6 +61,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u0l1"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2mdi"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vumn2"]
 texture = ExtResource("3_rsu3p")
 
@@ -59,6 +71,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fnv05"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp8xd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_paqy8"]
 texture = ExtResource("3_rsu3p")
@@ -69,6 +83,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb0w8"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6upcm"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vm5k2"]
 texture = ExtResource("3_rsu3p")
 
@@ -77,6 +93,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77yeh"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2bwol"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vuiwo"]
 texture = ExtResource("3_rsu3p")
@@ -87,6 +105,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h85wh"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pedlo"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jten6"]
 texture = ExtResource("3_rsu3p")
 
@@ -95,6 +115,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m4c2r"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i5ix7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdnxh"]
 texture = ExtResource("3_rsu3p")
@@ -105,6 +127,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sex27"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehxlj"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l2vbv"]
 texture = ExtResource("3_rsu3p")
 
@@ -113,6 +137,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bc1ii"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xgymj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72rtv"]
 texture = ExtResource("3_rsu3p")
@@ -123,6 +149,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j23q0"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5u0l1"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbubj"]
 texture = ExtResource("3_rsu3p")
 
@@ -131,6 +159,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gbkf7"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vumn2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apjem"]
 texture = ExtResource("3_rsu3p")
@@ -141,6 +171,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jf6ct"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efl3k"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0dvp3"]
 texture = ExtResource("3_rsu3p")
 
@@ -149,6 +181,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6btt"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnv05"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stc6b"]
 texture = ExtResource("3_rsu3p")
@@ -159,6 +193,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1evk"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_paqy8"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w26yj"]
 texture = ExtResource("3_rsu3p")
 
@@ -168,6 +204,8 @@ texture = ExtResource("4_wwt62")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srcvw"]
 texture = ExtResource("1_6guac")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23u2x"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_khkqg"]
 texture = ExtResource("3_rsu3p")
 
@@ -176,6 +214,8 @@ texture = ExtResource("4_wwt62")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdl73"]
 texture = ExtResource("1_6guac")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pb0w8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qpgye"]
 texture = ExtResource("3_rsu3p")
@@ -194,6 +234,7 @@ offset_left = 1033.0
 offset_top = 25.0
 offset_right = 1078.0
 offset_bottom = 70.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_03xao")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wwt62")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x42rn")
 theme_override_styles/normal = SubResource("StyleBoxTexture_prowx")
@@ -209,6 +250,7 @@ offset_left = 410.0
 offset_top = 128.0
 offset_right = 455.0
 offset_bottom = 173.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x42rn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_snfoo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dl000")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6tw6g")
@@ -224,6 +266,7 @@ offset_left = 683.0
 offset_top = 21.0
 offset_right = 728.0
 offset_bottom = 66.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_snfoo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_w2mdi")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pp8xd")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6upcm")
@@ -237,6 +280,7 @@ offset_left = 873.0
 offset_top = 523.0
 offset_right = 918.0
 offset_bottom = 568.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dl000")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2bwol")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pedlo")
 theme_override_styles/normal = SubResource("StyleBoxTexture_i5ix7")
@@ -251,6 +295,7 @@ offset_left = 420.0
 offset_top = 358.0
 offset_right = 465.0
 offset_bottom = 403.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6tw6g")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ehxlj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xgymj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5u0l1")
@@ -264,6 +309,7 @@ offset_left = 864.0
 offset_top = 158.0
 offset_right = 909.0
 offset_bottom = 203.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w2mdi")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vumn2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_efl3k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_fnv05")
@@ -277,6 +323,7 @@ offset_left = 650.0
 offset_top = 308.0
 offset_right = 695.0
 offset_bottom = 353.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pp8xd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_paqy8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_23u2x")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pb0w8")
@@ -290,6 +337,7 @@ offset_left = 793.0
 offset_top = 74.0
 offset_right = 838.0
 offset_bottom = 119.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6upcm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vm5k2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ovxet")
 theme_override_styles/normal = SubResource("StyleBoxTexture_77yeh")
@@ -303,6 +351,7 @@ offset_left = 472.0
 offset_top = 259.0
 offset_right = 517.0
 offset_bottom = 304.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2bwol")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vuiwo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fa462")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h85wh")
@@ -316,6 +365,7 @@ offset_left = 406.0
 offset_top = 18.0
 offset_right = 451.0
 offset_bottom = 63.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pedlo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_jten6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yaw3a")
 theme_override_styles/normal = SubResource("StyleBoxTexture_m4c2r")
@@ -329,6 +379,7 @@ offset_left = 545.0
 offset_top = 530.0
 offset_right = 590.0
 offset_bottom = 575.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i5ix7")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cdnxh")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m1hbl")
 theme_override_styles/normal = SubResource("StyleBoxTexture_sex27")
@@ -342,6 +393,7 @@ offset_left = 402.0
 offset_top = 493.0
 offset_right = 447.0
 offset_bottom = 538.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ehxlj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_l2vbv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gjqxr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bc1ii")
@@ -355,6 +407,7 @@ offset_left = 714.0
 offset_top = 439.0
 offset_right = 759.0
 offset_bottom = 484.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xgymj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_72rtv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8jf2i")
 theme_override_styles/normal = SubResource("StyleBoxTexture_j23q0")
@@ -368,6 +421,7 @@ offset_left = 1001.0
 offset_top = 156.0
 offset_right = 1046.0
 offset_bottom = 201.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5u0l1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qbubj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bix46")
 theme_override_styles/normal = SubResource("StyleBoxTexture_gbkf7")
@@ -381,6 +435,7 @@ offset_left = 982.0
 offset_top = 264.0
 offset_right = 1027.0
 offset_bottom = 309.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vumn2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_apjem")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6od6s")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jf6ct")
@@ -394,6 +449,7 @@ offset_left = 568.0
 offset_top = 89.0
 offset_right = 613.0
 offset_bottom = 134.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_efl3k")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0dvp3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_oqe8d")
 theme_override_styles/normal = SubResource("StyleBoxTexture_i6btt")
@@ -409,6 +465,7 @@ offset_left = 742.0
 offset_top = 200.0
 offset_right = 787.0
 offset_bottom = 245.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fnv05")
 theme_override_styles/hover = SubResource("StyleBoxTexture_stc6b")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_03xao")
 theme_override_styles/normal = SubResource("StyleBoxTexture_s1evk")
@@ -424,6 +481,7 @@ offset_left = 976.0
 offset_top = 391.0
 offset_right = 1021.0
 offset_bottom = 436.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_paqy8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_w26yj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aur5f")
 theme_override_styles/normal = SubResource("StyleBoxTexture_srcvw")
@@ -437,6 +495,7 @@ offset_left = 803.0
 offset_top = 281.0
 offset_right = 848.0
 offset_bottom = 326.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_23u2x")
 theme_override_styles/hover = SubResource("StyleBoxTexture_khkqg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fv2js")
 theme_override_styles/normal = SubResource("StyleBoxTexture_hdl73")
@@ -450,6 +509,7 @@ offset_left = 571.0
 offset_top = 172.0
 offset_right = 616.0
 offset_bottom = 217.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pb0w8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qpgye")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bhq4c")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0ppch")

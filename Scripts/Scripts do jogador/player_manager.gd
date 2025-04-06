@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
 		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
-	stats.set_text(str("Day: ", day_counter,"\nMoney: ", money))
+	stats.set_text(str("Day: ", day_counter,"\n$: ", money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
 	_dist_change(delta)

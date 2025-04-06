@@ -5,8 +5,10 @@ var man
 @onready var bookpg1 = get_node("/root/main/book/page1")
 @onready var bookpg2 = get_node("/root/main/book/page2")
 var has_worked = false
-
 var shop_on = false
+@onready var audio_player = $"audio_player"
+
+@export var shop_audio: AudioStream
 
 func _ready() -> void:
 	man = self.get_parent()
@@ -36,6 +38,7 @@ func _city_pressed() -> void:
 				1:
 					if man.player.money >= 60 && man.player.eng_state > 0 && man.player.tire_rear_durability != 100 or man.player.tire_front_durability != 100:
 						man.player.mess.add_text(str("\nA mechanic fixed your bike."))
+						self.audio_player.play()
 						man.player.tire_front_durability = 100
 						man.player.tire_rear_durability = 100
 						man.player.eng_state = 0
@@ -52,6 +55,7 @@ func _city_pressed() -> void:
 				return
 				
 			if man.player.money >= 60 && man.player.bikeGas < 100:
+				self.audio_player.play()
 				man.player.mess.add_text(str("\nYou refueled your bike."))
 				man.player.bikeGas += 100-man.player.bikeGas
 				man.player.money -= 60

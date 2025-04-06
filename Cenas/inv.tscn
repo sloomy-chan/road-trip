@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cfcbwvdcyy3ko"]
+[gd_scene load_steps=26 format=3 uid="uid://cfcbwvdcyy3ko"]
 
 [ext_resource type="Script" uid="uid://qihf52wbjqc1" path="res://Scripts/Scripts do jogador/inventory.gd" id="1_0st73"]
 [ext_resource type="Script" uid="uid://bfj2tv3wokxst" path="res://Scripts/Scripts do jogador/inventory_slot.gd" id="2_uqry6"]
@@ -7,7 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://52tkft5j54dw" path="res://sprites/items/gas.png" id="4_5xo8f"]
 [ext_resource type="Texture2D" uid="uid://cdht3spd6svk" path="res://sprites/items/fixer.png" id="5_cpf5w"]
 [ext_resource type="Texture2D" uid="uid://rgqo8wopcddi" path="res://sprites/UI/invBagHover.png" id="6_cpf5w"]
+[ext_resource type="AudioStream" uid="uid://iixbasjgsd1h" path="res://audio/null.mp3" id="6_kgbng"]
+[ext_resource type="AudioStream" uid="uid://djr6fk61f0jsv" path="res://audio/banan.mp3" id="6_yippr"]
 [ext_resource type="Texture2D" uid="uid://njrhbwi8ms26" path="res://sprites/UI/invBag.png" id="7_xuv5j"]
+[ext_resource type="AudioStream" uid="uid://b0tmaj1elpqpx" path="res://audio/gas.mp3" id="9_a7pjs"]
+[ext_resource type="AudioStream" uid="uid://dusx3fq4m2ldl" path="res://audio/coloca gasosa.mp3" id="9_xuv5j"]
+[ext_resource type="AudioStream" uid="uid://bhxv1wtyx7ax5" path="res://audio/ratchet-socket-wrench-tool-95253.mp3" id="10_ighmb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7pjs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yippr"]
 texture = ExtResource("6_cpf5w")
@@ -15,17 +22,23 @@ texture = ExtResource("6_cpf5w")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgbng"]
 texture = ExtResource("7_xuv5j")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ighmb"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61wg1"]
 texture = ExtResource("6_cpf5w")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7pjs"]
 texture = ExtResource("7_xuv5j")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyac5"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ighmb"]
 texture = ExtResource("6_cpf5w")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dyac5"]
 texture = ExtResource("7_xuv5j")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_05gvo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05gvo"]
 texture = ExtResource("6_cpf5w")
@@ -39,6 +52,11 @@ texture_banan = ExtResource("3_xsyxy")
 texture_cool = ExtResource("3_04hy2")
 texture_gas = ExtResource("4_5xo8f")
 texture_fixer = ExtResource("5_cpf5w")
+null_audio = ExtResource("6_kgbng")
+banan_audio = ExtResource("6_yippr")
+gas_audio = ExtResource("9_xuv5j")
+coolant_audio = ExtResource("9_a7pjs")
+fixer_audio = ExtResource("10_ighmb")
 
 [node name="1" type="Button" parent="." groups=["inv"]]
 offset_left = 230.0
@@ -46,6 +64,7 @@ offset_top = 284.0
 offset_right = 275.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a7pjs")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yippr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_kgbng")
 script = ExtResource("2_uqry6")
@@ -61,6 +80,7 @@ offset_top = 284.0
 offset_right = 367.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ighmb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_61wg1")
 theme_override_styles/normal = SubResource("StyleBoxTexture_a7pjs")
 script = ExtResource("2_uqry6")
@@ -76,6 +96,7 @@ offset_top = 284.0
 offset_right = 462.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dyac5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ighmb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dyac5")
 script = ExtResource("2_uqry6")
@@ -91,6 +112,7 @@ offset_top = 284.0
 offset_right = 559.0
 offset_bottom = 325.0
 theme_override_font_sizes/font_size = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_05gvo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_05gvo")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mcuar")
 script = ExtResource("2_uqry6")
@@ -99,6 +121,8 @@ script = ExtResource("2_uqry6")
 position = Vector2(22, 21)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xsyxy")
+
+[node name="audio player" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="mouse_entered" from="1" to="1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="1" to="1" method="_on_mouse_exited"]

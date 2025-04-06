@@ -1,26 +1,32 @@
-[gd_scene load_steps=32 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=38 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
 [ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://Cenas/city.tscn" id="2_52mnt"]
 [ext_resource type="Script" uid="uid://c2kqnl6ucyiyi" path="res://Scripts/Scripts do jogador/player_manager.gd" id="2_344h7"]
+[ext_resource type="AudioStream" uid="uid://bslolplboj0ql" path="res://audio/LOWRPM.mp3" id="2_q8etu"]
 [ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://Cenas/inv.tscn" id="2_v0nlm"]
+[ext_resource type="AudioStream" uid="uid://clvv3b8rs61sd" path="res://audio/LOWMIDRPM.mp3" id="3_dl3br"]
 [ext_resource type="Script" uid="uid://cm55irp834gk0" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://cfs66bipryxdh" path="res://sprites/UI/player.png" id="4_7yi6i"]
+[ext_resource type="AudioStream" uid="uid://vqrljurmvpay" path="res://audio/MIDRPM.mp3" id="4_snoq5"]
 [ext_resource type="Texture2D" uid="uid://dten4u2akxq06" path="res://sprites/states/road image night.png" id="5_wnyw5"]
 [ext_resource type="Texture2D" uid="uid://uo2vivxf62k1" path="res://sprites/states/road image noon.png" id="6_erht2"]
+[ext_resource type="AudioStream" uid="uid://mu2etva47lsq" path="res://audio/HIGHESTRPM.mp3" id="6_mf6v4"]
 [ext_resource type="Texture2D" uid="uid://1fs6jd4xacu2" path="res://sprites/states/default state.png" id="7_erht2"]
 [ext_resource type="Texture2D" uid="uid://dp4sarmmujgn2" path="res://sprites/UI/throttle.png" id="7_irhh0"]
 [ext_resource type="Texture2D" uid="uid://cbtmd4griwf44" path="res://sprites/UI/throttleHover.png" id="7_me8gh"]
 [ext_resource type="Texture2D" uid="uid://2ephta042isi" path="res://sprites/UI/UI roadtrip.png" id="8_0fdb8"]
 [ext_resource type="PackedScene" uid="uid://drtxbias3a37h" path="res://Cenas/mouse.tscn" id="8_7cm0s"]
 [ext_resource type="Texture2D" uid="uid://cr7o6ox28dcwg" path="res://sprites/UI/throttlePress.png" id="8_330ga"]
-[ext_resource type="AudioStream" uid="uid://dslt4rqhs8ddy" path="res://engine.mp3" id="9_vi8pf"]
 [ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
 [ext_resource type="Texture2D" uid="uid://cau0vkfofgs78" path="res://sprites/states/road image1.png" id="13_ir430"]
 [ext_resource type="Texture2D" uid="uid://nmingaahe5x5" path="res://sprites/UI/engLight.png" id="15_ir430"]
 [ext_resource type="Texture2D" uid="uid://cue8iyvqa0v4n" path="res://sprites/UI/fuelLight.png" id="16_neu2f"]
 [ext_resource type="Texture2D" uid="uid://d1ajwu8j507bf" path="res://sprites/UI/heatLight.png" id="17_wnyw5"]
+[ext_resource type="FontFile" uid="uid://bcgn1ok7dtoib" path="res://sprites/poxel-font.ttf" id="19_lcw4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhom4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_330ga"]
 texture = ExtResource("7_me8gh")
@@ -30,6 +36,8 @@ texture = ExtResource("8_330ga")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_me8gh"]
 texture = ExtResource("7_irhh0")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lcw4w"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ea3k"]
 texture = ExtResource("7_me8gh")
@@ -207,6 +215,10 @@ _data = {
 z_index = 3
 position = Vector2(687, 436)
 scale = Vector2(0.68, 0.68)
+LOWRPM = ExtResource("2_q8etu")
+LOWMIDRPM = ExtResource("3_dl3br")
+MIDRPM = ExtResource("4_snoq5")
+HIGHESTRPM = ExtResource("6_mf6v4")
 
 [node name="map" parent="." instance=ExtResource("1_mqp60")]
 z_index = 1
@@ -548,11 +560,10 @@ scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("4_7yi6i")
 
 [node name="engine_sound" type="AudioStreamPlayer2D" parent="PlayerManager"]
-stream = ExtResource("9_vi8pf")
-volume_db = -9.795
-max_distance = 1635.0
-attenuation = 0.00704104
-panning_strength = 0.7
+stream = ExtResource("2_q8etu")
+volume_db = 24.0
+max_distance = 9640.0
+panning_strength = 1.15
 parameters/looping = true
 
 [node name="city" parent="." instance=ExtResource("2_52mnt")]
@@ -567,6 +578,7 @@ offset_top = 554.0
 offset_right = 924.0
 offset_bottom = 601.0
 scale = Vector2(0.674, 0.674)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mhom4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_330ga")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xaxpv")
 theme_override_styles/normal = SubResource("StyleBoxTexture_me8gh")
@@ -578,6 +590,7 @@ offset_top = 612.0
 offset_right = 924.0
 offset_bottom = 659.0
 scale = Vector2(0.674, -0.674)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lcw4w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_3ea3k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ir430")
 theme_override_styles/normal = SubResource("StyleBoxTexture_me8gh")
@@ -593,10 +606,11 @@ fit_content = true
 scroll_active = false
 
 [node name="Messages" type="RichTextLabel" parent="."]
-offset_left = 38.0
-offset_top = 413.0
+offset_left = 52.0
+offset_top = 426.0
 offset_right = 585.0
 offset_bottom = 599.0
+theme_override_fonts/normal_font = ExtResource("19_lcw4w")
 scroll_following = true
 
 [node name="mouse" parent="." instance=ExtResource("8_7cm0s")]
@@ -604,10 +618,11 @@ position = Vector2(28, 62)
 
 [node name="EngStats" type="RichTextLabel" parent="."]
 offset_left = 441.0
-offset_top = 312.0
+offset_top = 316.0
 offset_right = 509.0
-offset_bottom = 378.0
+offset_bottom = 382.0
 scale = Vector2(0.725, 0.725)
+theme_override_fonts/normal_font = ExtResource("19_lcw4w")
 theme_override_font_sizes/normal_font_size = 15
 text = "Day: 
 

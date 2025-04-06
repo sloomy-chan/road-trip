@@ -7,13 +7,16 @@ var shopName: String
 @onready var inv = get_node("/root/main/inv")
 @onready var player = get_node("/root/main/PlayerManager")
 @onready var mouse = get_node("/root/main/mouse")
+@onready var audio_player = get_node("/root/main/city/audio_player")
 
 func _ready() -> void:
 	_add_name()
 
 func _on_pressed() -> void:
+	audio_player.set_stream(parent.shop_audio)
 	if inv.full == false:
 		if player.money >= item_price:
+			audio_player.play()
 			player.money -= item_price
 			inv.itemNmbr = item_type
 			inv._add_item()

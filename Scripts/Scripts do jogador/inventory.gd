@@ -7,6 +7,13 @@ var full = false
 @export var texture_cool: Texture2D
 @export var texture_gas: Texture2D
 @export var texture_fixer: Texture2D
+
+@export var null_audio: AudioStream
+@export var banan_audio: AudioStream
+@export var gas_audio: AudioStream
+@export var coolant_audio: AudioStream
+@export var fixer_audio: AudioStream
+
 func _process(_delta: float) -> void:
 	for slot in inv:
 		if slot.itemID != 0:
