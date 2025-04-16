@@ -1,6 +1,5 @@
-[gd_scene load_steps=86 format=3 uid="uid://csyo6ego73ddr"]
+[gd_scene load_steps=85 format=3 uid="uid://csyo6ego73ddr"]
 
-[ext_resource type="Script" uid="uid://b10u7203i8xts" path="res://Cenas/mapSprites.gd" id="1_03xao"]
 [ext_resource type="Texture2D" uid="uid://d22pjwodtxfj" path="res://sprites/UI/mapItem.png" id="1_6guac"]
 [ext_resource type="Script" uid="uid://cs0ojecnlot0s" path="res://Scripts/Scripts do mapa/map_item.gd" id="1_xgyyd"]
 [ext_resource type="Texture2D" uid="uid://ds2qv3a5k273u" path="res://sprites/UI/mapItemHover.png" id="3_rsu3p"]
@@ -227,9 +226,9 @@ texture = ExtResource("4_wwt62")
 texture = ExtResource("1_6guac")
 
 [node name="map" type="Node2D"]
-script = ExtResource("1_03xao")
 
 [node name="Mason County" type="Button" parent="." groups=["place"]]
+self_modulate = Color(0.4, 2, 0.4, 1)
 offset_left = 1033.0
 offset_top = 25.0
 offset_right = 1078.0
@@ -372,6 +371,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_m4c2r")
 script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Farnell City"), NodePath("../Fairhaven")]
 cityName = "Old Olives"
+isConnected = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Illemore" type="Button" parent="." groups=["place"]]
@@ -473,7 +473,6 @@ script = ExtResource("1_xgyyd")
 places_connected = [NodePath("../Embercrest"), NodePath("../Solitude"), NodePath("../Coppenberg"), NodePath("../Mint Hills"), NodePath("../Tuxland"), NodePath("../Fairhaven")]
 cityName = "New Olavo"
 city_interact = "The heart of the entire state. No matter what you want to do or see, New Olavo has you covered."
-isConnected = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Chestead" type="Button" parent="." groups=["place"]]

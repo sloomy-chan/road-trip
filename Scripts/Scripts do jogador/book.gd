@@ -1,6 +1,7 @@
 extends Node2D
 
 var postal_cards = []
+var has_finished = false
 @onready var player = get_node("/root/main/PlayerManager")
 
 
@@ -35,3 +36,16 @@ func _on_button_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	self.visible = false
+
+func _end_game():
+	for cards in postal_cards:
+		if cards == null:
+			has_finished = false
+			return
+		else:
+			has_finished = true
+			player.mess.add_text(str("\nSeems like you've reached the end of your journey. It's time to head back to Old Olives."))
+			break
+
+func _on_sex_pressed() -> void:
+	postal_cards.insert(0,1)

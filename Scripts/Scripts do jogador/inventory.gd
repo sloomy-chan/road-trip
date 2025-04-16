@@ -20,6 +20,7 @@ func _process(_delta: float) -> void:
 			full = true
 		else:
 			full = false
+			
 func _add_item():
 	for slot in inv:
 		if slot.itemID == 0:

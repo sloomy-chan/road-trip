@@ -1,18 +1,18 @@
-[gd_scene load_steps=38 format=3 uid="uid://bafesg0112kju"]
+[gd_scene load_steps=52 format=3 uid="uid://bafesg0112kju"]
 
 [ext_resource type="PackedScene" uid="uid://f1sjkjwxumcj" path="res://Cenas/dashboard.tscn" id="1_apyga"]
 [ext_resource type="PackedScene" uid="uid://csyo6ego73ddr" path="res://Cenas/map.tscn" id="1_mqp60"]
 [ext_resource type="PackedScene" uid="uid://cuwogci2gi0mo" path="res://Cenas/city.tscn" id="2_52mnt"]
 [ext_resource type="Script" uid="uid://c2kqnl6ucyiyi" path="res://Scripts/Scripts do jogador/player_manager.gd" id="2_344h7"]
-[ext_resource type="AudioStream" uid="uid://bslolplboj0ql" path="res://audio/LOWRPM.mp3" id="2_q8etu"]
+[ext_resource type="AudioStream" uid="uid://bslolplboj0ql" path="res://audio/Efeitos/LOWRPM.mp3" id="2_q8etu"]
 [ext_resource type="PackedScene" uid="uid://cfcbwvdcyy3ko" path="res://Cenas/inv.tscn" id="2_v0nlm"]
-[ext_resource type="AudioStream" uid="uid://clvv3b8rs61sd" path="res://audio/LOWMIDRPM.mp3" id="3_dl3br"]
+[ext_resource type="AudioStream" uid="uid://clvv3b8rs61sd" path="res://audio/Efeitos/LOWMIDRPM.mp3" id="3_dl3br"]
 [ext_resource type="Script" uid="uid://cm55irp834gk0" path="res://Scripts/Scripts do jogador/engineMan.gd" id="4_6bvhk"]
 [ext_resource type="Texture2D" uid="uid://cfs66bipryxdh" path="res://sprites/UI/player.png" id="4_7yi6i"]
-[ext_resource type="AudioStream" uid="uid://vqrljurmvpay" path="res://audio/MIDRPM.mp3" id="4_snoq5"]
+[ext_resource type="AudioStream" uid="uid://vqrljurmvpay" path="res://audio/Efeitos/MIDRPM.mp3" id="4_snoq5"]
 [ext_resource type="Texture2D" uid="uid://dten4u2akxq06" path="res://sprites/states/road image night.png" id="5_wnyw5"]
 [ext_resource type="Texture2D" uid="uid://uo2vivxf62k1" path="res://sprites/states/road image noon.png" id="6_erht2"]
-[ext_resource type="AudioStream" uid="uid://mu2etva47lsq" path="res://audio/HIGHESTRPM.mp3" id="6_mf6v4"]
+[ext_resource type="AudioStream" uid="uid://mu2etva47lsq" path="res://audio/Efeitos/HIGHESTRPM.mp3" id="6_mf6v4"]
 [ext_resource type="Texture2D" uid="uid://1fs6jd4xacu2" path="res://sprites/states/default state.png" id="7_erht2"]
 [ext_resource type="Texture2D" uid="uid://dp4sarmmujgn2" path="res://sprites/UI/throttle.png" id="7_irhh0"]
 [ext_resource type="Texture2D" uid="uid://cbtmd4griwf44" path="res://sprites/UI/throttleHover.png" id="7_me8gh"]
@@ -20,11 +20,24 @@
 [ext_resource type="PackedScene" uid="uid://drtxbias3a37h" path="res://Cenas/mouse.tscn" id="8_7cm0s"]
 [ext_resource type="Texture2D" uid="uid://cr7o6ox28dcwg" path="res://sprites/UI/throttlePress.png" id="8_330ga"]
 [ext_resource type="PackedScene" uid="uid://cl8ee18xqfatn" path="res://Cenas/book.tscn" id="10_41073"]
+[ext_resource type="Texture2D" uid="uid://bk3p6jnedloty" path="res://sprites/states/beautiful view.png" id="12_kfy0q"]
+[ext_resource type="Texture2D" uid="uid://bdfvjwmqud7a2" path="res://sprites/states/wind in your clothes.png" id="13_61vbc"]
 [ext_resource type="Texture2D" uid="uid://cau0vkfofgs78" path="res://sprites/states/road image1.png" id="13_ir430"]
+[ext_resource type="AudioStream" uid="uid://bdhfgn1rksxyn" path="res://audio/Efeitos/engine.mp3" id="13_snoq5"]
+[ext_resource type="Texture2D" uid="uid://rhu7k0nra6u" path="res://sprites/states/you can hear the engine roar.png" id="14_xamvh"]
 [ext_resource type="Texture2D" uid="uid://nmingaahe5x5" path="res://sprites/UI/engLight.png" id="15_ir430"]
+[ext_resource type="Texture2D" uid="uid://beutvx6bv7nj8" path="res://sprites/states/Uphill.png" id="15_xamvh"]
+[ext_resource type="Texture2D" uid="uid://bpc41uttlugx8" path="res://sprites/states/Downhill.png" id="16_5e60p"]
 [ext_resource type="Texture2D" uid="uid://cue8iyvqa0v4n" path="res://sprites/UI/fuelLight.png" id="16_neu2f"]
+[ext_resource type="Texture2D" uid="uid://dpqu3nlg0xqyi" path="res://sprites/states/bad road.png" id="17_rora0"]
 [ext_resource type="Texture2D" uid="uid://d1ajwu8j507bf" path="res://sprites/UI/heatLight.png" id="17_wnyw5"]
+[ext_resource type="Texture2D" uid="uid://xsayv3hkhki3" path="res://sprites/states/sun hot.png" id="18_dy67a"]
+[ext_resource type="Texture2D" uid="uid://cn1xri1vtp5ws" path="res://sprites/states/raining.png" id="19_dy67a"]
 [ext_resource type="FontFile" uid="uid://bcgn1ok7dtoib" path="res://sprites/poxel-font.ttf" id="19_lcw4w"]
+[ext_resource type="PackedScene" uid="uid://l66fqrbxtiog" path="res://Cenas/pause.tscn" id="20_q8etu"]
+[ext_resource type="Texture2D" uid="uid://dskbcyin3ux1s" path="res://sprites/UI/cardBook.png" id="21_snoq5"]
+[ext_resource type="Texture2D" uid="uid://rgqo8wopcddi" path="res://sprites/UI/invBagHover.png" id="25_5pwku"]
+[ext_resource type="AudioStream" uid="uid://ctjvnvvgf36kt" path="res://audio/Musicas/Low End Torque.mp3" id="35_5e60p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhom4"]
 
@@ -44,6 +57,8 @@ texture = ExtResource("7_me8gh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ir430"]
 texture = ExtResource("8_330ga")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wnyw5"]
 
 [sub_resource type="Animation" id="Animation_vi8pf"]
 length = 0.001
@@ -94,6 +109,34 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../end_fade:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5pwku"]
+resource_name = "end_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../end_fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_wnyw5"]
@@ -203,11 +246,10 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgp11"]
 _data = {
 &"RESET": SubResource("Animation_vi8pf"),
+&"end_fade": SubResource("Animation_5pwku"),
 &"fade_in": SubResource("Animation_wnyw5"),
 &"fade_out": SubResource("Animation_erht2")
 }
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wnyw5"]
 
 [node name="main" type="Node2D"]
 
@@ -220,7 +262,7 @@ LOWMIDRPM = ExtResource("3_dl3br")
 MIDRPM = ExtResource("4_snoq5")
 HIGHESTRPM = ExtResource("6_mf6v4")
 
-[node name="map" parent="." instance=ExtResource("1_mqp60")]
+[node name="map" parent="." groups=["TO_SAVE"] instance=ExtResource("1_mqp60")]
 z_index = 1
 position = Vector2(520, 32)
 scale = Vector2(0.49, 0.49)
@@ -543,9 +585,9 @@ joint_mode = 2
 sharp_limit = 0.37
 antialiased = true
 
-[node name="PlayerManager" type="Node2D" parent="."]
+[node name="PlayerManager" type="Node2D" parent="." groups=["TO_SAVE"]]
 z_index = 2
-position = Vector2(879, 142)
+position = Vector2(758, 60)
 script = ExtResource("2_344h7")
 playerName = "Sloomy"
 bikeGas = 100
@@ -553,6 +595,14 @@ riding_sunset = ExtResource("13_ir430")
 riding_night = ExtResource("5_wnyw5")
 riding_noon = ExtResource("6_erht2")
 default_city = ExtResource("7_erht2")
+beautiful_view = ExtResource("12_kfy0q")
+clothes_wind = ExtResource("13_61vbc")
+engine_roar = ExtResource("14_xamvh")
+uphill = ExtResource("15_xamvh")
+downhill = ExtResource("16_5e60p")
+bad_road = ExtResource("17_rora0")
+sun_hot = ExtResource("18_dy67a")
+raining = ExtResource("19_dy67a")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerManager"]
 position = Vector2(-2, 3.8147e-06)
@@ -560,17 +610,28 @@ scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("4_7yi6i")
 
 [node name="engine_sound" type="AudioStreamPlayer2D" parent="PlayerManager"]
-stream = ExtResource("2_q8etu")
-volume_db = 24.0
+stream = ExtResource("13_snoq5")
+volume_db = 9.914
+autoplay = true
 max_distance = 9640.0
+attenuation = 0.15932
 panning_strength = 1.15
 parameters/looping = true
 
 [node name="city" parent="." instance=ExtResource("2_52mnt")]
 position = Vector2(188, -9)
 
-[node name="inv" parent="." instance=ExtResource("2_v0nlm")]
+[node name="inv" parent="." groups=["TO_SAVE"] instance=ExtResource("2_v0nlm")]
 position = Vector2(-187, 38)
+texture_banan = null
+texture_cool = null
+texture_gas = null
+texture_fixer = null
+null_audio = null
+banan_audio = null
+gas_audio = null
+coolant_audio = null
+fixer_audio = null
 
 [node name="+" type="Button" parent="."]
 offset_left = 853.0
@@ -597,21 +658,37 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_me8gh")
 script = ExtResource("4_6bvhk")
 type = 2
 
-[node name="CityName" type="RichTextLabel" parent="."]
-offset_left = 735.0
-offset_top = 316.0
-offset_right = 1068.0
-offset_bottom = 361.0
+[node name="CityName" type="RichTextLabel" parent="." groups=["TO_SAVE"]]
+offset_left = 747.0
+offset_top = 320.0
+offset_right = 1080.0
+offset_bottom = 365.0
+theme_override_fonts/normal_font = ExtResource("19_lcw4w")
 fit_content = true
 scroll_active = false
+
+[node name="text_background" type="Sprite2D" parent="."]
+modulate = Color(0.285323, 0.800534, 0.423568, 1)
+z_index = -1
+material = SubResource("CanvasItemMaterial_wnyw5")
+position = Vector2(313.65, 514.1)
+scale = Vector2(1, -0.373)
+texture = ExtResource("21_snoq5")
 
 [node name="Messages" type="RichTextLabel" parent="."]
 offset_left = 52.0
 offset_top = 426.0
 offset_right = 585.0
 offset_bottom = 599.0
+theme_override_colors/default_color = Color(0.630346, 1, 0.717665, 1)
 theme_override_fonts/normal_font = ExtResource("19_lcw4w")
+theme_override_font_sizes/normal_font_size = 28
+text = "It's time to ride away from life."
 scroll_following = true
+
+[node name="pause" parent="." instance=ExtResource("20_q8etu")]
+visible = false
+position = Vector2(59, 116)
 
 [node name="mouse" parent="." instance=ExtResource("8_7cm0s")]
 position = Vector2(28, 62)
@@ -656,7 +733,14 @@ position = Vector2(529, 228)
 scale = Vector2(0.344994, 0.203704)
 texture = ExtResource("13_ir430")
 
-[node name="PlayerState" type="Sprite2D" parent="."]
+[node name="end_fade" type="Sprite2D" parent="transitioner"]
+self_modulate = Color(0, 0, 0, 0)
+z_index = 14
+position = Vector2(633, 347)
+scale = Vector2(18.3875, 10.875)
+texture = ExtResource("25_5pwku")
+
+[node name="PlayerState" type="Sprite2D" parent="." groups=["TO_SAVE"]]
 z_index = -4
 position = Vector2(264, 175)
 scale = Vector2(0.247579, 0.242604)
@@ -685,5 +769,10 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("15_ir430")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="Music Jukebox" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_5e60p")
+volume_db = -3.25
+autoplay = true
 
 [connection signal="animation_finished" from="transitioner" to="PlayerManager" method="_on_transitioner_animation_finished"]

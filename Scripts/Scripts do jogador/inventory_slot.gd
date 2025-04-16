@@ -45,7 +45,7 @@ func _use():
 			audio_player.play()
 			player.mess.add_text("\nYou ate the banana. Nothing happened.")
 		3:
-			if player.speed > 0 && player.temp > 9:
+			if player.speed == 0 && player.temp > 9:
 				player.temp -= 8
 				audio_player.set_stream(man.coolant_audio)
 				audio_player.play()
@@ -56,7 +56,7 @@ func _use():
 				player.mess.add_text("\nCan't use coolant right now.")
 				return
 		4:
-			if player.eng_state > 26 && player.speed > 0:
+			if player.eng_state > 26 && player.speed == 0:
 				player.eng_state -= 25
 				audio_player.set_stream(man.fixer_audio)
 				audio_player.play()

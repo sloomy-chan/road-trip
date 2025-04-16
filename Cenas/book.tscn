@@ -1,33 +1,33 @@
 [gd_scene load_steps=25 format=3 uid="uid://cl8ee18xqfatn"]
 
 [ext_resource type="Script" uid="uid://b5ygl5ywwnyt7" path="res://Scripts/Scripts do jogador/book.gd" id="1_82vla"]
-[ext_resource type="Texture2D" uid="uid://cu7c5l1waj0l3" path="res://sprites/cards/mason county.png" id="2_552vw"]
-[ext_resource type="Texture2D" uid="uid://cdahwex8bcsdw" path="res://sprites/cards/farnell.png" id="3_1vtma"]
-[ext_resource type="Texture2D" uid="uid://drsi847s6byjf" path="res://sprites/cards/plum.png" id="4_18ix2"]
-[ext_resource type="Texture2D" uid="uid://bqrd5t80if72y" path="res://sprites/cards/verdi.png" id="5_3p8h3"]
-[ext_resource type="Texture2D" uid="uid://cgypbrivldmy2" path="res://sprites/cards/illemore.png" id="6_c04vt"]
-[ext_resource type="Texture2D" uid="uid://du66o2l7837xa" path="res://sprites/cards/olave.png" id="7_8t1rq"]
-[ext_resource type="Texture2D" uid="uid://dutcrlrqbrgbh" path="res://sprites/cards/solitude.png" id="8_gswfd"]
-[ext_resource type="Texture2D" uid="uid://dmpgi2j7use0q" path="res://sprites/cards/mint.png" id="9_ox4d2"]
-[ext_resource type="Texture2D" uid="uid://bk2kwrtmnoeqx" path="res://sprites/cards/corn.png" id="10_b4w5d"]
-[ext_resource type="Texture2D" uid="uid://04kq1govjql8" path="res://sprites/cards/beach.png" id="11_a5gdx"]
-[ext_resource type="Texture2D" uid="uid://4m1pood26ny1" path="res://sprites/cards/staywell.png" id="12_3r0bo"]
-[ext_resource type="Texture2D" uid="uid://dvabgr08hmx4" path="res://sprites/cards/olives.png" id="13_8qtbf"]
-[ext_resource type="Texture2D" uid="uid://dj1lai6p1vm25" path="res://sprites/cards/ardmond.png" id="14_teeht"]
-[ext_resource type="Texture2D" uid="uid://yoadxdno02ox" path="res://sprites/cards/herd.png" id="15_u512a"]
-[ext_resource type="Texture2D" uid="uid://b2w1714gu2qyu" path="res://sprites/cards/willow.png" id="16_oa6ta"]
-[ext_resource type="Texture2D" uid="uid://c1agi2bfxmslv" path="res://sprites/cards/haven.png" id="17_co3su"]
-[ext_resource type="Texture2D" uid="uid://conxcawghaxvm" path="res://sprites/cards/chestead.png" id="18_0765i"]
-[ext_resource type="Texture2D" uid="uid://d0vw63f304re1" path="res://sprites/cards/crest.png" id="19_gu2i5"]
-[ext_resource type="Texture2D" uid="uid://foucinw3vekj" path="res://sprites/cards/coppen.png" id="20_dfpwe"]
-[ext_resource type="Texture2D" uid="uid://dh2s0dt056pwh" path="res://sprites/cards/tuxland.png" id="21_5stll"]
+[ext_resource type="Texture2D" uid="uid://c5que5urxf4xg" path="res://sprites/cards/old olives.png" id="2_1vtma"]
+[ext_resource type="Texture2D" uid="uid://c2jsjrkfyu82m" path="res://sprites/cards/mason county.png" id="2_552vw"]
+[ext_resource type="Texture2D" uid="uid://cs7mghba7mrsc" path="res://sprites/cards/farnell.png" id="3_1vtma"]
+[ext_resource type="Texture2D" uid="uid://ykcbtlhonb1y" path="res://sprites/cards/plum.png" id="4_18ix2"]
+[ext_resource type="Texture2D" uid="uid://e04swkfljy3n" path="res://sprites/cards/verdi.png" id="5_3p8h3"]
+[ext_resource type="Texture2D" uid="uid://ce5tdmfaguo3" path="res://sprites/cards/willowbrook.png" id="5_18ix2"]
+[ext_resource type="Texture2D" uid="uid://dpsfx365uc257" path="res://sprites/cards/illemore.png" id="6_c04vt"]
+[ext_resource type="Texture2D" uid="uid://kv48clgfmv37" path="res://sprites/cards/olave.png" id="7_8t1rq"]
+[ext_resource type="Texture2D" uid="uid://dyx1tnw663g5s" path="res://sprites/cards/staywell.png" id="8_gswfd"]
+[ext_resource type="Texture2D" uid="uid://bgvi2x3j8sww3" path="res://sprites/cards/mint.png" id="9_ox4d2"]
+[ext_resource type="Texture2D" uid="uid://d027f7nupl4qv" path="res://sprites/cards/corn.png" id="10_b4w5d"]
+[ext_resource type="Texture2D" uid="uid://oowersy6llw0" path="res://sprites/cards/beach.png" id="11_a5gdx"]
+[ext_resource type="Texture2D" uid="uid://wbr2t0pd6p15" path="res://sprites/cards/ardmond.png" id="14_teeht"]
+[ext_resource type="Texture2D" uid="uid://v2k11r7l8iaq" path="res://sprites/cards/herd.png" id="15_u512a"]
+[ext_resource type="Texture2D" uid="uid://b7pnv73rc3r13" path="res://sprites/cards/haven.png" id="17_co3su"]
+[ext_resource type="Texture2D" uid="uid://b2k3adjc55k6o" path="res://sprites/cards/solitude.png" id="18_1vtma"]
+[ext_resource type="Texture2D" uid="uid://0sny6l8qbxqk" path="res://sprites/cards/chestead.png" id="18_0765i"]
+[ext_resource type="Texture2D" uid="uid://b1mctrxcf2wpj" path="res://sprites/cards/crest.png" id="19_gu2i5"]
+[ext_resource type="Texture2D" uid="uid://1kc01c7t18r1" path="res://sprites/cards/coppen.png" id="20_dfpwe"]
+[ext_resource type="Texture2D" uid="uid://bjl1oum8yoyqt" path="res://sprites/cards/tuxland.png" id="21_5stll"]
 [ext_resource type="Texture2D" uid="uid://dskbcyin3ux1s" path="res://sprites/UI/cardBook.png" id="22_1vtma"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vtma"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_18ix2"]
 
-[node name="book" type="Node2D"]
+[node name="book" type="Node2D" groups=["TO_SAVE"]]
 script = ExtResource("1_82vla")
 
 [node name="page1" type="Node2D" parent="."]
@@ -38,14 +38,14 @@ visible = false
 position = Vector2(923, 101)
 rotation = -0.0648829
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("12_3r0bo")
+texture = ExtResource("8_gswfd")
 
 [node name="Old Olives" type="Sprite2D" parent="page1" groups=["card"]]
 visible = false
 position = Vector2(488, 251)
 rotation = 0.0300513
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("13_8qtbf")
+texture = ExtResource("2_1vtma")
 
 [node name="Ardmond" type="Sprite2D" parent="page1" groups=["card"]]
 visible = false
@@ -66,7 +66,7 @@ visible = false
 position = Vector2(770, 262)
 rotation = 0.0985561
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("16_oa6ta")
+texture = ExtResource("5_18ix2")
 
 [node name="Fairhaven" type="Sprite2D" parent="page1" groups=["card"]]
 visible = false
@@ -153,7 +153,7 @@ visible = false
 position = Vector2(674, 291)
 rotation = -0.261799
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_gswfd")
+texture = ExtResource("18_1vtma")
 
 [node name="Mint Hills" type="Sprite2D" parent="page2" groups=["card"]]
 visible = false
@@ -198,5 +198,13 @@ position = Vector2(580, 316)
 scale = Vector2(1.01806, 1.01806)
 texture = ExtResource("22_1vtma")
 
+[node name="sex" type="Button" parent="."]
+offset_left = 620.0
+offset_top = 109.0
+offset_right = 628.0
+offset_bottom = 117.0
+text = "asaewdadaw"
+
 [connection signal="pressed" from="change" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="sex" to="." method="_on_sex_pressed"]

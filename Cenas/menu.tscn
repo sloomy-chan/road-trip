@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfi5xbkipfhqy"]
+
+[ext_resource type="Script" uid="uid://1g84jghfmxpq" path="res://Scripts/menu.gd" id="1_u1n12"]
+[ext_resource type="Script" uid="uid://c2imx3t0tvcrn" path="res://Scripts/save_manager.gd" id="2_vpgfy"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_u1n12")
+
+[node name="New game" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 240.0
+offset_right = 74.0
+offset_bottom = 248.0
+text = "New Game
+"
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 73.0
+offset_top = 290.0
+offset_right = 81.0
+offset_bottom = 298.0
+text = "Continue
+"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 77.0
+offset_top = 340.0
+offset_right = 85.0
+offset_bottom = 348.0
+text = "Credits
+"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 388.0
+offset_right = 91.0
+offset_bottom = 396.0
+text = "Quit
+"
+
+[node name="SaveManager" type="Node2D" parent="."]
+script = ExtResource("2_vpgfy")
+
+[connection signal="pressed" from="New game" to="." method="_on_new_game_pressed"]

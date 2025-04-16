@@ -28,10 +28,10 @@ func _on_pressed() -> void:
 
 func _add_name():
 	match item_type:
-		1:	shopName = "Gas"
-		2:	shopName = "A banana"
-		3:	shopName = "Coolant"
-		4:	shopName = "An emergency kit."
+		1:	shopName = str("A gallon of gas. \nCosts ", item_price, "bucks.")
+		2:	shopName = str("A banana. \nCosts ", item_price, "bucks.")
+		3:	shopName = str("Coolant. \nCosts ", item_price, "bucks.")
+		4:	shopName = str("An emergency kit. \nCosts ", item_price, "bucks.")
 
 
 func _on_mouse_entered() -> void:

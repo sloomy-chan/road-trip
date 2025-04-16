@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dusx3fq4m2ldl"
+path="res://.godot/imported/coloca gasosa.mp3-15408dbc2a290cf6ab54b781f85c27fc.mp3str"
+
+[deps]
+
+source_file="res://audio/Efeitos/coloca gasosa.mp3"
+dest_files=["res://.godot/imported/coloca gasosa.mp3-15408dbc2a290cf6ab54b781f85c27fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

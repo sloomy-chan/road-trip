@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://l66fqrbxtiog"]
+
+[ext_resource type="Script" uid="uid://bbm0yb3i7ndun" path="res://Scripts/Scripts do jogador/pause_menu.gd" id="1_45vjg"]
+
+[node name="pause" type="Node2D"]
+script = ExtResource("1_45vjg")
+
+[node name="resume" type="Button" parent="."]
+offset_left = 510.0
+offset_top = 244.0
+offset_right = 518.0
+offset_bottom = 252.0
+text = "resume"
+
+[node name="save" type="Button" parent="."]
+offset_left = 498.0
+offset_top = 121.0
+offset_right = 506.0
+offset_bottom = 129.0
+text = "save"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 508.0
+offset_top = 190.0
+offset_right = 516.0
+offset_bottom = 198.0
+text = "quit"
+
+[node name="load" type="Button" parent="."]
+offset_left = 563.0
+offset_top = 120.0
+offset_right = 618.0
+offset_bottom = 151.0
+text = "load"
+
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="load" to="." method="_on_load_pressed"]

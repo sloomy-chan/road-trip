@@ -35,38 +35,33 @@ func _dashMove(delta):
 		match player.engRpm:
 			10:
 				rpmN = 14
-				engine.set_stream(LOWRPM)
-				engine.set_pitch_scale(1)
+				engine.set_pitch_scale(0.4)
 			20:
 				rpmN = 18
-				engine.set_pitch_scale(1.2)
+				engine.set_pitch_scale(0.5)
 			30:
 				rpmN = 24
-				engine.set_pitch_scale(1.4)
+				engine.set_pitch_scale(0.6)
 			40:
-				engine.set_stream(LOWMIDRPM)
 				rpmN = 28
-				engine.set_pitch_scale(1.0)
+				engine.set_pitch_scale(0.7)
 			50:
 				rpmN = 32
-				engine.set_pitch_scale(1.2)
+				engine.set_pitch_scale(0.8)
 			60:
 				rpmN = 36
-				engine.set_pitch_scale(1.4)
+				engine.set_pitch_scale(0.9)
 			70:
-				engine.set_stream(MIDRPM)
 				rpmN = 40
 				engine.set_pitch_scale(1)
 			80:
 				rpmN = 44
-				engine.set_pitch_scale(1.2)
+				engine.set_pitch_scale(1.1)
 			90:
 				rpmN = 48
-				engine.set_pitch_scale(1)
-				engine.set_stream(HIGHRPM)
+				engine.set_pitch_scale(1.2)
 			100:
 				rpmN = 52
-				engine.set_stream(HIGHESTRPM)
 				engine.set_pitch_scale(1.3)
 	else:
 		rpm.rotation = lerp_angle(rpm.rotation, 849.3, delta * 5)

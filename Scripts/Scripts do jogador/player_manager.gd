@@ -6,6 +6,7 @@ extends Node2D
 @onready var ctyName = get_node("/root/main/CityName")
 @onready var city = get_node("/root/main/city")
 @onready var book = get_node("/root/main/book")
+@onready var pause = get_node("/root/main/pause")
 
 var A1: float
 var B1: float
@@ -44,13 +45,22 @@ var next_state: Texture2D
 func _ready() -> void:
 	day_counter += 1
 	money += 100
+var next_place_name: String
 
 func _process(delta: float) -> void:
+	_game_final_section()
+	if Input.is_action_just_pressed("ui_cancel"):
+		if pause.visible == false:
+			pause.visible = true
+		else: if pause.visible == true:
+			pause.visible = false
+		
 	#Configura o texto das caixas de texto.
 	if isTravel == false:
 		ctyName.set_text(str("\nYou are currently at ", city.currCity_name))
 	else:
-		ctyName.set_text(str("\nThe distance left to your destination is: ", A1 - B1))
+		
+		ctyName.set_text(str("\nYou are headed to ", next_place_name))
 	stats.set_text(str("Day: ", day_counter,"\n$: ", money))
 	#Funções que rodam em todo frame
 	_eng_durability(delta)
@@ -104,7 +114,7 @@ func _dist_change(delta):
 		isTravel = false
 		speed_limit_modifier = 0
 		place._get_places()
-		#book._add_card()
+		book._add_card()
 
 
 func _gas(delta):
@@ -141,26 +151,50 @@ func _eng_durability(delta):
 	else:
 		temp_mod = 0
 
+@export var beautiful_view: Texture2D
+@export var clothes_wind: Texture2D
+@export var engine_roar: Texture2D
+@export var uphill: Texture2D
+@export var downhill: Texture2D
+@export var bad_road: Texture2D
+@export var sun_hot: Texture2D
+@export var raining: Texture2D
 func _event_generator():
 	match eventNmbr:	
 		0:
 			mess.add_text(str("\nThe view is beautiful."))
+			next_state = beautiful_view
+			transitioner.play("fade_in")
 		1:
 			mess.add_text(str("\nYou can feel the wind in your clothes"))
+			next_state = clothes_wind
+			transitioner.play("fade_in")
 		2:
 			mess.add_text(str("\nThe roar of your engine calms your mind. You're excited to arrive at your destination."))
+			next_state = engine_roar
+			transitioner.play("fade_in")
 		3:
 			mess.add_text(str("\nYou're currently going up a hill. Your bike might struggle."))
+			next_state = uphill
+			transitioner.play("fade_in")
 		4:
 			mess.add_text(str("\nThe road seems to be pretty good."))
 		5:
 			mess.add_text(str("\nYou're currently going downhill. You can ease off the throttle."))
+			next_state = downhill 
+			transitioner.play("fade_in")
 		6:
 			mess.add_text(str("\nThe roads seem pretty bad. Your tires will lose durability faster, and you'll go slower."))
+			next_state = bad_road
+			transitioner.play("fade_in")
 		7:
 			mess.add_text(str("\nThe sun seems pretty hot. You engine might overheat faster."))
+			next_state = sun_hot
+			transitioner.play("fade_in")
 		8:
 			mess.add_text(str("\nIt's raining. You engine will take longer to overheat."))
+			next_state = raining
+			transitioner.play("fade_in")
 		9:
 			mess.add_text(str("\nYou think about where you are in your life. You should be proud of yourself, even if you're tired."))
 	#match para mudar apenas o limite de velocidade
@@ -221,16 +255,16 @@ func _tire_durability(delta):
 	#dita se o pneu vai desgastar mais rápido ou não
 	if isTravel == true && speed != 0:
 		match eventNmbr:
-			_:
-				if tire_front_popped == false:
-					tire_front_durability -= (0.1 * speed * 0.1)  * delta
-				if tire_rear_popped == false:
-					tire_rear_durability -= (0.1 * speed * 0.1)  * delta
 			6:
 				if tire_front_popped == false:
 					tire_front_durability -= (0.2 * speed * 0.2)  * delta
 				if tire_rear_popped == false:
 					tire_rear_durability -= (0.2 * speed * 0.2)  * delta
+			_:
+				if tire_front_popped == false:
+					tire_front_durability -= (0.1 * speed * 0.1)  * delta
+				if tire_rear_popped == false:
+					tire_rear_durability -= (0.1 * speed * 0.1)  * delta
 				
 				#chance aleatória do pneu furar
 				pop_timer -= 1 * delta
@@ -249,8 +283,6 @@ func _tire_durability(delta):
 								tire_front_durability = 0
 					_:
 						return
-	print(tire_front_durability)
-	print(tire_rear_durability)
 
 @onready var transitioner = get_node("/root/main/transitioner")
 
@@ -258,3 +290,10 @@ func _on_transitioner_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_in":
 		player_state.texture = next_state
 		transitioner.play("fade_out")
+	
+	if anim_name == "end_fade":
+		self.get_tree().change_scene_to_file("res://Cenas/ending.tscn")
+		
+func _game_final_section():
+	if book.has_finished == true && place.cityName == "Old Olives" && A1 == B1:
+		transitioner.play("end_fade")

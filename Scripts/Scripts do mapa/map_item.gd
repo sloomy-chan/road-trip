@@ -8,6 +8,7 @@ extends Button
 @onready var player = get_node("/root/main/PlayerManager")
 @onready var parent = self.get_parent()
 
+var has_interacted: bool
 var has_worked = false
 var mapButton = self
 @export var isConnected = false
@@ -25,10 +26,15 @@ func _process(_delta: float) -> void:
 		self.self_modulate = Color(1,1,1,1)
 	else:
 		self.self_modulate = Color(1,1,1,0.5)
+	if has_interacted == true && isConnected == true:
+		self.self_modulate = Color(0.4,2,0.4,1)
+	else: if has_interacted == true && isConnected == false:
+		self.self_modulate = Color(0.4,2,0.4,0.5)
 		
 func _map_selected():
 	var choose_ride = randi_range(1,3)
 	player.place = self
+	player.next_place_name = self.cityName
 	player.place.has_worked = false
 	if player.speed <= 0 && isConnected == true && player.isTravel == false:
 		player.startPos = player.global_position

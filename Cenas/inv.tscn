@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://52tkft5j54dw" path="res://sprites/items/gas.png" id="4_5xo8f"]
 [ext_resource type="Texture2D" uid="uid://cdht3spd6svk" path="res://sprites/items/fixer.png" id="5_cpf5w"]
 [ext_resource type="Texture2D" uid="uid://rgqo8wopcddi" path="res://sprites/UI/invBagHover.png" id="6_cpf5w"]
-[ext_resource type="AudioStream" uid="uid://iixbasjgsd1h" path="res://audio/null.mp3" id="6_kgbng"]
-[ext_resource type="AudioStream" uid="uid://djr6fk61f0jsv" path="res://audio/banan.mp3" id="6_yippr"]
+[ext_resource type="AudioStream" uid="uid://iixbasjgsd1h" path="res://audio/Efeitos/null.mp3" id="6_kgbng"]
+[ext_resource type="AudioStream" uid="uid://djr6fk61f0jsv" path="res://audio/Efeitos/banan.mp3" id="6_yippr"]
 [ext_resource type="Texture2D" uid="uid://njrhbwi8ms26" path="res://sprites/UI/invBag.png" id="7_xuv5j"]
-[ext_resource type="AudioStream" uid="uid://b0tmaj1elpqpx" path="res://audio/gas.mp3" id="9_a7pjs"]
-[ext_resource type="AudioStream" uid="uid://dusx3fq4m2ldl" path="res://audio/coloca gasosa.mp3" id="9_xuv5j"]
-[ext_resource type="AudioStream" uid="uid://bhxv1wtyx7ax5" path="res://audio/ratchet-socket-wrench-tool-95253.mp3" id="10_ighmb"]
+[ext_resource type="AudioStream" uid="uid://b0tmaj1elpqpx" path="res://audio/Efeitos/gas.mp3" id="9_a7pjs"]
+[ext_resource type="AudioStream" uid="uid://dusx3fq4m2ldl" path="res://audio/Efeitos/coloca gasosa.mp3" id="9_xuv5j"]
+[ext_resource type="AudioStream" uid="uid://bhxv1wtyx7ax5" path="res://audio/Efeitos/ratchet-socket-wrench-tool-95253.mp3" id="10_ighmb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7pjs"]
 
@@ -68,8 +68,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_a7pjs")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yippr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_kgbng")
 script = ExtResource("2_uqry6")
+itemID = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="1"]
+z_index = 1
+z_as_relative = false
 position = Vector2(23, 21)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xsyxy")
@@ -86,6 +89,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_a7pjs")
 script = ExtResource("2_uqry6")
 
 [node name="Sprite2D" type="Sprite2D" parent="2"]
+z_index = 1
+z_as_relative = false
 position = Vector2(22, 21)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xsyxy")
@@ -102,6 +107,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dyac5")
 script = ExtResource("2_uqry6")
 
 [node name="Sprite2D" type="Sprite2D" parent="3"]
+z_index = 1
 position = Vector2(22, 21)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xsyxy")
@@ -118,6 +124,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_mcuar")
 script = ExtResource("2_uqry6")
 
 [node name="Sprite2D" type="Sprite2D" parent="4"]
+z_index = 1
+z_as_relative = false
 position = Vector2(22, 21)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("3_xsyxy")

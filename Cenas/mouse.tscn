@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://drtxbias3a37h"]
+[gd_scene load_steps=6 format=3 uid="uid://drtxbias3a37h"]
 
 [ext_resource type="Script" uid="uid://bwq6vka5gx3mw" path="res://Scripts/Scripts do jogador/mouse.gd" id="1_1b0en"]
-[ext_resource type="AudioStream" uid="uid://ubij1tco0wt3" path="res://audio/click.mp3" id="2_bx3hq"]
+[ext_resource type="AudioStream" uid="uid://ubij1tco0wt3" path="res://audio/Efeitos/click.mp3" id="2_bx3hq"]
+[ext_resource type="FontFile" uid="uid://cha3o3ygn2hp0" path="res://sprites/chawp.otf" id="2_ou24p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6vfy"]
 bg_color = Color(0.208084, 0.218828, 0.216219, 1)
@@ -23,12 +24,13 @@ script = ExtResource("1_1b0en")
 [node name="text" type="RichTextLabel" parent="."]
 offset_left = 45.0
 offset_right = 251.0
-offset_bottom = 40.0
+offset_bottom = 73.0
+theme_override_fonts/normal_font = ExtResource("2_ou24p")
 theme_override_styles/fill = SubResource("StyleBoxFlat_c6vfy")
 theme_override_styles/background = SubResource("StyleBoxFlat_45emw")
 text = "SEX!!"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_bx3hq")
-volume_db = 1.89
-pitch_scale = 1.33
+volume_db = 0.807
+pitch_scale = 1.04

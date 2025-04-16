@@ -2,6 +2,7 @@ extends Button
 @onready var cityButton = self
 var man
 @export var buttonType = 0
+@onready var book = get_node("/root/main/book")
 @onready var bookpg1 = get_node("/root/main/book/page1")
 @onready var bookpg2 = get_node("/root/main/book/page2")
 var has_worked = false
@@ -28,8 +29,13 @@ func _city_pressed() -> void:
 			_open_shop()
 		2:
 			man.player.mess.add_text(str("\n",man.player.place.city_interact))
-			man.player.mess.add_text(str("\nA new postal card was added to your book."))
-			_get_card()
+			book._end_game()
+			if man.player.place.has_interacted == false:
+				man.player.mess.add_text(str("\nA new postal card was added to your book."))
+				_get_card()
+				man.player.place.has_interacted = true
+			else:
+				pass
 		3:
 			match clicked_mechanic:
 				0:
@@ -81,7 +87,6 @@ func _open_shop():
 	print(shop_on)
 
 func _open_book():
-	var book = get_node("/root/main/book")
 	if book.visible == false:
 		book.visible = true
 	else:
@@ -90,7 +95,7 @@ func _open_book():
 	
 func _work():
 	if man.player.place.has_worked == false:
-		man.player.money += 50 
+		man.player.money += 80
 		man.player.day_counter += 1
 		man.player.mess.add_text("\nYou worked a part-time job and rested on a nearby inn.")
 		man.player.day_counter += 1
